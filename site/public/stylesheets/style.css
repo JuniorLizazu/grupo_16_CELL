@@ -157,17 +157,15 @@ footer .redes ul{
     margin-right: 0px;
   }
   /*FOOTER TABLET*/
-  footer .info ul{
-    position: fixed;
-    display: flex;
+  footer .info{
+    flex-direction: row;
+    position: absolute;
   }
-  footer .info ul li{
-    position: relative;
-    margin-right: 20px;
-    padding-right: 11px;
+  footer .info li{
     border-right: 2px solid black;
+    padding: 0px 10px;
   }
-  footer .info ul li:last-child{
+  footer .info li:last-child{
     border-right: none;
   }
 
