@@ -25,7 +25,6 @@ li{
 header{
   background-color: #222831;
   padding: 10px 5px 0px 5px;
-  position: fixed;
 }
 
 header .logo{
@@ -98,10 +97,6 @@ header nav .menu{
   background-color: #222831;
   color: white;
 }
-main{
-  padding-top: 72px;
-}
-
 
 /*FOOTER*/
 
