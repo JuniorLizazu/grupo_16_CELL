@@ -1,0 +1,277 @@
+/*GENERALES*/
+*{
+    box-sizing: border-box;
+    margin:0
+  }
+  body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 100;
+    background-color: #eeeeee;
+  }
+  a{
+    text-decoration: none;
+    color: white;
+  }
+  a:hover{
+    color: #e8ded2;
+    text-decoration: none;
+  }
+  li{
+    list-style: none;
+  }
+  
+  /*HEADER*/
+  
+  header{
+    background-color: #222831;
+    padding: 10px 5px 0px 5px;
+  }
+  
+  header .logo{
+    padding: 0;
+  }
+  header .logo img{
+    position: relative;
+    left: 50px;
+    padding-top: 5px;
+  }
+  header form{
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+  
+  }
+  header form input{
+    border: solid 1px #393e46;
+  display: block;
+  width: 100%;
+  padding: 7px 35px 7px 7px;
+  border-radius: 8px;
+  height: 40px;
+  }
+  
+  header form button{
+    position: absolute;
+    right: 2px;
+    height: 60%;
+    background-color: white;
+    border: none;
+    color: #393e46;
+    cursor: pointer;
+  }
+  header nav{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 7px;
+  }
+  
+  header nav button.desplegable{
+    background-color: #00adb5;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    
+    
+  }
+  header nav .menu{
+    color: white;
+  }
+  
+  /*Banner y principales*/
+  
+  .banner img{
+    width: 100%;
+  }
+  .ultimo{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #393e46;
+  }
+  .datos{
+    justify-content: flex-end;
+  }
+  .copyright{
+    width: 100%;
+    background-color: #222831;
+    color: white;
+  }
+  .row{
+    margin: 0;
+  }
+  .productos{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .productos .titulo h2{
+    text-align: left;
+    font-size: 24px;
+    color: #393e46;
+    padding: 30px;
+    font-family: sans-serif;
+  } 
+  
+  .productos .contenido{
+    background-color: white;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+  }
+  
+  .productos .contenido figure img{
+    width: 90%;
+  }
+  
+  .productos article{
+    display: flex;
+    flex-wrap: wrap;
+    border-top: #393e46;
+    padding: 20px;
+    position: relative;
+    height: 150px;
+  }
+  
+  .productos article h2{
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    top: 10px;
+  }
+  
+  .productos article span{
+    color: #00adb5;
+    margin-left: 10px;
+    display: flex;
+    align-items: flex-end;
+  }
+  .productos article a{
+    color: #00adb5;
+    display: flex;
+    align-items: flex-end;
+  }
+  
+  
+  /*FOOTER*/
+  
+  footer {
+    background-color: #393e46;
+  }
+  
+  footer .info {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+  }
+  footer .info li{
+    margin: 10px 0;
+    position: relative;
+    right: 20px;
+    top: 7px;
+  }
+  
+  footer .redes ul{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    right: 17px;
+    top: 9px;
+  }
+  
+  .copyright{
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    top: 18px;
+  }
+  
+  
+  @media(min-width: 768px){
+    /*HEADER TABLET*/
+    header .logo img{
+        left: auto;
+    }
+    
+    header form input{
+      position: absolute;
+      top: 16px;
+      left: 235px;
+      height: 30px;
+    }
+    header form button{
+      left: 520px;
+      top: 19px;
+    }
+    .menu li{
+      margin-right: 15px;
+      position: relative;
+      bottom: 25px;
+      left: 40px;
+    }
+    .menu li:last-child{
+      margin-right: 0px;
+    }
+    /*FOOTER TABLET*/
+    footer .info{
+      flex-direction: row;
+      position: absolute;
+    }
+    footer .info li{
+      border-right: 2px solid black;
+      padding: 0px 10px;
+    }
+    footer .info li:last-child{
+      border-right: none;
+    }
+  
+    footer .redes ul{
+      justify-content: flex-end;
+      margin-right: 0;
+    }
+    footer .redes ul li{
+      position: relative;
+      top: 8px;
+      margin-right: 40px;
+    }
+    footer .redes ul li:last-child{
+      margin-right: 0px;
+    }
+  
+  }
+  
+  @media(min-width: 1040px){
+    /*HEADER ESCRITORIO*/
+    header .logo img{
+      left: 60px;
+      width: 50px;
+  }
+    header form input{
+      position: absolute;
+      top: 17px;
+      bottom: 3px;
+      left: 318px;
+    }
+    header form button{
+      bottom: 3px;
+      left: 815px;
+    }
+    .menu li{
+      margin-right: 23px;
+      left: 150px;
+      bottom: 35px;
+    }
+  
+    /*FOOTER ESCRITORIO*/
+  
+    footer .redes ul li{
+      margin-right: 60px;
+    }
+    footer .redes ul li:last-child{
+      margin-right: 20px;
+    }
+  }
