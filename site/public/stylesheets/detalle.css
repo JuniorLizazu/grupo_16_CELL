@@ -1,1 +1,14 @@
 @import "style.css";
+
+.caja1{
+    background-color: red;
+}
+.caja2{
+    background-color: blue;
+}
+.caja3{
+    background-color: chartreuse;
+}
+.caja4{
+    background-color: yellow;
+}
