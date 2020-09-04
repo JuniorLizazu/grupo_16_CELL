@@ -8,8 +8,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 let detailProductosRouter = require('./routes/detailProductos');
 let cargaProductoRouter = require('./routes/cargaProducto');
-const cargaProductoController = require('./controllers/cargaProductoController');
-let registerRouter = require('./routes/registerRouter');
+let registerRouter = require('./routes/register');
 let loginRouter=require('./routes/loginRouter');
 let cartRouter=require('./routes/cartRouter');
 

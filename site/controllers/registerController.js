@@ -1,12 +1,11 @@
-let registerController ={ 
-    'notRegister': function(req, res) {
-        res.render('/partials/notRegister');
-    },
-    'register': function(req, res) {
-        res.render('/partials/register');
-    },
-    'registerCart': function(req, res) {
-        res.render('/partials/registerCart');
+const path = require('path');
+
+
+module.exports ={ 
+    index: function(req, res) {
+        res.render('register', {
+            title: 'Registro',
+            css: 'register.css',
+        });
     }
 };
-module.exports=registerController;

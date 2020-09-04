@@ -3,9 +3,6 @@ var router = express.Router();
 let loginController = require('../controllers/loginController');
 
 /* GET home page. */
-router.get('/', loginController.login);
-router.get('/entercode', loginController.enterCode);
-router.get('/enterpass', loginController.enterPass);
-router.get('/social', loginController.social);
+router.get('/', loginController.index);
 
 module.exports = router;

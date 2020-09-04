@@ -1,15 +1,10 @@
-let loginController ={ 
-    'login': function(req, res) {
-        res.render('/partials/login');
-    },
-    'enterCode': function(req, res) {
-        res.render('partials/enterCode');
-    },
-    'enterPass': function(req, res) {
-        res.render('/partials/enterPass');
-    },
-    'social': function(req, res) {
-        res.render('partials/social');
+const path = require('path');
+
+module.exports ={ 
+    index: function(req, res) {
+        res.render('login', { 
+            title: 'Ingreso',
+            css: 'login.css',
+        });
     }
-};
-module.exports=loginController;
+}

@@ -1,11 +1,4 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-}
-/*ejemplo de header*/
-header{
-    background-color: midnightblue;
-}
+@import "style.css";
 /*carrito*/
 
 /*Texto superior izquierdo carrito*/
@@ -19,7 +12,6 @@ header{
     text-align:center;
     position: relative;
     color: rgb(81, 80, 90);
-    width: 100%;
     margin: 4%;
     padding: 7%;
     font-size: medium;
@@ -43,7 +35,6 @@ img{
     margin-left: 0.3%;
     display:inline;
     font-size: 15px;
-    height: 100%;
     padding-bottom: 10px;
 }
 .pr{
@@ -51,7 +42,6 @@ img{
     margin-left: 6%;
     display:inline;
     font-size: 15px;
-    height: 100%;
     padding-bottom: 10px;
     font-weight: 500%;
 }
@@ -62,7 +52,6 @@ p{
     margin-left: 0.3%;
     display:inline;
     font-size: 15px;
-    height: 100%;
     padding-bottom: 10px;
 }
 .precio{

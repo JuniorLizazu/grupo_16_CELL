@@ -1,6 +1,10 @@
-let cartController ={ 
-    'cart': function(req, res) {
-        res.render('/partials/cart');
+const path = require('path');
+
+module.exports ={ 
+    index: function(req, res) {
+        res.render('cart', { 
+            title: 'Carrito',
+            css: 'cart.css',
+        });
     }
-};
-module.exports=cartController;
+}
