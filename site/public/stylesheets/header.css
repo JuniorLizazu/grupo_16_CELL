@@ -1,0 +1,104 @@
+/*HEADER*/
+
+header{
+    background-color: #222831;
+    padding: 10px 5px 0px 5px;
+  }
+  
+  header .logo{
+    padding: 0;
+  }
+  header .logo img{
+    position: relative;
+    left: 50px;
+    padding-top: 5px;
+  }
+  header form{
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+  
+  }
+  header form input{
+  display: block;
+  width: 100%;
+  padding: 7px 35px 7px 7px;
+  border-radius: 8px;
+  height: 40px;
+  }
+  
+  header form button{
+    position: absolute;
+    right: 2px;
+    height: 60%;
+    background-color: white;
+    border: none;
+    color: #393e46;
+    cursor: pointer;
+  }
+  header nav{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  header nav button.desplegable{
+    color: #00adb5;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 1px 4px 1px;
+  }
+  header nav .menu{
+    color: white;
+  }
+
+  @media(min-width: 768px){
+    /*HEADER TABLET*/
+    header .logo img{
+        left: auto;
+    }
+    
+    header form input{
+      position: absolute;
+      top: 10px;
+      left: 235px;
+      height: 30px;
+    }
+    header form button{
+      left: 520px;
+      top: 12px;
+    }
+    .menu li{
+      margin-right: 15px;
+      position: relative;
+      bottom: 25px;
+      left: 40px;
+    }
+    .menu li:last-child{
+      margin-right: 0px;
+    }
+}
+@media(min-width: 1024px){
+    /*HEADER ESCRITORIO*/
+    header .logo img{
+      left: 60px;
+      width: 50px;
+  
+  }
+    header form input{
+      position: absolute;
+      bottom: 3px;
+      left: 318px;
+    }
+    header form button{
+      display: none;
+    }
+    .menu li{
+      margin-right: 23px;
+      left: 150px;
+      bottom: 35px;
+      position: relative;
+    }
+}
