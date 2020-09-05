@@ -4,12 +4,12 @@ const path = require('path');
 module.exports ={ 
     register: function(req, res) {
         res.render('register', {
-            title: 'Completá tus datos',
+            title: 'Registrate en Cell',
             css: 'register.css',
         });
     },
     registerCart: function(req, res) {
-        res.render('registerCart', {
+        res.render('Registrate en Cell', {
             title: 'Completá tus datos',
             css: 'registerCart.css',
         });
