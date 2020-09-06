@@ -1,25 +1,74 @@
 # Sprint Nº1
-
+  
 ## :phone: CELL
 
 ![logotipo](/diseño/logo.png)
 
-*¡Hola! , Nosotros somos Cell y nos dedicamos a la venta de aparatos celulares. Nuestro objetivo es brindar a nuestro público un lugar donde pueda encontrar cualquier tipo de celular, sin importar marca ni precio. Además, combinamos el espíritu innovador con un renovado sentido de compromiso hacia los consumidores. Es por ello que contamos con el mayor catalogo del mercado, como así también logramos que la población pueda optar por marcas exclusivas que solamente podrán encontrar en nuestra tienda. Todo esto sin comprometer la calidad, la experiencia ni el estilo de los diseños móviles. Nuestros integrantes son: Nelson Natanael Barrios una persona con capacidad de adaptarse a los diferentes planes informáticos y de análisis de la información, estudiante de Programación. Junior Lizazu,  26 años, nacido en Asunción Paraguay pero viviendo en Buenos Aires desde los 4 años. Experiencia laboral más enfocada en la administración de personas, estudio hasta tercer año la Licenciatura en RR.HH, pero quiso dar un giro y enfocarse en el sector IT, más exactamente en el desarrollo web. Su objetivo es desarrollarse en el sector y seguir adquiriendo nuevos conocimientos para poder trabajar en el sector. Y Santiago Ojeda un joven humilde de 18 años, que está dando sus primeros pasos en el mundo laboral y aporta aires frescos al grupo.*
 
-## :book: Paginas de referencia
+¡Hola! 🖐️,  
 
-- [Mercado Libre](https://www.mercadolibre.com.ar/)
-- [McDonalds'](https://www.mcdonalds.com.ar/)
-- [Apple](https://www.apple.com/la/)
-- [Fravega](https://www.fravega.com/)
-- [Incipio](https://incipio.com/)
+'' _Cell se dedica a la venta de Smartphone's_"  
 
-*Hemos elegido estas página, ya que consideramos que apuntan el producto al que apuntamos, como Incipio. Además de tomar como referencia de diseño a algunas de ellas como Apple o Mercado Libre, y su fuerte llegada al publico como es el caso de McDonalds' o Frávega.*
+Nuestro objetivo 🎯,
+
+'' _Combinamos el espíritu innovador con un renovado sentido de compromiso hacia los consumidores_"
+
+Además 📱,  
+
+'' _Brindar un lugar donde puedan encontrar su mejor smartphone_  "
+
+Para vos 🖤,
+
+'' _Contamos con el mayor catalogo del mercado, como así también logramos que la población pueda optar por marcas exclusivas que solamente podrán encontrar en nuestra tienda.
+Todo esto sin comprometer la calidad, la experiencia ni el estilo de los diseños móviles_  ".
+
+———————————————————
+
+**Examinado, navegado y explorado por diversos sitios Webs resultamos en unanimidad en las siguientes Páginas Digitales**  
+
+_Como referencia apartamos éstos por su elegancia y simpleza en sus diseños característicos.
+Agregamos fuerza en el compromiso con los clientes...  
+Es por ellos que hemos apartado estás página para su investigación y emprendimiento en este nuevo trabajo._
+
+-   [Mercado Libre](https://www.mercadolibre.com.ar/)  
+-   [McDonalds'](https://www.mcdonalds.com.ar/)
+-   [Apple](https://www.apple.com/la/)  
+-   [Fravega](https://www.fravega.com/)  
+-   [Incipio](https://incipio.com/)  
+
+_¡Considerar el producto es nuestra primacía!_
+
+🤫¿Sabías?
+
+## Nuestro Equipo:
+
+-  **_🧑[Nelson Barrios](https://www.GitHub.com/nelsonbarrios)_**  
+  
+   **Estudiante, 23 años.**  
+   **Especialidad:** *Programación.*  
+   **Habilidad:** *Capacidad de adaptación a diferentes planes informáticos y de análisis de la información.*  
+-  **_👦[Santiago Ojeda](https://www.GitHub.com/ssanti09)_**  
+  
+   **Estudiante, 18 años.**  
+   **Especialidad:** _Programación._  
+   **Habilidad:** _Aportación en aires frescos a ámbitos grupales._  
+  
+-  **_👨[Junior Lizazu](https://www.GitHub.com/juniorlizazu)_**  
+
+   **Estudiante, 26 años.**  
+   **Especialidad:** _Programación._  
+   **Habilidad:** _RR.HH basado en IT._  
 
 ## Colores
 
 ![logotipo](/diseño/color.png)
 
-# :pencil: Tipografia
+## :pencil: Tipografia
 
 **san -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;**
+
+———————————————————
+
+ 
+Deseamos utilidad y beneficio a nuestros semejantes, así como lo fué útil para nosotros.  
+_Att-_  **_Nelson, Santiago, Junior._**
