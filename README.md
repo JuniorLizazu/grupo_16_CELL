@@ -39,19 +39,20 @@ _¡Considerar el producto es nuestra primacía!_
 
 ## Nuestro Equipo:
 
--  **_🧑[Nelson Barrios](https://www.GitHub.com/nelsonbarrios)_**  
+-  **_![Nelson Barrios](https://avatars1.githubusercontent.com/u/63270399?s=20&u=4b0074adb449a50eed5387c47a003e8e7ea08328&v=4)[ Nelson Barrios](https://www.GitHub.com/nelsonbarrios)_** 
   
    **Estudiante, 23 años.**  
    **Especialidad:** *Programación.*  
-   **Habilidad:** *Capacidad de adaptación a diferentes planes informáticos y de análisis de la información.*  
--  **_👦[Santiago Ojeda](https://www.GitHub.com/ssanti09)_**  
+   **Habilidad:** *Capacidad de adaptación a diferentes planes informáticos y de análisis de la información.*
+  
+-  **_![](https://avatars2.githubusercontent.com/u/67490231?s=20&u=ce97dd97766cea0165c2ecca474342a6fc844b07&v=4)[ Santiago Ojeda](https://www.GitHub.com/ssanti09)_**
   
    **Estudiante, 18 años.**  
    **Especialidad:** _Programación._  
    **Habilidad:** _Aportación en aires frescos a ámbitos grupales._  
   
--  **_👨[Junior Lizazu](https://www.GitHub.com/juniorlizazu)_**  
-
+-  **_![](https://avatars1.githubusercontent.com/u/67671912?s=20&u=3747f8742ccf2dc8dd169e6eac13a1ea5cd38877&v=4)[ Junior Lizazu](https://www.GitHub.com/juniorlizazu)_**
+  
    **Estudiante, 26 años.**  
    **Especialidad:** _Programación._  
    **Habilidad:** _RR.HH basado en IT._  
