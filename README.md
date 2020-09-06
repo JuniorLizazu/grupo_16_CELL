@@ -11,7 +11,7 @@
 
 Nuestro objetivo 🎯,
 
-'' _Combinamos el espíritu innovador con un renovado sentido de compromiso hacia los consumidores_"
+'' _Combinamos el espíritu innovador con un renovado sentido de compromiso hacia los consumidores_ "
 
 Además 📱,  
 
@@ -24,17 +24,14 @@ Todo esto sin comprometer la calidad, la experiencia ni el estilo de los diseño
 
 ———————————————————
 
-**Examinado, navegado y explorado por diversos sitios Webs resultamos en unanimidad en las siguientes Páginas Digitales**  
+- *Examinado, navegado y explorado por diversos sitios Webs resultamos en unanimidad en las siguientes Páginas Digitales*  
 
 _Como referencia apartamos éstos por su elegancia y simpleza en sus diseños característicos.
 Agregamos fuerza en el compromiso con los clientes...  
 Es por ellos que hemos apartado estás página para su investigación y emprendimiento en este nuevo trabajo._
 
--   [Mercado Libre](https://www.mercadolibre.com.ar/)  
--   [McDonalds'](https://www.mcdonalds.com.ar/)
--   [Apple](https://www.apple.com/la/)  
--   [Fravega](https://www.fravega.com/)  
--   [Incipio](https://incipio.com/)  
+-   [Mercado Libre](https://www.mercadolibre.com.ar/)   [McDonalds'](https://www.mcdonalds.com.ar/)
+-   [Apple](https://www.apple.com/la/)   [Fravega](https://www.fravega.com/)   [Incipio](https://incipio.com/)  
 
 _¡Considerar el producto es nuestra primacía!_
 
