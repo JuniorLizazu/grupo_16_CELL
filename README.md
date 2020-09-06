@@ -15,7 +15,7 @@ Nuestro objetivo 🎯,
 
 Además 📱,  
 
-'' _Brindar un lugar donde puedan encontrar su mejor smartphone_  "
+'' _Brindamos un lugar donde puedan encontrar su mejor smartphone_  "
 
 Para vos 🖤,
 
