@@ -12,6 +12,7 @@ _Nuestro objetivo, combinamos el espíritu innovador con un renovado sentido de 
 _Además, brindamos un lugar donde puedan encontrar su mejor smartphone 💙📱_
 
 ## 📖 Índice
+
 [Equipo 16 - Cell 📱]: https://github.com/JuniorLizazu/grupo_16_CELL#equipo-16---cell-
 [📖 Índice]: https://github.com/JuniorLizazu/grupo_16_CELL#-%C3%ADndice
 [Acerca del proyecto]: https://github.com/JuniorLizazu/grupo_16_CELL#acerca-del-proyecto
