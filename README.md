@@ -12,16 +12,16 @@ _Nuestro objetivo, combinamos el espíritu innovador con un renovado sentido de 
 _Además, brindamos un lugar donde puedan encontrar su mejor smartphone 💙📱_
 
 ## 📖 Índice
-[Equipo 16 - Cell 📱]: https://github.com/NelsonBarrios/grupo_16_CELL/blob/master/README.md#equipo-16---cell-
-[📖 Índice]: https://github.com/NelsonBarrios/grupo_16_CELL#-%C3%ADndice
-[Acerca del proyecto]: https://github.com/NelsonBarrios/grupo_16_CELL/blob/master/README.md#acerca-del-proyecto
-[Diseños]: https://github.com/NelsonBarrios/grupo_16_CELL/blob/master/README.md#dise%C3%B1os
-[Stack]: https://github.com/NelsonBarrios/grupo_16_CELL/blob/master/README.md#stack
-[Créditos]: https://github.com/NelsonBarrios/grupo_16_CELL#cr%C3%A9ditos
-[Equipo Cell team]: https://github.com/NelsonBarrios/grupo_16_CELL#equipo-cell-team
-[Otros contribuidores]: https://github.com/NelsonBarrios/grupo_16_CELL#otros-contribuidores
-[Herramienta de gestión de proyecto]: https://github.com/NelsonBarrios/grupo_16_CELL/blob/master/README.md#herramienta-de-gesti%C3%B3n-de-proyecto
-[Agradecimientos]: https://github.com/NelsonBarrios/grupo_16_CELL#agradecimientos
+[Equipo 16 - Cell 📱]: https://github.com/JuniorLizazu/grupo_16_CELL#equipo-16---cell-
+[📖 Índice]: https://github.com/JuniorLizazu/grupo_16_CELL#-%C3%ADndice
+[Acerca del proyecto]: https://github.com/JuniorLizazu/grupo_16_CELL#acerca-del-proyecto
+[Diseños]: https://github.com/JuniorLizazu/grupo_16_CELL#dise%C3%B1os
+[Stack]: https://github.com/JuniorLizazu/grupo_16_CELL#stack
+[Créditos]: https://github.com/JuniorLizazu/grupo_16_CELL#cr%C3%A9ditos
+[Equipo Cell team]: https://github.com/JuniorLizazu/grupo_16_CELL#equipo-cell-team
+[Otros contribuidores]: https://github.com/JuniorLizazu/grupo_16_CELL#otros-contribuidores
+[Herramienta de gestión de proyecto]: https://github.com/JuniorLizazu/grupo_16_CELL#herramienta-de-gesti%C3%B3n-de-proyecto
+[Agradecimientos]: https://github.com/JuniorLizazu/grupo_16_CELL#agradecimientos
 
 - [Equipo 16 - Cell 📱]
   - [📖 Índice]
