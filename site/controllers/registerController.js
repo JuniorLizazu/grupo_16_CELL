@@ -9,8 +9,8 @@ module.exports ={
         });
     },
     registerCart: function(req, res) {
-        res.render('Registrate en Cell', {
-            title: 'Completá tus datos',
+        res.render('registerCart', {
+            title: 'Registrate en Cell',
             css: 'registerCart.css',
         });
     },

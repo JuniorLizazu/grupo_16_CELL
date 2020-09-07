@@ -7,11 +7,11 @@ body {
 }
 .form-control {
 	height: 40px;
-	box-shadow: none;
-	color: #969fa4;
+    color: #656768;
+	box-shadow: 0px 0px 0.5px 1px #656768 !important;
 }
 .form-control:focus {
-	border-color: #5cb85c;
+    border-color: #636464;
 }
 .form-control, .btn {        
 	border-radius: 3px;
@@ -28,15 +28,6 @@ body {
 	position: relative;
 	text-align: center;
 }
-.signup-form h2:before, .signup-form h2:after {
-	content: "";
-	height: 2px;
-	width: 30%;
-	background: #d4d4d4;
-	position: absolute;
-	top: 50%;
-	z-index: 2;
-}	
 .signup-form h2:before {
 	left: 0;
 }
@@ -52,7 +43,7 @@ body {
 	color: #999;
 	border-radius: 3px;
     background: #f2f3f7;
-    box-shadow: 0px 0px 5.5px 0.09px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 5.5px 1.5px rgba(0, 0, 0, 0.1);
     padding: 28px;
 }
 .signup-form .form-group {
@@ -81,9 +72,20 @@ body {
 	text-decoration: none;
 }
 .signup-form form a {
-	color: #5cb85c;
+	color: #444950;
 	text-decoration: none;
 }	
 .signup-form form a:hover {
 	text-decoration: underline;
 }  
+.btn-success {
+    color: #fff;
+    background-color: #5e5c68 !important;
+    border-color: #5e5c68 !important ;
+}
+.hj{
+    color:white !important;
+    text-decoration: none !important;
+	display: block;
+	font-display: block;
+}

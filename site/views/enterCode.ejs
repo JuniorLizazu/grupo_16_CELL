@@ -5,19 +5,37 @@
 <body>
    <!--ACA HEADER-->
    <%- include('partials/header') %>
-    <section class="form">
-        <h1>Ingresá el codigo que te enviamos por e-mail</h1>
-        <form action="" method="post">
-            <div class="grupo-form">
-                <p id="a">Te enviamos un codigo a tu e-amil para que puedas ingresar a tu cuenta.</p>
-                <p id="b">tu-email@gmail.com</p>
-                <input type="text" name="" id="">
+   <section class="login-block">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <form class="md-float-material form-material" action="#" method="POST">
+                    <div class="auth-box card">
+                        <div class="card-block">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3 class="text-center heading">Ingresá a tu cuenta con Google</h3>
+                                </div>
+                            </div>
+                            <div class="or-container">
+                                <div class="line-separator"></div>
+                                <div class="or-label">Recuperá el acceso a tu cuenta a través de este medio.</div>
+                                <div class="line-separator"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12"> <a class="btn btn-lg btn-google btn-block text-uppercase btn-outline" href="http://www.gmail.com/"><img src="https://img.icons8.com/color/16/000000/google-logo.png"> Ingresar con Google</a> </div>
+                            </div><br>
+                            <div class="row">
+                                <div class="col-md-12"> <a class="btn btn-primary btn-md btn-block waves-effect text-center m-b-20 hj" href="/register/social">Ingresar con e-mail</a> <!-- <button type="button" class="btn btn-primary btn-md btn-block waves-effect text-center m-b-20"><i class="fa fa-lock"></i> Signup Now </button> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
-
-            <a class="a" href="/">Verificar el código</a>
-            <p class="b">Protegido por reCAPTCHA - <a class="c" href="">Privacidad</a> - <a class="c" href="">condiciones</a></p>
-        </form>
-    </section>
+        </div>
+    </div>
+</section>
     <!--FOOTER-->
     <%- include('partials/footer') %>
 </body>
