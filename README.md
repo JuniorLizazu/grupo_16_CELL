@@ -70,3 +70,8 @@ _¡Considerar el producto es nuestra primacía!_
  
 Deseamos utilidad y beneficio a nuestros semejantes, así como lo fué útil para nosotros.  
 _Att-_  **_Nelson, Santiago, Junior._**
+
+
+## :book: TRELLO 
+
+[Trello Invitación](https://trello.com/invite/b/JRpKlpfZ/ad28785ecb85e638752c6594cdb4021a/grupo16cell)
