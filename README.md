@@ -48,18 +48,11 @@ Esta es nuestra participación como el Equipo 16 en el programa Formar, de Digit
 
 Para el desarrollo de este proyecto hemos utilizado:
 
-![](https://miro.medium.com/max/200/1*Jr3NFSKTfQWRUyjblBSKeg.png)
-![](https://www.cursosgis.com/wp-content/uploads/2017/06/lenguajes_1.png)
-![](https://avanzaeninternet.com/wp-content/uploads/2018/05/bootstrap-4.png)
-![](https://azurecomcdn.azureedge.net/cvt-0b40b1bff318268e721d52838dc296062380fe208d10d95a79603c3d7b06e390/images/page/products/visual-studio-code/vscode-logo.png)
-
 - NodeJS
 - Express (framework web)
 - HTML5/CSS3
 - Bootstrap v4
 - VS Code para editor de códigos
-
-## Créditos
 
 ### Equipo Cell team:
 
@@ -98,7 +91,3 @@ Es por ellos que hemos apartado estás página para su investigación y emprendi
 
 Utilizamos la plataforma [Trello](https://trello.com/b/JRpKlpfZ/grupo16cell), cómo gestión online del equipo 
 
-## Agradecimientos
-
-Deseamos utilidad y beneficio a nuestros semejantes, así como lo fué útil para nosotros.  
-_Att-_  **_Nelson, Santiago, Junior._**
