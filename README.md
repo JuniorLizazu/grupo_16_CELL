@@ -22,7 +22,6 @@ _Además, brindamos un lugar donde puedan encontrar su mejor smartphone 💙📱
 [Equipo Cell team]: https://github.com/JuniorLizazu/grupo_16_CELL#equipo-cell-team
 [Otros contribuidores]: https://github.com/JuniorLizazu/grupo_16_CELL#otros-contribuidores
 [Herramienta de gestión de proyecto]: https://github.com/JuniorLizazu/grupo_16_CELL#herramienta-de-gesti%C3%B3n-de-proyecto
-[Agradecimientos]: https://github.com/JuniorLizazu/grupo_16_CELL#agradecimientos
 
 - [Equipo 16 - Cell 📱]
   - [📖 Índice]
@@ -32,8 +31,7 @@ _Además, brindamos un lugar donde puedan encontrar su mejor smartphone 💙📱
   -  [Créditos]
       -    [Equipo Cell team]
       -    [Otros contribuidores]
-  -  [Herramienta de gestión de proyecto]
-  -  [Agradecimientos]
+  -  [Herramienta de gestión de proyecto]  
 
 ## Acerca del proyecto
 
@@ -86,7 +84,8 @@ Es por ellos que hemos apartado estás página para su investigación y emprendi
 -   [Mercado Libre](https://www.mercadolibre.com.ar/)
 -   [McDonalds'](https://www.mcdonalds.com.ar/)
 -   [Apple](https://www.apple.com/la/)
--   [Fravega](https://www.fravega.com/)   [Incipio](https://incipio.com/)  
+-   [Fravega](https://www.fravega.com/)
+-   [Incipio](https://incipio.com/)  
 
 ## Herramienta de gestión de proyecto
 
