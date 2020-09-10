@@ -104,7 +104,6 @@
     border-radius: 5px;
     padding: 5px;
     text-align: center;
-    
   }
   
   .productos .contenido figure img{
@@ -157,13 +156,11 @@
     width: 68px;
   }
   
-  
-  
-  @media(min-width: 768px){
-    /*HEADER TABLET*/
+  /*HEADER TABLET*/
     
     /*PRINCIPALES*/
   
+  @media(min-width: 768px){
     .productos .seccion{
       height: 432px;
       position: relative;
@@ -181,8 +178,9 @@
   
   }
   
+/*PRINCIPALES*/
+
   @media(min-width: 1024px){
-    /*PRINCIPALES*/
     .productos .oculto{
       display: block;
     }
