@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
     //-- Click on detail
     $("ul.menu-items > li").on("click",function(){
         $("ul.menu-items > li").removeClass("active");
