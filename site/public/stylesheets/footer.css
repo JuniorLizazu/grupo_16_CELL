@@ -38,8 +38,9 @@ footer {
     top: 18px;
   }
 
+/*FOOTER TABLET*/
+
   @media(min-width: 768px){
-      /*FOOTER TABLET*/
   footer .info{
     flex-direction: row;
     position: absolute;
@@ -65,9 +66,10 @@ footer {
     margin-right: 0px;
   }
 }
-@media(min-width: 1024px){
-    /*FOOTER ESCRITORIO*/
 
+/*FOOTER ESCRITORIO*/
+
+@media(min-width: 1024px){
   footer .redes ul li{
     margin-right: 60px;
   }
