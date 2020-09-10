@@ -54,8 +54,9 @@ header{
     color: white;
   }
 
+/*HEADER TABLET*/
+
   @media(min-width: 768px){
-    /*HEADER TABLET*/
     header .logo img{
         left: auto;
     }
@@ -80,8 +81,10 @@ header{
       margin-right: 0px;
     }
 }
+
+/*HEADER ESCRITORIO*/
+
 @media(min-width: 1024px){
-    /*HEADER ESCRITORIO*/
     header .logo img{
       left: 60px;
       width: 50px;
