@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "first_name": "Juan",
+        "last_name": "Gonzales",
+        "email": "wemson0@flavors.me",
+        "password": "dh2CXTIHti"
+    },
+    {
+        "id": 2,
+        "first_name": "Pedro",
+        "last_name": "Perez",
+        "email": "gtomkins1@netvibes.com",
+        "password": "oCYZ6cmjQq1E"
+    },
+    {
+        "id": 3,
+        "first_name": "Marcelo",
+        "last_name": "Castro",
+        "email": "hmarwick2@trellian.com",
+        "password": "5AqNvzDtXUe"
+    },
+    {
+        "id": 4,
+        "first_name": "Mendez",
+        "last_name": "Libermore",
+        "email": "nlibermore3@ihg.com",
+        "password": "DztdOdHPZyRW"
+    },
+    {
+        "id": 5,
+        "first_name": "Nestor",
+        "last_name": "Gomez",
+        "email": "bhenzley4@purevolume.com",
+        "password": "YkQ1nw"
+    },
+    {
+        "id": 6,
+        "first_name": "Marcela",
+        "last_name": "Boulet",
+        "email": "rbenes5@berkeley.edu",
+        "password": "hBY12fzYM0zH"
+    },
+    {
+        "id": 7,
+        "first_name": "Marta",
+        "last_name": "Zapatero",
+        "email": "azapatero6@creativecommons.org",
+        "password": "eY8aroQEWe36"
+    },
+    {
+        "id": 8,
+        "first_name": "Eliana",
+        "last_name": "Delgado",
+        "email": "dkeneford7@reference.com",
+        "password": "bGFBBfeNl"
+    },
+    {
+        "id": 9,
+        "first_name": "Liliana",
+        "last_name": "Lizazu",
+        "email": "ibeckworth8@devhub.com",
+        "password": "0rHhZjr"
+    },
+    {
+        "id": 10,
+        "first_name": "Nunila",
+        "last_name": "Perez",
+        "email": "gbezley9@senate.gov",
+        "password": "4AkDwAtSoyAT"
+    }
+]
