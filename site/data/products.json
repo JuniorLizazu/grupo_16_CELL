@@ -1,0 +1,65 @@
+[
+    {
+        "id": 1,
+        "trademark": "Apple",
+        "name": "iPhone 11 Pro",
+        "price":  1000,
+        "image": "iphone-11-pro.jpg",
+        "colors": "Gris y Blanco",
+        "company": "Libre"
+    },
+    {
+        "id": 2,
+        "trademark": "Xiomi",
+        "name": "Mi 9",
+        "price": 1000,
+        "image": "Xiomi Mi 9.png",
+        "colors": "Negro",
+        "company": "Libre"
+    },
+    {
+        "id": 3,
+        "trademark": "Samsung",
+        "name": "S8",
+        "price": 1000,
+        "image": "Samsung S8.png",
+        "colors": "Negro",
+        "company": "Libre"
+    },
+    {
+        "id": 4,
+        "trademark": "LG",
+        "name": "K40S",
+        "price": 1000,
+        "image": "LG K40S.jpg",
+        "colors": "Negro",
+        "company": "Libre"
+    },
+    {
+        "id": 5,
+        "trademark": "Samsung",
+        "name": "J2",
+        "price": 1000,
+        "image": "Samsung J2.png",
+        "colors": "Negro",
+        "company": "Libre"
+    },
+    {
+        "id": 6,
+        "trademark": "Motorola",
+        "name": "Moto 8",
+        "price": 1000,
+        "image": "Motorola Moto 8.png",
+        "colors": "Negro",
+        "company": "Libre"
+    },
+    {
+        "id": 7,
+        "trademark": "Apple",
+        "name": "iPhone 11",
+        "price": 1000,
+        "image": "Apple iPhone 11.png",
+        "colors": "Blanco",
+        "company": "Libre"
+    }
+]
