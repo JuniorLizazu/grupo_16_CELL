@@ -10,5 +10,17 @@ module.exports = {
             css:"home.css",
             productos: dbProducts
         })
-    }
+    },
+    detalle: function(req, res){
+        idProducto = req.params.id;
+        let producto = dbProducts.filter(producto=>{
+            return producto.id == idProducto
+        })
+        res.render('detailProducts',{
+            title:"Detalle del Producto",
+            css:"detalle.css",
+            producto:producto[0]
+        })
+    },
+
 }

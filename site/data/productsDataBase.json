@@ -7,7 +7,8 @@
         "image": "iphone-11-pro.jpg",
         "colors": "Gris y Blanco",
         "company": "Libre",
-        "discount": "10"
+        "discount": "10",
+        "capacidad": 64
     },
     {
         "id": 2,
@@ -17,7 +18,8 @@
         "image": "mi-9.png",
         "colors": "Negro",
         "company": "Libre",
-        "discount": "5"
+        "discount": "5",
+        "capacidad": 124
     },
     {
         "id": 3,
@@ -27,7 +29,8 @@
         "image": "samsung-s8.png",
         "colors": "Negro",
         "company": "Libre",
-        "discount": "12"
+        "discount": "12",
+        "capacidad": 64
     },
     {
         "id": 4,
@@ -37,7 +40,8 @@
         "image": "lg-k4os.jpg",
         "colors": "Negro",
         "company": "Libre",
-        "discount": "5"
+        "discount": "5",
+        "capacidad": 32
     },
     {
         "id": 5,
@@ -47,17 +51,19 @@
         "image": "samsung-j2.png",
         "colors": "Negro",
         "company": "Libre",
-        "discount": "1"
+        "discount": "1",
+        "capacidad": 64
     },
     {
         "id": 6,
         "trademark": "Motorola",
         "name": "Moto 8",
         "price": 9990,
-        "image": "moto-8.png",
+        "image": "moto8.png",
         "colors": "Negro",
         "company": "Libre",
-        "discount": "10"
+        "discount": "10",
+        "capacidad": 64
     },
     {
         "id": 7,
@@ -67,6 +73,7 @@
         "image": "iphone-11.png",
         "colors": "Blanco",
         "company": "Libre",
-        "discount": "20"
+        "discount": "20",
+        "capacidad": 124
     }
 ]
