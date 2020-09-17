@@ -38,4 +38,4 @@ Y finalizamos concluyendo cada tarea a cumplir con el rol de cada uno de los int
 
 *• El jueves en la clase de habilidades blandas hicimos nuestra retrospectica grupal de estrella de mar a la que la alojamos en un archivo retro2.md.*
 
-• *Fijamos metas y nos dividímos tareas de las rutas y vistas .*
+• *Por último fijamos metas y nos dividímos tareas de las rutas y vistas .*
