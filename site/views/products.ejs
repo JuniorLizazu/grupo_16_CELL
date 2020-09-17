@@ -21,11 +21,11 @@
                     <div class="contenido">
                       <p><%= producto.name %></p>
                       <figure>
-                        <a href="/detail"><img src="/images/logos/<%= producto.image %>" alt=""/></a>
+                        <a href="/products/detail/<%= producto.id %>"><img src="/images/logos/<%= producto.image %>" alt=""/></a>
                       </figure>
                       <article>
                         <h2>
-                            $<%- (producto.price - producto.price * producto.discount / 100).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") %>
+                          $<%- (producto.price - producto.price * producto.discount / 100).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") %>
                         </h2>
                         <% if (producto.discount !=0) { %>
                             <span><%= producto.discount %>% OFF</span>

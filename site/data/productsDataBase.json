@@ -1,79 +1,97 @@
 [
     {
         "id": 1,
-        "trademark": "Apple",
         "name": "iPhone 11 Pro",
+        "category": "menu",
+        "trademark": "Apple",
+        "model": "iPhone 11 Pro",
         "price":  50000,
         "image": "iphone-11-pro.jpg",
         "colors": "Gris y Blanco",
         "company": "Libre",
         "discount": "10",
-        "capacidad": 64
+        "capacidad": 64,
+        "dualsim": "Si"
     },
-    {
+    { 
         "id": 2,
+        "name": "Xiaomi Mi 9",
+        "category": "menu",
         "trademark": "Xiomi",
-        "name": "Mi 9",
+        "model": "Mi 9",
         "price": 25000,
         "image": "mi-9.png",
         "colors": "Negro",
         "company": "Libre",
         "discount": "5",
-        "capacidad": 124
+        "capacidad": 124,
+        "dualsim": "Si"
     },
     {
         "id": 3,
+        "name": "Samsung S8",
+        "category": "menu",
         "trademark": "Samsung",
-        "name": "S8",
+        "model": "S8",
         "price": 18000,
         "image": "samsung-s8.png",
         "colors": "Negro",
         "company": "Libre",
         "discount": "12",
-        "capacidad": 64
+        "capacidad": 64,
+        "dualsim": "Si"
     },
     {
         "id": 4,
+        "name": "LG K4OS",
+        "category": "menu",
         "trademark": "LG",
-        "name": "K40S",
+        "model": "K40S",
         "price": 8000,
         "image": "lg-k4os.jpg",
         "colors": "Negro",
         "company": "Libre",
         "discount": "5",
-        "capacidad": 32
+        "capacidad": 32,
+        "dualsim": "Si"
     },
     {
         "id": 5,
+        "name": "Samsung J2",
         "trademark": "Samsung",
-        "name": "J2",
+        "model": "J2",
         "price": 5000,
         "image": "samsung-j2.png",
         "colors": "Negro",
         "company": "Libre",
         "discount": "1",
-        "capacidad": 64
+        "capacidad": 64,
+        "dualsim": "Si"
     },
     {
         "id": 6,
-        "trademark": "Motorola",
         "name": "Moto 8",
+        "trademark": "Motorola",
+        "model": "Moto 8",
         "price": 9990,
         "image": "moto8.png",
         "colors": "Negro",
         "company": "Libre",
         "discount": "10",
-        "capacidad": 64
+        "capacidad": 64,
+        "dualsim": "Si"
     },
     {
         "id": 7,
-        "trademark": "Apple",
         "name": "iPhone 11",
+        "trademark": "Apple",
+        "model": "iPhone 11",
         "price": 40999,
         "image": "iphone-11.png",
         "colors": "Blanco",
         "company": "Libre",
         "discount": "20",
-        "capacidad": 124
+        "capacidad": 124,
+        "dualsim": "Si"
     }
 ]

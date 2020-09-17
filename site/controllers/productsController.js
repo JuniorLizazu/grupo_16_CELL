@@ -16,11 +16,17 @@ module.exports = {
         let producto = dbProducts.filter(producto=>{
             return producto.id == idProducto
         })
-        res.render('detailProducts',{
+        res.render('detailProductos',{
             title:"Detalle del Producto",
             css:"detalle.css",
             producto:producto[0]
         })
     },
+    crear: function(req, res){
+        res.render('cargaproducts',{
+            title:"Carga de Productos",
+            css:"cargaproducto.css",
+        })
+    }
 
 }

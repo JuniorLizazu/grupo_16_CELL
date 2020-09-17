@@ -13,16 +13,19 @@
         <div class="container">
         	<div class="row">
                <div class="col-xs-4 item-photo">
-                    <img style="max-width:80%;" src="images/logos/iphone-11-pro2.png" />
+                    <img style="max-width:80%;" src="/images/logos/<%= producto.image %>" />
                 </div>
                 <div class="col-xs-5" style="border:0px solid gray">
                     <!-- Datos del vendedor y titulo del producto -->
-                    <h3>iPhone 11 Pro - Apple</h3>    
+                    <h3><%= producto.name %></h3>    
                     
         
                     <!-- Precios -->
                     <h6 class="title-price"><small>PRECIO FINAL</small></h6>
-                    <h3 style="margin-top:0px;">$ 1000</h3>
+                    <h3 style="margin-top:0px;">
+                        <span>$<%= producto.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") %> <strong>
+                            <%= producto.discount %> % OFF</strong></span>
+                    </h3>
         
                     <!-- Detalles especificos del producto -->
                     <div class="section">
@@ -60,21 +63,18 @@
                 <div class="col-xs-9">
                     <ul class="menu-items">
                         <li class="active">Detalle del producto</li>
-                        <li>Garantía</li>
-                        <li>Vendedor</li>
-                        <li>Envío</li>
                     </ul>
-                    <div style="width:100%;border-top:1px solid silver">
+                    <div >
                         
                         <small>
                             <ul>
-                                <li>Marca: Apple</li>
-                                <li>¿Es Dual Sim?: No</li>
-                                <li>Modelo: 11 pro</li>
+                                <li>Marca: <%= producto.trademark %></li>
+                                <li>¿Es Dual Sim?: <%= producto.dualsim %></li>
+                                <li>Modelo: <%= producto.model %></li>
                                 <li>Memoria interna:64GB, 256GB y 512GB</li>
-                                <li>Memoria Ram: 4GB</li>
-                                <li>Colores:Gris y Blanco</li>
-                                <li>Compaia telefonica: Libre</li>
+                                <li>Memoria Ram: <%= producto.capacidad %></li>
+                                <li>Colores:<%= producto.colors %></li>
+                                <li>Compaia telefonica: <%= producto.company %></li>
                                 
                             </ul>  
                         </small>
