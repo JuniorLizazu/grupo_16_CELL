@@ -26,15 +26,13 @@ Y finalizamos concluyendo cada tarea a cumplir con el rol de cada uno de los int
 -Junior creo el login del administrador, y la carga de producto.
 -Nelson diseñó el registro del usuario , el ingreso a su cuenta con página de confirmación de email en el caso de no estar recordar sus datos y el carrito de compras de la e-commerce.*
 
-**El 21/08**  
+**Del 21/08 al 15/10**  
 
 *• Creamos el tablero y un repositorio remoto en Github.com donde pudimos alojar todo nuestro proyecto web.*
 
 *• El mismo sábado de esa semana, Santiago Ojeda creo nuestro trabajo con express generator.*
 
 **Finalizando**  
-  
-**15/10**
 
 *• El jueves en la clase de habilidades blandas hicimos nuestra retrospectica grupal de estrella de mar a la que la alojamos en un archivo retro2.md.*
 
