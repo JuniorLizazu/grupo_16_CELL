@@ -1,48 +1,6 @@
 @import "style.css";
 
-/*Banner y principales*/
-
-.banner img{
-    width: 100%;
-  }
-  .banner ol li{
-    width: 10px;
-    height: 10px;
-    border-radius: 100%;
-  }
-  
-  .ultimo{
-    display: flex;
-    flex-wrap: wrap;
-    background-color: #393e46;
-  }
-  .datos{
-    justify-content: flex-end;
-  }
-  
-  
-  .MultiCarousel { float: left; overflow: hidden; padding: 15px; width: 100%; position:relative; }
-    .MultiCarousel .MultiCarousel-inner { transition: 1s ease all; float: left; }
-        .MultiCarousel .MultiCarousel-inner .item { float: left;}
-        .MultiCarousel .MultiCarousel-inner .item > div { text-align: center; padding:10px; margin:10px; background:#f1f1f1; color:#666;border: 1px solid #e0ece4;;}
-    .MultiCarousel .leftLst, .MultiCarousel .rightLst { position:absolute; border-radius:50%;top:calc(50% - 20px); }
-    .MultiCarousel .leftLst { left:0; }
-    .MultiCarousel .rightLst { right:0; }
-    
-        .MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over { pointer-events: none; background:#ccc; }
-
-  .MultiCarousel img{
-    width: 70px;
-    height: 70px;
-  }
-  .btn-primary {
-    color: #fff;
-    background-color: #00adb5;
-    border-color: #00adb5;
-}
-
-
-  .row{
+.row{
     margin: 0;
   }
   .productos{
@@ -106,8 +64,8 @@
     text-align: center;
   }
   
-  .productos .contenido figure img{
-    height: 153px;
+  .productos img{
+    height: 170px;
     position: relative;
     top: 50px;
     border-bottom: 1px solid #f6f5f5;
@@ -165,16 +123,7 @@
       height: 432px;
       position: relative;
     }
-    .productos .seccion figure img{
-      height: 308px;
-      position: relative;
-      left: 32px;
-    }
-    .productos .seccion .eco img {
-      height: 312px;
-      width: 203px;
-      left: 26px;
-  }
+   
   
   }
   
@@ -184,33 +133,14 @@
     .productos .oculto{
       display: block;
     }
-    .productos .seccion figure img{
-      width: 198px;
-      position: absolute;
-      top: 27px;
-      left: 62px;
-    }
     .productos .seccion span a{
       position: relative;
       top: 243px;
     }
-    .productos .seccion .eco img{
-      width: 163px;
-      height: 306px;
-      position: absolute;
-      left: 54px;
-      top: 27px;
-    }
+    
     .productos .seccion .eco span a{
       position: relative;
       top: 243px;
-    }
-    .productos .seccion .buscado img{
-      height: 314px;
-      width: 90%;
-      position: absolute;
-      top: 24px;
-      left: 15px;
     }
     .productos .seccion .buscado span a{
       position: relative;

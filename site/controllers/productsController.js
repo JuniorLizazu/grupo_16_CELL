@@ -7,7 +7,7 @@ module.exports = {
     listar: function(req, res){
         res.render('products',{
             title: "Productos",
-            css:"home.css",
+            css:"products.css",
             productos: dbProducts
         })
     },
