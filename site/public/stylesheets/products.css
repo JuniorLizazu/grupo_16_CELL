@@ -1,5 +1,19 @@
 @import "style.css";
 
+.barra{
+  padding: 25px;
+  padding-left: 20%;
+  background-color: #222831;
+  margin-top: 20px;
+}
+.barra .opciones{
+  font-size: 20px;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+}
+.barra .opciones:last-child{
+  padding-bottom: 0px;
+}
 .row{
     margin: 0;
   }
@@ -123,13 +137,28 @@
       height: 432px;
       position: relative;
     }
-   
+    .barra{
+      padding: 15px;
+  }
+  .barra .opciones{
+      display: inline-block;
+      padding-left: 15%;
+      padding-bottom: 0px;
+      padding-right: 20px;
+  }
+  .barra .opciones:last-child{
+      border-right: none;
+      padding-right: none;
+  }
   
   }
   
 /*PRINCIPALES*/
 
   @media(min-width: 1024px){
+  .barra .opciones{
+      padding-right: 30px;
+  }
     .productos .oculto{
       display: block;
     }

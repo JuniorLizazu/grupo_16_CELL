@@ -2,7 +2,6 @@ const path = require('path');
 const dbProducts = require(path.join(__dirname,'..','data','dbProducts'))
 const fs = require('fs');
 
-
 module.exports = {
     listar: function(req, res){
         res.render('products',{
@@ -22,11 +21,16 @@ module.exports = {
             producto:producto[0]
         })
     },
-    crear: function(req, res){
-        res.render('cargaproducts',{
-            title:"Carga de Productos",
-            css:"cargaproducto.css",
-        })
+    carrito: function(req, res) {
+        res.render('cart', { 
+            title: 'Carrito de compras',
+            css: 'cart.css',
+        });
+    },
+    notregister: function(req, res) {
+        res.render('notRegister', { 
+            title: '¡Hola! Para agregar al carrito, Ingresá a tu cuenta',
+            css: 'notRegister.css',
+        });
     }
-
 }

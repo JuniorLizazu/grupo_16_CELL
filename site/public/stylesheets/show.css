@@ -1,0 +1,53 @@
+@import "style.css";
+
+.barra{
+    padding-left:0px;;
+}
+
+.barra{
+    background-color: #222831;
+    margin-top: 10px;
+}
+.barra li{
+    color: #222831;
+    display: inline-block;
+    padding: 20px;
+    padding-top: 10px;
+    margin-top: 10px;
+    height: 40px;
+    
+    padding-right: 70px;
+   
+    text-transform: uppercase;
+}
+ 
+.principal .contenido{
+    background-color:var(--color-grisClaro);
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    height: 97%;
+} 
+.contenido img{
+    width: 80%;
+}
+
+p{
+    color: black;
+    font-size: 20px;
+}
+h4, h3{
+    color: black;
+}
+
+@media(min-width:1024px){
+    .barra li{
+        margin-left:150px;
+        border-right: white 1px solid;
+    }
+    .barra li:last-child{
+        border-right: none;
+        margin-left: 20px;
+    }
+}

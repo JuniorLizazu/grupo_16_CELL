@@ -69,13 +69,13 @@ header{
     }
     header form button{
       left: 520px;
-      top: 12px;
+      top: 17px;
     }
     .menu li{
       margin-right: 15px;
       position: relative;
       bottom: 25px;
-      left: 73px;
+      left: 50px;
     }
     .menu li:last-child{
       margin-right: 0px;
@@ -100,7 +100,7 @@ header{
     }
     .menu li{
       margin-right: 23px;
-      left: 165px;
+      left: 130px;
       bottom: 35px;
       position: relative;
     }
