@@ -1,6 +1,8 @@
 @import "style.css";
 /* MINI BARRA */
-
+.barra{
+    padding-left:11%;;
+}
 
 .barra{
     background-color: #222831;
@@ -13,16 +15,10 @@
     padding-top: 10px;
     margin-top: 10px;
     height: 40px;
-    margin-left: 61px;
+    margin-left: 65px;
     padding-right: 70px;
-   
     text-transform: uppercase;
 }
-.barra li:last-child{
-    border-right: none;
-    margin-left: 75px;
-}
-/* PRODUCTOS */
 .principal .contenido{
     background-color: #eeeeee;
     border-radius: 5px;
@@ -37,11 +33,17 @@ p{
     color: black;
     font-size: 20px;
 }
-
-/* --- AJUSTES TIENDA - VERSION PARA TABLET (768px) --- */
+.btn:not(:disabled):not(.disabled){
+    border: none;
+    position: relative;
+    top: 9px;
+}
 
 @media(min-width:768px){
-    /* MINI BARRA */
+    .barra li{
+        margin-left:30px;
+        
+    }
     .main-nav .algo{
         background-color: black;
         height: 50%;
@@ -52,7 +54,6 @@ p{
         display: block;
         padding: 10px;
         border-right: none;
-        border-bottom: white 1px solid;
     }
     .main-nav li:last-child{
         border: none;
@@ -62,10 +63,10 @@ p{
 
 @media(min-width:1024px){
     .barra li{
-        margin-left:200px;
+        margin-left:150px;
     }
     .barra li:last-child{
         border-right: none;
-        margin-left: 50px;
+        margin-left: 20px;
     }
 }

@@ -84,6 +84,12 @@
                                         <%=producto.discount%>%
                                     </span>
                                     </div>
+                                    <form action="/admin/delete/<%= producto.id %>?_method=DELETE"
+                                        method="POST">
+                                        <button class="btn btn-outline-light" type="submit">
+                                            <h4 class="fas fa-trash-alt text-danger"></h4>
+                                        </button>
+                                    </form>
 
                                 </div>
                             </div>

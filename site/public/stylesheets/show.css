@@ -1,7 +1,7 @@
 @import "style.css";
 
 .barra{
-    padding-left:0px;;
+    padding-left:11%;;
 }
 
 .barra{
@@ -9,25 +9,22 @@
     margin-top: 10px;
 }
 .barra li{
-    color: #222831;
+    color: black;
     display: inline-block;
     padding: 20px;
     padding-top: 10px;
     margin-top: 10px;
     height: 40px;
-    
+    margin-left: 65px;
     padding-right: 70px;
-   
     text-transform: uppercase;
 }
- 
 .principal .contenido{
-    background-color:var(--color-grisClaro);
+    background-color: #eeeeee;
     border-radius: 5px;
+    padding: 5px;
     text-align: center;
-    margin-bottom: 10px;
-    padding: 10px;
-    height: 97%;
+    margin-bottom: 20px;
 } 
 .contenido img{
     width: 80%;
@@ -40,11 +37,15 @@ p{
 h4, h3{
     color: black;
 }
-
+@media(min-width:768px){
+    .barra li{
+        margin-left:30px;
+    }
+    
+}
 @media(min-width:1024px){
     .barra li{
         margin-left:150px;
-        border-right: white 1px solid;
     }
     .barra li:last-child{
         border-right: none;

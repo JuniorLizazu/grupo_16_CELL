@@ -89,5 +89,8 @@ module.exports = {
         })
         fs.writeFileSync(path.join(__dirname,'../data/productsDataBase.json'),JSON.stringify(dbProducts),'utf-8');
         res.redirect('/admin/show/'+ idProducto +'/show')
+    },
+    eliminar: function(req,res){
+        
     }
 }
