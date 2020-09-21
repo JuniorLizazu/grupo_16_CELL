@@ -11,7 +11,7 @@ router.post('/create', adminController.agregar);
 router.get('/show/:id/:flap?',adminController.showEdit);
 router.put('/edit/:id', adminController.editar)
 /* Eliminar producto */
-
+router.delete('/delete/:id', adminController.eliminar);
 
 
 module.exports = router; 

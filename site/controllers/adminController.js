@@ -90,7 +90,15 @@ module.exports = {
         fs.writeFileSync(path.join(__dirname,'../data/productsDataBase.json'),JSON.stringify(dbProducts),'utf-8');
         res.redirect('/admin/show/'+ idProducto +'/show')
     },
-    eliminar: function(req,res){
-        
+    eliminar:function(req,res){
+        let idProducto = req.params.id;
+        dbProducts.forEach(producto =>{
+            if(producto.id == idProducto){
+                var aEliminar = dbProducts.indexOf(producto)
+                dbProducts.splice(aEliminar,1)
+            }
+        })
+        fs.writeFileSync(path.join(__dirname,'../data/productsDataBase.json'),JSON.stringify(dbProducts))
+        res.redirect('/admin')
     }
 }
