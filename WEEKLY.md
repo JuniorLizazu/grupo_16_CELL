@@ -1,4 +1,4 @@
-<h1>ANOTACIÓN</h1>
+<h1>WEEKLY (SPRINT 3)</h1>
 
 <h2>Apuntes ✏️</h2>
 
