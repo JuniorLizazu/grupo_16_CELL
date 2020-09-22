@@ -1,4 +1,4 @@
-<h1 style="color:blue">WEEKLY(SPRINT 3)</h1>
+<h2 style="color:blue">WEEKLY (SPRINT 3)</h2>
 
 <h2>Apuntes ✏️</h2>
 
