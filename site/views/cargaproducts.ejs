@@ -1,82 +1,57 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<!--ACA HEAD-->
-<%- include('partials/head') %>
-
-<body> 
-    <!--ACA HEAD-->
+<%- include('partials/head') %> 
 <%- include('partials/header') %>
-<!--Comienzo del Formulario-->
-<div class="container">
-	<div class="row">
-    <div class="col-12">
-		<div class="form_main">
-                <h4 class="heading"><strong>Formulario </strong> Carga <span></span></h4>
-                <div class="form">
-                <form action="" method="POST" enctype="multipart/form-data">
-                  
-                     <label for="">Nombre</label>
-                    <input type="text" placeholder="Titulo = Modelo + Marca" name="name" class="form-control">
-          
-                     <label for="">Marca</label>
-                    <input type="text"
-                     placeholder="Marca" name="marca" class="form-control">
-                    
-                     <label for="">Modelo</label>
-                    <input type="text"
-                     placeholder="Modelo" name="model" class="form-control">
-
-                     <label for="">Capacidad</label>
-                    <input type="number"
-                     placeholder="Memoria Ram" name="memory" class="form-control">
-
-                     <label for="">Colores</label>
-                    <input type="text" 
-                    placeholder="Colores" value="" name="colors" class="form-control">
-
-                    <label for="">Compania</label>
-                    <input type="text" 
-                    placeholder="Compania Telefonica" name="company" class="form-control">
-
-                    <label for="">Precio</label>
-                    <input type="number" 
-                    placeholder="Precio" name="price" class="form-control">
-                    
-                    <label for="">Descuento</label>
-                    <input type="number" 
-                    placeholder="Descuento" name="discount" class="form-control">
-                    
-
-                    <label for="">¿Es dual sim?</label>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                    <label class="form-check-label" for="exampleRadios1">
-                      No
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                    <label class="form-check-label" for="exampleRadios2">
-                      Si
-                    </label>
-                  </div>
-                  
-                    <div class="form-group">
-                      <label for="exampleFormControlFile1">Imagen del Producto</label>
-                      <input type="file" class="form-control" name="image">
-                    </div>
-
-                  
-
-                    <button type="submit" class="btn btn-primary">Submit</button>
-
-
-                    
-                  </form>
-            </div>
-            </div>
-            </div>
-  </div>
+<div class="container-flud">
+    <div class="container">
+        <div class="form_main">
+            <h4 class="heading"><strong>Formulario </strong> Carga <span></span></h4>
+            <div class="form">
+        <form action="/admin/create" method="POST" id="principal">
+            <section class="form">
+                <div class="grupo-form">
+                    <h3><label for="">Nombre</label></h3>
+                    <input type="text" name="name" placeholder="Nombre" >
+                </div>
+                <div class="grupo-form">
+                    <h3><label for="">Marca</label></h3>
+                    <input type="text" name="trademark" placeholder="Marca" required >
+                </div>
+                <div class="grupo-form">
+                    <h3><label for="">Modelo</label></h3>
+                    <input type="text"  name="model" placeholder="Modelo"  >
+                </div>
+                <div class="grupo-form">
+                    <h3><label for="">Precio</label></h3>
+                    <input type="number"  name="price" placeholder="Precio" required >
+                </div>
+                <div class="grupo-form">
+                    <h3><label for="">Colores</label></h3>
+                    <input type="text"  name="colors" placeholder="Color" >
+                </div>
+                <div class="grupo-form">
+                    <h3><label for="">Descuento</label></h3>
+                    <input type="number"  name="discount" placeholder="Descuento" >
+                </div>
+                <div class="grupo-form">
+                    <h3><label for="">Compania</label></h3>
+                    <input type="text"  name="company" placeholder="Compania" >
+                </div>
+                <div class="grupo-form">
+                  <h3><label for="">Capacidad</label></h3>
+                  <input type="number"  name="capacidad" placeholder="Capacidad" >
+              </div>
+                <div class="grupo-form">
+                  <h3><label for="">Dual Sim</label></h3>
+                  <input type="text"  name="dualsim" placeholder="Dual-Sim" >
+              </div>
+                <div class="grupo-form">
+                    <h3><label for="">Agregar imagen</label></h3>
+                    <input type="file" name="image">
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-outline-secondary mr-3" id="agregar">Agregar</button>
+                </div>
+            </section>
+        </form>
+        
+    </div>
 </div>
-</body>

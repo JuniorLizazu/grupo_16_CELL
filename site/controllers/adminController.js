@@ -27,21 +27,20 @@ module.exports = {
         let productoNuevo={
             id:nuevoID +1,
             name: req.body.name,
-            trademark: req.body.marca,
+            trademark:req.body.trademark,
             model: req.body.model,
-            price:Number(req.body.price),
+            price: Number(req.body.price),
             image: "default-image.png",
             colors: req.body.colors,
             company: req.body.company,
-            discount: Number(req.body.discount),
-            capacidad: Number(req.body.memory),
-            dualsim: req.body.exampleRadios,
-            
+            discount:  Number(req.body.discount),
+            capacidad:  Number(req.body.capacidad),
+            dualsim:  req.body.dualsim
         }
         ultimoID=productoNuevo.id
         dbProducts.push(productoNuevo);
         fs.writeFileSync(path.join(__dirname,"..","data","productsDataBase.json"),JSON.stringify(dbProducts),'utf-8')
-        res.redirect('/admin/show/'+ ultimoID +'/show')
+        res.redirect('/products')
     },
     showEdit:function(req,res){
         let idProducto = req.params.id;
@@ -62,7 +61,7 @@ module.exports = {
             return producto.id == idProducto
         })
         res.render('vistaProducto',{
-            title: 'Ver - Editar',
+            title: 'Ver / Editar',
             css: 'vistaProducto.css',
             total: dbProducts.lenght,
             producto:resultado[0],

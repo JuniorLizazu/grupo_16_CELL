@@ -4,13 +4,14 @@ ul > li{margin-right:25px;font-weight:lighter;cursor:pointer}
 li.active{border-bottom:3px solid silver;}
 
 .item-photo{display:flex;justify-content:center;align-items:center;}
-.item-photo img{max-width: 80%;
-    width: 70%;
-    position: relative;
-    left: 57px;}
-.menu-items{list-style-type:none;display:inline-flex;margin-bottom:0;margin-top:20px}
+.item-photo img{
+    width: 229px;
+    height: 248px;
+}
+.menu-items{list-style-type:none;display:inline-flex;margin-bottom:0;margin-top:20px;padding: 0;}
 .btn-success{width:100%;border-radius:0;}
 .section{width:100%;margin-left:3px;padding:2px;padding-left:15px;padding-right:15px;background:#f8f9f9}
+.section a{color: black;position: relative;left: 90px;}
 .title-price{margin-top:30px;margin-bottom:0;color:black}
 .title-attr{margin-top:0;margin-bottom:0;color:black;}
 .btn-minus{cursor:pointer;font-size:7px;display:flex;align-items:center;padding:5px;padding-left:10px;padding-right:10px;border:1px solid gray;border-radius:2px;border-right:0;}
@@ -20,12 +21,19 @@ div.section > div > input {margin:0;padding-left:5px;font-size:10px;padding-righ
 .attr,.attr2{cursor:pointer;margin-right:5px;height:20px;font-size:10px;padding:2px;border:1px solid gray;border-radius:2px;}
 .attr.active,.attr2.active{ border:1px solid orange;}
 
+.menu-items li{
+    font-size: 29px;
+}
+.menu-items li ul{
+    font-size: 29px;
+}
 @media (max-width: 426px) {
     .container {margin-top:0px !important;}
     .container > .row{padding:15px;}
     .container > .row > .col-xs-12.col-sm-5{
         padding-right:0 ;    
     }
+    
     .container > .row > .col-xs-12.col-sm-9 > div > p{
         padding-left:0 !important;
         padding-right:0 !important;
@@ -39,8 +47,16 @@ div.section > div > input {margin:0;padding-left:5px;font-size:10px;padding-righ
 }
 
 @media(min-width: 768px){
-    .item-photo img{max-width: 80%;
-        width: 350px;
+    .section a{
+        color: black;
         position: relative;
-        left: 0;}
+        left: 20px;
+    }
+}
+@media(min-width: 1024px){
+    .section a{
+        color: black;
+        position: relative;
+        left: 70px;
+    }
 }

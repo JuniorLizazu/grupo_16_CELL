@@ -1,18 +1,37 @@
 @import "style.css";
 
 .barra{
-  padding: 25px;
-  padding-left: 20%;
-  background-color: #222831;
-  margin-top: 20px;
+  padding-left:11%;;
 }
-.barra .opciones{
-  font-size: 20px;
-  padding-bottom: 20px;
+
+.barra{
+  background-color: #222831;
+  margin-top: 10px;
+}
+.barra li{
+  color: black;
+  display: inline-block;
+  padding: 20px;
+  padding-top: 7px;
+  margin-top: 3px;
+  height: 40px;
+  margin-left: 65px;
+  padding-right: 70px;
   text-transform: uppercase;
 }
-.barra .opciones:last-child{
-  padding-bottom: 0px;
+.principal .contenido{
+  background-color: #eeeeee;
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center;
+  margin-bottom: 20px;
+} 
+p{
+  color: black;
+  font-size: 20px;
+}
+h4, h3{
+  color: black;
 }
 .row{
     margin: 0;
@@ -137,40 +156,34 @@
       height: 432px;
       position: relative;
     }
-    .barra{
-      padding: 15px;
-  }
-  .barra .opciones{
-      display: inline-block;
-      padding-left: 15%;
-      padding-bottom: 0px;
-      padding-right: 20px;
-  }
-  .barra .opciones:last-child{
-      border-right: none;
-      padding-right: none;
-  }
+    .barra li{
+      margin-left:30px;
+    }
   
   }
   
 /*PRINCIPALES*/
 
   @media(min-width: 1024px){
-  .barra .opciones{
-      padding-right: 30px;
+    .barra li{
+      margin-left:150px;
   }
-    .productos .oculto{
-      display: block;
-    }
-    .productos .seccion span a{
-      position: relative;
-      top: 243px;
-    }
+  .barra li:last-child{
+      border-right: none;
+      margin-left: 20px;
+  }
+  .productos .oculto{
+    display: block;
+  }
+  .productos .seccion span a{
+    position: relative;
+    top: 243px;
+  }
     
-    .productos .seccion .eco span a{
-      position: relative;
-      top: 243px;
-    }
+  .productos .seccion .eco span a{
+    position: relative;
+    top: 243px;
+  }
     .productos .seccion .buscado span a{
       position: relative;
       top: 243px;
