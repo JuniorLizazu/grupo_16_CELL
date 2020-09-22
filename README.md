@@ -91,3 +91,6 @@ Es por ellos que hemos apartado estás página para su investigación y emprendi
 
 Utilizamos la plataforma [Trello](https://trello.com/b/JRpKlpfZ/grupo16cell), cómo gestión online del equipo 
 
+## Sprint 3
+-  *Puede acceder a /products mediante el boton "ver más"*
+- */delete se encuentra en el detalle del administrador*
