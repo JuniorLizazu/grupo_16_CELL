@@ -7,10 +7,9 @@ var methodOverride = require('method-override')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-let registerRouter = require('./routes/register');
-let loginRouter=require('./routes/loginRouter');
 let adminRouter = require('./routes/admin');
-let productsRouter = require('./routes/products')
+let productsRouter = require('./routes/products');
+
 
 
 var app = express();
@@ -28,8 +27,6 @@ app.use(methodOverride("_method"))
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/register', registerRouter);
-app.use('/login', loginRouter);
 app.use('/admin', adminRouter);
 app.use('/products', productsRouter)
 

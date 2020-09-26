@@ -53,6 +53,12 @@ header nav button.desplegable{
 header nav .menu{
   color: white;
 }
+.menu li img{
+  width: 32px;
+  position: relative;
+  bottom: 3px;
+  right: 2px;
+}
 
 /*HEADER TABLET*/
 
@@ -75,10 +81,13 @@ header nav .menu{
     margin-right: 15px;
     position: relative;
     bottom: 25px;
-    left: 50px;
+    left: 37px;
   }
   .menu li:last-child{
     margin-right: 0px;
+  }
+  a{
+    font-size: 14px;
   }
 }
 
@@ -100,7 +109,7 @@ header nav .menu{
   }
   .menu li{
     margin-right: 23px;
-    left: 143px;
+    left: 131px;
     bottom: 35px;
     position: relative;
   }

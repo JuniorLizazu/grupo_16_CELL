@@ -7,7 +7,5 @@ router.get('/',productsController.listar);
 router.get('/detail/:id',productsController.detalle);
 /* GET home page. */
 router.get('/cart', productsController.carrito);
-router.get('/notregister', productsController.notregister);
-
 
 module.exports = router;

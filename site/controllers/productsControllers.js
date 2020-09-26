@@ -26,11 +26,5 @@ module.exports = {
             title: 'Carrito de compras',
             css: 'cart.css',
         });
-    },
-    notregister: function(req, res) {
-        res.render('notRegister', { 
-            title: '¡Hola! Para agregar al carrito, Ingresá a tu cuenta',
-            css: 'notRegister.css',
-        });
     }
 }
