@@ -17,7 +17,6 @@ body {
 	border-radius: 3px;
 }
 .signup-form {
-	width: 450px;
 	margin: 0 auto;
 	padding: 30px 0;
   	font-size: 15px;
@@ -88,4 +87,10 @@ body {
     text-decoration: none !important;
 	display: block;
 	font-display: block;
+}
+
+@media(min-width: 720px){
+	.signup-form {
+		width: 450px;
+	}
 }
