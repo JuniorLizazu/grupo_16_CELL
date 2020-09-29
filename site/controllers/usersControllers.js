@@ -8,7 +8,7 @@ const bcrypt = require('bcrypt');
 module.exports={
     register:function(req,res){
         res.render('userRegister',{
-            litle:"Registro de Usuario",
+            title:"Registro de Usuario",
             css:'register.css'
         })
     },
@@ -36,16 +36,16 @@ module.exports={
 
         return res.redirect('/users/login')
 
-    },
+    },*/
     login:function(req,res){
         res.render('userLogin',{
-            litle:"Ingresá a tu cuenta",
-            css:'register.css'
+            title:"Ingresá a tu cuenta",
+            css: 'login.css'
         })
     },
     processLogin:function(res,res){
 
-    },*/
+    },
 }
 
 
