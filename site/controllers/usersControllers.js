@@ -3,42 +3,49 @@ const dbProducts = require(path.join(__dirname,'..','data','dbProducts'))
 const dbUsers = require(path.join(__dirname,'..','data','dbUsers'))
 const fs = require('fs');
 
-module.exports = {
-    notregister: function(req, res) {
-        res.render('notRegister', { 
-            title: '¡Hola! Para agregar al carrito, Ingresá a tu cuenta',
-            css: 'notRegister.css',
-        });
+const bcrypt = require('bcrypt');
+
+module.exports={
+    register:function(req,res){
+        res.render('userRegister',{
+            litle:"Registro de Usuario",
+            css:'register.css'
+        })
     },
-    register: function(req, res) {
-        res.render('register', {
-            title: 'Registrate en Cell',
-            css: 'register.css',
-        });
+    processRegister:function(req,res){
+        let lastID = 1;
+        if(dbUsers.length != 0){
+            dbUsers.forEach(user =>{
+                if(user.id > lastID){
+                    lastID = user.id
+                }
+            })
+        }
+        let newUser = {
+            id: lastID + 1,
+            nombre: req.body.nombre.trim(),
+            apellido:req.body.apellido.trim(),
+            email:req.body.apellido.trim(),
+            avatar:(req.files[0])?req.files[0].filename:"default.png",
+            password:bcrypt.hashSync(req.body.pass,10),
+            rol:"user"
+        
+        }
+        dbUsers.push(newUsers);
+        fs.writeFileSync(path.join(__dirname,'..','data','dbUsers.json'),JSON.stringify(dbUsers),'utf-8')
+
+        return res.redirect('/users/login')
+
     },
-    social: function(req, res) {
-        res.render('social', {
-            title: 'Ingresá a tu cuenta con Google',
-            css: 'social.css',
-        });
+    login:function(req,res){
+        res.render('userLogin',{
+            litle:"Ingresá a tu cuenta",
+            css:'register.css'
+        })
     },
-    enterCode: function(req, res) {
-        res.render('enterCode', {
-            title: 'Ingresá a tu cuenta con Google',
-            css: 'enterCode.css',
-        });
+    processLogin:function(res,res){
+
     },
-    login: function(req, res) {
-        res.render('login', { 
-            title: 'Ingreso',
-            css: 'login.css',
-        });
-    },
-    
-    social: function(req, res) {
-        res.render('social', {
-            title: 'Ingresá a tu cuenta con Google',
-            css: 'social.css',
-        });
-    }
 }
+
+

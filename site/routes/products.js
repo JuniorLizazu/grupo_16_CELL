@@ -1,10 +1,14 @@
-var express = require('express');
-var router = express.Router();
-let productsController = require('../controllers/productsControllers');
+const express = require('express');
+const router = express.Router();
+const productsController = require('../controllers/productsControllers');
+
+const upImagesProducts = require('../middlewares/upImagesProducts')
 
 /*Lista de productos y detalle*/
 router.get('/',productsController.listar);
 router.get('/detail/:id',productsController.detalle);
+
+
 /* GET home page. */
 router.get('/cart', productsController.carrito);
 

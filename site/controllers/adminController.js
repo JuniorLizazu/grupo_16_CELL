@@ -30,7 +30,7 @@ module.exports = {
             trademark:req.body.trademark,
             model: req.body.model,
             price: Number(req.body.price),
-            image: "default-image.png",
+            image: (req.files[0])?req.files[0].filename:"default.png",
             colors: req.body.colors,
             company: req.body.company,
             discount:  Number(req.body.discount),
