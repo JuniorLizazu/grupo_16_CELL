@@ -7,8 +7,8 @@
             <div class="container">
                 <section class="row"></section>
                 <ul class="barra">
-                <li class="opciones"><a href="/admin/create">Agregar Producto</a></li>
-                <li class="opciones"><a href="/admin/show/1/show">Editar / Eliminar</a></li>
+                <li class="opciones"><a href="/products/create">Agregar Producto</a></li>
+                <li class="opciones"><a href="/products/show/1/show">Editar / Eliminar</a></li>
                 </ul>
 
             <div class="contenido text-left">
@@ -29,7 +29,7 @@
                                 <div class="row">
                                     <div class="col-1">
                                         <% if (producto.id>1) { %>
-                                            <a href="/admin/show/<%- producto.id-1 %>/show " class="text-warning"><i class="fas fa-chevron-circle-left"></i></a>
+                                            <a href="/products/show/<%- producto.id-1 %>/show " class="text-warning"><i class="fas fa-chevron-circle-left"></i></a>
                                             <% } %>
                                     </div>
                                     <div class="col-10">
@@ -39,7 +39,7 @@
                                     </div>
                                     <div class="col-1">
                                         <% if (producto.id>0 || producto.id <= total) { %>
-                                            <a href="/admin/show/<%- producto.id+1 %>/show " class="text-warning"><i class="fas fa-chevron-circle-right"></i></a>
+                                            <a href="/products/show/<%- producto.id+1 %>/show " class="text-warning"><i class="fas fa-chevron-circle-right"></i></a>
  
                                             <% } %>
                                     </div>
@@ -84,7 +84,7 @@
                                         <%=producto.discount%>%
                                     </span>
                                     </div>
-                                    <form action="/admin/delete/<%= producto.id %>?_method=DELETE"
+                                    <form action="/products/delete/<%= producto.id %>?_method=DELETE"
                                         method="POST">
                                         <button class="btn btn-outline-light" type="submit">
                                             <h4 class="fas fa-trash-alt text-danger"></h4>
@@ -98,7 +98,7 @@
                         </div>
                     </div>
                     <div class="tab-pane fade <%= showEdit %> <%= activeEdit %>" id="editar" role="tabpanel" aria-labelledby="home-tab">
-                        <form action="/admin/edit/<%= producto.id %>?_method=PUT" method="POST" >
+                        <form action="/products/edit/<%= producto.id %>?_method=PUT" method="POST" >
                             <div class="row p-3">
                                 <div class="form-group col-12">
                                     <p>Nombre:</p><input class="form-control" type="text" value="<%= producto.name%>" name="name">
@@ -148,7 +148,7 @@
                                             </span>
                                         </div>
                                         <div class="col-12 d-flex justify-content-end">
-                                            <a href="/admin/show/<%= producto.id %>/show"><button class="btn btn-danger mr-2" type="button">Cancelar</button></a>
+                                            <a href="/products/show/<%= producto.id %>/show"><button class="btn btn-danger mr-2" type="button">Cancelar</button></a>
                                             <button class="btn btn-info" type="submit" name="id" value="<%= producto.id %> ">Guardar</button>
                                         </div>
                                     </div>

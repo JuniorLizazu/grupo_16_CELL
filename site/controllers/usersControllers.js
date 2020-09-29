@@ -12,7 +12,7 @@ module.exports={
             css:'register.css'
         })
     },
-    processRegister:function(req,res){
+    /*processRegister:function(req,res){
         let lastID = 1;
         if(dbUsers.length != 0){
             dbUsers.forEach(user =>{
@@ -45,7 +45,7 @@ module.exports={
     },
     processLogin:function(res,res){
 
-    },
+    },*/
 }
 
 
