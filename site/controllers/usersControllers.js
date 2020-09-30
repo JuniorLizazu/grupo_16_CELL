@@ -54,8 +54,33 @@ module.exports={
             css: 'login.css'
         })
     },
-    processLogin:function(res,res){
-
+    processLogin:function(req,res){
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
+            dbUsers.forEach(user => {
+                if(user.email == req.body.email){
+                    req.session.user = {
+                        id: user.id,
+                        nick: user.nombre + " " + user.apellido,
+                        email: user.email,
+                        avatar:user.avatar
+                    }
+                }
+            })
+            if(req.body.recordar){
+                res.cookie('userMercadoLiebre',req.session.user,{maxAge:1000*60*60})
+            }
+            //res.locals.user = req.session.user
+            //console.log(res.locals.user)
+            res.redirect('/')
+        }else{
+            res.render('userLogin',{
+                title: "Ingresá a tu cuenta",
+                css:"login.css",
+                errors:errors.mapped(),
+                old:req.body
+            })
+        }
     },
 }
 
