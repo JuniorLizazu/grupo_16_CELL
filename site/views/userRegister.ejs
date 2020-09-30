@@ -1,51 +1,121 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <%- include('partials/head') %>
 
 <body>
-    <!--ACA HEADER-->
-    <%- include('partials/header') %>
+	<%- include('partials/header') %>
 
-    <div class="signup-form">
-        <form action="" method="POST"
-        enctype="multipart/form-data">
-            <h2>Completá tus datos</h2>
-            <div class="form-group">
-                <div class="row">
-                    <div class="col">
-                        <input type="text" class="form-control" name="name" placeholder="Nombre" required="required">
-                    </div>
+	<div class="signup-form col-12">
+		<form action="" method="POST" enctype="multipart/form-data">
+			<div class="signup-form col-12">
 
-                    <div class="col">
-                        <input type="text" class="form-control" name="apellido" placeholder="Apellido"
-                            required="required">
-                    </div>
-                </div>
-            </div>
-            <div class="form-group">
-                <input type="email" class="form-control" name="email" placeholder="Email" required="required">
-            </div>
-            <div class="form-group">
-                <input type="password" class="form-control" name="pass" placeholder="Clave" required="required">
-            </div>
-            <div class="form-group">
-                <input type="file" class="form-control" name="avatar" placeholder="Avatar" required="required">
-            </div>
+			<h2><%= title %></h2>
+					
+		    </div>
+				<div class="form-row">
 
-            <div class="form-group">
-                <label class="form-check-label"><input type="checkbox" required="required"> Acepto los <a
-                        href="#">Terminos y Condiciones</a> &amp; <a href="#">Privacidad</a></label>
-            </div>
-            <div class="form-group">
-                <button type="submit" class="btn btn-success btn-lg btn-block"><a class="hj"
-                        href="/users/login">Registrarme</a></button>
-            </div>
+					<div class="form-group col-12 col-xl-6">
+					<label for="nombre"></label>
+					<input type="text" class="form-control <%= (typeof old != 'undefined' && old.name)?"is-valid":(typeof errors != 'undefined' && errors.name)?"is-invalid": ""  %>"
+												id="nombre" name="nombre"
+												value="<%= (typeof old != 'undefined' && old.name)?old.name:'' %>"
+												placeholder="Nombre" />
+											<small
+												class="text-danger"><%= (typeof errors != 'undefined' && errors.nombre)?errors.nombre.msg: "" %>
+											</small>
+										</div>
 
-        </form>
-    </div>
-    <!--FOOTER-->
-    <%- include('partials/footer') %>
+										<div class="form-group col-12 col-xl-6">
+											<label for="apellido"></label>
+											<input type="text"
+												class="form-control <%= (typeof old != 'undefined' && old.apellido)?"is-valid":(typeof errors != 'undefined' && errors.apellido)?"is-invalid": ""  %>"
+												id="apellido"
+												value="<%= (typeof old != 'undefined' && old.apellido)?old.apellido:'' %>"
+												placeholder="Apellido" name="apellido" />
+											<small
+												class="text-danger"><%= (typeof errors != 'undefined' && errors.apellido)?errors.apellido.msg: "" %>
+											</small>
+										</div>
+
+									</div>
+
+									<div class="form-row">
+										<div class="form-group col-12 col-xl-6">
+											<label for="pass"></label>
+											<input type="password"
+												class="form-control <%= (typeof errors != 'undefined' && errors.pass)?"is-invalid": ""  %>"
+												id="pass" placeholder="Contraseña" name="pass" />
+											<small
+												class="text-danger"><%= (typeof errors != 'undefined' && errors.pass)?errors.pass.msg: "" %>
+											</small>
+										</div>
+
+										<div class="form-group col-12 col-xl-6">
+											<label for="pass2"></label>
+											<input type="password"
+												class="form-control <%= (typeof errors != 'undefined' && errors.pass2)?"is-invalid": ""  %>"
+												id="pass2" placeholder="Reingresar Contraseña" name="pass2" />
+											<small
+												class="text-danger"><%= (typeof errors != 'undefined' && errors.pass2)?errors.pass2.msg: "" %>
+											</small>
+
+										</div>
+
+									</div>
+									<div class="form-row">
+										<div class="form-group col-12 col-xl-6">
+											<label for="email"></label>
+											<input type="email"
+												class="form-control <%= (typeof old != 'undefined' && old.email && !errors.email)?"is-valid":(typeof errors != 'undefined' && errors.email)?"is-invalid": ""  %>"
+												id="email"
+												value="<%= (typeof old != 'undefined' && old.email)?old.email:'' %>"
+												placeholder="Email" name="email" />
+											<small
+												class="text-danger"><%= (typeof errors != 'undefined' && errors.email)?errors.email.msg: "" %>
+											</small>
+										</div>
+
+										<div class="form-group col-12 col-xl-6">
+											<div class="custom-file mt-4">
+												<input type="file" class="custom-file-input " id="customFileLang"
+													lang="es" name="avatar">
+												<label class="custom-file-label" for="customFileLang">Seleccionar
+													Archivo</label>
+												<small
+													class="text-danger"><%= (typeof errorFormato != 'undefined')?errorFormato: "" %>
+												</small>
+											</div>
+										</div>
+
+									</div>
+									<div class="form-row">
+										<div class="col-12 col-lg-6 mt-2">
+											<div class="custom-control custom-checkbox">
+												<input type="checkbox"
+													class="custom-control-input <%= (typeof old != 'undefined' && old.bases)?"is-valid":(typeof errors != 'undefined' && errors.bases)?"is-invalid": ""  %>"
+													id="customCheck1" name="bases">
+												<label class="custom-control-label" for="customCheck1">Acepto las bases
+													y
+													condiciones</label><br>
+												<a href="" class="text-info">ver bases y condiciones</a><br>
+
+												<small
+													class="text-danger"><%= (typeof errors != 'undefined' && errors.bases)?errors.bases.msg: "" %>
+												</small>
+											</div>
+										</div>
+										<div class="col-12 col-lg-6 mt-2">
+											<button type="submit" class="btn btn-success btn-lg btn-block">
+												Registrarse
+											</button>
+										</div>
+
+									</div>
+								</div>
+							</form>
+	</div>
+
+	<%- include('partials/footer') %>
 </body>
 
 </html>

@@ -18,13 +18,13 @@
                         <%= (typeof old != 'undefined' && old.email && !errors.email)?"is-valid":
                         (typeof errors != 'undefined' && errors.email)?"is-invalid":
                                   '' %>" 
-                                  id="exampleInputEmail1" aria-describedby="emailHelp" value="<%= (typeof old != 'undefined' && old.email)?old.email:'' %>" placeholder="email" name="email">
+                                  id="exampleInputEmail1" aria-describedby="emailHelp" value="<%= (typeof old != 'undefined' && old.email)?old.email:'' %>" placeholder="Email" name="email">
                                   <small class="text-danger"><%= (typeof errors != 'undefined' && errors.email)?errors.email.msg: "" %> </small>
                                 </div>
                                 <div class="form-group">
                                   <label for="exampleInputPassword1"></label>
                                   <input type="password" class="form-control <%= (typeof errors != 'undefined' && errors.pass)?"is-invalid":
-                                  '' %>" id="exampleInputPassword1" placeholder="contraseña" name="pass">
+                                  '' %>" id="exampleInputPassword1" placeholder="Contraseña" name="pass">
                                   <small class="text-danger"><%= (typeof errors != 'undefined' && errors.pass)?errors.pass.msg: "" %> </small>
                                 </div>
                                 <div class="form-group form-check">
@@ -38,11 +38,6 @@
                             </div>
                               </form>
                            </div>
-                       
-                   
-            
-        
-    
 
     <%- include('partials/footer') %> 
 </body>

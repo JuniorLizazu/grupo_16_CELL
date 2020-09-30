@@ -12,31 +12,39 @@ module.exports={
             css:'register.css'
         })
     },
-    /*processRegister:function(req,res){
-        let lastID = 1;
+    processRegister:function(req,res){
+        let errors = validationResult(req);
+        let lastID = 0;
         if(dbUsers.length != 0){
-            dbUsers.forEach(user =>{
+            dbUsers.forEach(user => {
                 if(user.id > lastID){
                     lastID = user.id
                 }
             })
         }
-        let newUser = {
-            id: lastID + 1,
-            nombre: req.body.nombre.trim(),
-            apellido:req.body.apellido.trim(),
-            email:req.body.apellido.trim(),
-            avatar:(req.files[0])?req.files[0].filename:"default.png",
-            password:bcrypt.hashSync(req.body.pass,10),
-            rol:"user"
-        
+        if(errors.isEmpty()){
+            let newUser = {
+                id: lastID + 1,
+                nombre: req.body.nombre.trim(),
+                apellido: req.body.apellido.trim(),
+                email: req.body.email.trim(),
+                avatar: (req.files[0])?req.files[0].filename:"default.png",
+                password:bcrypt.hashSync(req.body.pass,10),
+                rol:"user"
+            }
+            dbUsers.push(newUser);
+            fs.writeFileSync(path.join(__dirname,'..','data','dbUsers.json'),JSON.stringify(dbUsers),'utf-8')
+    
+            return res.redirect('/users/login')
+        }else{
+            res.render('userRegister',{
+                title:"Registro de Usuario",
+                css:"register.css",
+                errors:errors.mapped(),
+                old:req.body
+            })
         }
-        dbUsers.push(newUsers);
-        fs.writeFileSync(path.join(__dirname,'..','data','dbUsers.json'),JSON.stringify(dbUsers),'utf-8')
-
-        return res.redirect('/users/login')
-
-    },*/
+    },
     login:function(req,res){
         res.render('userLogin',{
             title:"Ingresá a tu cuenta",
