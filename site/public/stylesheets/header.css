@@ -54,11 +54,13 @@ header nav .menu{
   color: white;
 }
 .menu li img{
-  width: 32px;
+  width: 30px;
+  height: 32px;
   position: relative;
   bottom: 3px;
   right: 2px;
 }
+
 
 /*HEADER TABLET*/
 
@@ -81,7 +83,7 @@ header nav .menu{
     margin-right: 15px;
     position: relative;
     bottom: 25px;
-    left: 37px;
+    left: 101px;
   }
   .menu li:last-child{
     margin-right: 0px;
@@ -108,8 +110,8 @@ header nav .menu{
     display: none;
   }
   .menu li{
-    margin-right: 23px;
-    left: 131px;
+    margin-right: 27px;
+    left: 191px;
     bottom: 35px;
     position: relative;
   }

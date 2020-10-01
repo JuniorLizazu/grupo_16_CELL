@@ -82,6 +82,23 @@ module.exports={
             })
         }
     },
+    profile:function(req,res){
+        res.render('userProfile',{
+            title:"Perfil de usuario",
+            css: "profile.css",
+            productos: dbProducts.filter(producto =>{
+                return producto.category != "menu" && producto.category != "nomenu"
+            })
+            
+        })
+    },
+    logout:function(req,res){
+        req.session.destroy()
+        if(req.cookies.userMercadoLiebre){
+            res.cookie('userMercadoLiebre',' ',{maxAge:-1});
+        }
+        return res.redirect('/')
+    }
 }
 
 

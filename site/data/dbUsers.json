@@ -43,5 +43,14 @@
         "avatar": "",
         "password": "",
         "rol": "user"
+    },
+    {
+        "id": 6,
+        "nombre": "Santiago",
+        "apellido": "Ojeda",
+        "email": "santiagoeojeda@gmail.com",
+        "avatar": "avatar-avatar-1601509176108.png",
+        "password": "$2b$10$xs0h.mq91LSoqZYqjNyzT.BSiGuWLGm6J0rRbbmqECrcDX8zvsija",
+        "rol": "user"
     }
 ]

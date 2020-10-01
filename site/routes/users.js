@@ -17,6 +17,9 @@ router.post('/register',upImagesUsers.any(),registerValidator,usersController.pr
 router.get('/login', usersController.login);
 router.post('/login', loginValidator,usersController.processLogin);
 
+router.get('/profile',usersController.profile);
+
+router.get('/logout',usersController.logout);
 /*router.get('/', loginController.login);
 router.get('/enterpass', loginController.enterPass);
 router.get('/social', loginController.social)*/

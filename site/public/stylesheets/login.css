@@ -47,6 +47,10 @@ body {
     box-shadow: 0px 0px 5.5px 1.5px rgba(0, 0, 0, 0.1);
     padding: 28px;
 }
+.btn-outline-success {
+    color:white !important;;
+    border-color: #5e5c68 !important;;
+}
 .signup-form .form-group {
 	margin-bottom: 20px;
 }
@@ -58,6 +62,7 @@ body {
 	font-weight: bold;		
 	min-width: 140px;
 	outline: none !important;
+	background-color: #5e5c68 !important;;
 }
 .signup-form .row div:first-child {
 	padding-right: 10px;

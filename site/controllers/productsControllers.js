@@ -19,7 +19,7 @@ module.exports = {
             title:"Detalle del Producto",
             css:"detalle.css",
             producto:producto[0]
-        })
+        }) 
     },
     carrito: function(req, res) {
         res.render('cart', { 
@@ -27,11 +27,13 @@ module.exports = {
             css: 'cart.css',
         });
     },
-    show:  function(req, res){
+    show: function(req, res){
         res.render('show',{
             title: "Productos",
             css:"products.css",
-            productos: dbProducts
+            productos: dbProducts.filter(producto =>{
+                return producto.category != "menu" && producto.category != "nomenu"
+            })
         })
     },
     crear: function(req, res){
@@ -53,7 +55,7 @@ module.exports = {
             trademark:req.body.trademark,
             model: req.body.model,
             price: Number(req.body.price),
-            image: (req.files[0])?req.files[0].filename:"default.png",
+            image: "default.png",
             colors: req.body.colors,
             company: req.body.company,
             discount:  Number(req.body.discount),
@@ -72,7 +74,7 @@ module.exports = {
         let activeEdit;
         let showDetail;
         let showEdit;
-
+ 
         if(flap=="show"){
             activeDetail = 'active';
             showDetail = 'show';
@@ -81,7 +83,7 @@ module.exports = {
             showEdit = 'show';
         }
         let resultado = dbProducts.filter(producto =>{
-            return producto.id == idProducto
+            return producto.category != "menu" && producto.category != "nomenu"
         })
         res.render('vistaProducto',{
             title: 'Ver / Editar',
