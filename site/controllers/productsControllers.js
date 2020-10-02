@@ -112,7 +112,7 @@ module.exports = {
             }
         })
         fs.writeFileSync(path.join(__dirname,'../data/productsDataBase.json'),JSON.stringify(dbProducts),'utf-8');
-        res.redirect('/admin/show/'+ idProducto +'/show')
+        res.redirect('/products/show/'+ idProducto +'/show')
     },
     eliminar:function(req,res){
         let idProducto = req.params.id;
@@ -123,6 +123,6 @@ module.exports = {
             }
         })
         fs.writeFileSync(path.join(__dirname,'../data/productsDataBase.json'),JSON.stringify(dbProducts))
-        res.redirect('/admin')
+        res.redirect('/products/admin')
     }
 }

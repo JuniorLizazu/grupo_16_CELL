@@ -85,9 +85,12 @@ header nav .menu{
     bottom: 25px;
     left: 101px;
   }
+  .menu li img{
+    border-radius: 10px;
+  }
   .menu li:last-child{
     margin-right: 0px;
-  }
+  } 
   a{
     font-size: 14px;
   }

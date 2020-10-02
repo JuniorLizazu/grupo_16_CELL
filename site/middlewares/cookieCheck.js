@@ -1,7 +1,7 @@
 module.exports = function(req,res,next){
-    if(req.cookies.userMercadoLiebre){
-        console.log(req.cookies.userMercadoLiebre)
-        req.session.user = req.cookies.userMercadoLiebre;
+    if(req.cookies.userCell){
+        console.log(req.cookies.userCell)
+        req.session.user = req.cookies.userCell;
         res.locals.user = req.session.user  
         next()
     }else{

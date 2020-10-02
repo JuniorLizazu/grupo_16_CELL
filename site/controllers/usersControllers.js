@@ -94,9 +94,9 @@ module.exports={
     },
     logout:function(req,res){
         req.session.destroy()
-        if(req.cookies.userMercadoLiebre){
-            res.cookie('userMercadoLiebre',' ',{maxAge:-1});
-        }
+        if(req.cookies.userCell){
+            res.cookie('userCell',' ',{maxAge:-1});
+        } 
         return res.redirect('/')
     }
 }
