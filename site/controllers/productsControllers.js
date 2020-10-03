@@ -31,9 +31,7 @@ module.exports = {
         res.render('show',{
             title: "Productos",
             css:"products.css",
-            productos: dbProducts.filter(producto =>{
-                return producto.category != "menu" && producto.category != "nomenu"
-            })
+            productos: dbProducts
         })
     },
     crear: function(req, res){
@@ -43,29 +41,28 @@ module.exports = {
         })
     },
     agregar: function(req,res){
-        let nuevoID = 1;
-        dbProducts.forEach(producto=>{
-           if(producto.id > nuevoID){
-               nuevoID = producto.id
+        let lastID = 1;
+       dbProducts.forEach(producto=>{
+           if(producto.id > lastID){
+               lastID = producto.id
            }
         })
-        let productoNuevo={
-            id:nuevoID +1,
+        let newProduct = {
+            id:lastID +1,
             name: req.body.name,
             trademark:req.body.trademark,
             model: req.body.model,
             price: Number(req.body.price),
-            image: "default.png",
+            image: (req.files[0])?req.files[0].filename:"default.png",
             colors: req.body.colors,
             company: req.body.company,
             discount:  Number(req.body.discount),
             capacidad:  Number(req.body.capacidad),
             dualsim:  req.body.dualsim
         }
-        ultimoID=productoNuevo.id
-        dbProducts.push(productoNuevo);
-        fs.writeFileSync(path.join(__dirname,"..","data","productsDataBase.json"),JSON.stringify(dbProducts),'utf-8')
-        res.redirect('/products')
+        dbProducts.push(newProduct);
+       fs.writeFileSync(path.join(__dirname,"..","data","productsDataBase.json"),JSON.stringify(dbProducts),'utf-8')
+       res.redirect('/products')
     },
     showEdit:function(req,res){
         let idProducto = req.params.id;
@@ -83,7 +80,7 @@ module.exports = {
             showEdit = 'show';
         }
         let resultado = dbProducts.filter(producto =>{
-            return producto.category != "menu" && producto.category != "nomenu"
+            return producto.id == idProducto
         })
         res.render('vistaProducto',{
             title: 'Ver / Editar',

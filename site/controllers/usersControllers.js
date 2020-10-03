@@ -68,7 +68,7 @@ module.exports={
                 }
             })
             if(req.body.recordar){
-                res.cookie('userMercadoLiebre',req.session.user,{maxAge:1000*60*60})
+                res.cookie('userCell',req.session.user,{maxAge:1000*60*60})
             }
             //res.locals.user = req.session.user
             //console.log(res.locals.user)

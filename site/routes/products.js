@@ -15,7 +15,7 @@ router.get('/cart', productsController.carrito);
 router.get('/admin', productsController.show)
 /*Crear producto*/ 
 router.get('/create', productsController.crear);
-router.post('/create', productsController.agregar);
+router.post('/create', upImagesProducts.any(), productsController.agregar);
 
 /*Vista del edit y eliminar*/
 router.get('/show/:id/:flap?',productsController.showEdit);
