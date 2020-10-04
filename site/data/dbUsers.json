@@ -1,11 +1,1 @@
-[
-    {
-        "id": 6,
-        "nombre": "Santiago",
-        "apellido": "Ojeda",
-        "email": "santiagoeojeda@gmail.com",
-        "avatar": "avatar-avatar-1601660125002.jpg",
-        "password": "$2b$10$Nl9wkjyUZEl6TGgY/Z9TXeHHDq9.HVduEnari31YPFnHNRnoPaCKi",
-        "rol": "user"
-    }
-]
+[{"id":6,"nombre":"Santiago","apellido":"Ojeda","email":"santiagoeojeda@gmail.com","avatar":"avatar-avatar-1601660125002.jpg","password":"$2b$10$Nl9wkjyUZEl6TGgY/Z9TXeHHDq9.HVduEnari31YPFnHNRnoPaCKi","rol":"user"},{"id":7,"nombre":"Juan Junior","apellido":"Caceres Lizazu","email":"cacereslizazu2@hotmail.com","avatar":"avatar-avatar-1601840038330.jfif","password":"$2b$10$jEdQy.6Vry.fk/VWUawU4eVCrBkqdhwCKoyD3GI8RXEDqjixtsccW","rol":"user"}]
