@@ -3,13 +3,7 @@
 
 # Equipo 16 - Cell 📱
 
-¡Hola! ,  
-
-_Cell se dedica a la venta de Smartphone's_  
-
-_Nuestro objetivo, combinamos el espíritu innovador con un renovado sentido de compromiso hacia los consumidores_ 
-
-_Además, brindamos un lugar donde puedan encontrar su mejor smartphone 💙📱_
+¡Hola! , Cell se dedica a la venta de Smartphone's. Nuestro objetivo, combinamos el espíritu innovador con un renovado sentido de compromiso hacia los consumidores. Además, brindamos un lugar donde puedan encontrar su mejor smartphone 💙📱_
 
 ## 📖 Índice
 
@@ -25,13 +19,13 @@ _Además, brindamos un lugar donde puedan encontrar su mejor smartphone 💙📱
 
 - [Equipo 16 - Cell 📱]
   - [📖 Índice]
-  -  [Acerca del proyecto]
-  -  [Diseños]
-  -  [Stack]
-  -  [Créditos]
-      -    [Equipo Cell team]
-      -    [Otros contribuidores]
-  -  [Herramienta de gestión de proyecto]  
+  - [Acerca del proyecto]
+  - [Diseños]
+  - [Stack]
+  - [Créditos]
+  - [Equipo Cell team]
+  - [Otros contribuidores]
+  - [Herramienta de gestión de proyecto]  
 
 ## Acerca del proyecto
 
@@ -39,9 +33,9 @@ Esta es nuestra participación como el Equipo 16 en el programa Formar, de Digit
 
 ## Diseños
 
-- ![logotipo](/diseño/color.png)
+![logotipo](/diseño/color.png)
 
-- san -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;**
+Fuente: san -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;**
 
 ## Stack
 
@@ -55,19 +49,19 @@ Para el desarrollo de este proyecto hemos utilizado:
 
 ### Equipo Cell team:
 
--  **_![Nelson Barrios](https://avatars1.githubusercontent.com/u/63270399?s=20&u=4b0074adb449a50eed5387c47a003e8e7ea08328&v=4)[ Nelson Barrios](https://www.GitHub.com/nelsonbarrios)_** 
+**_![Nelson Barrios](https://avatars1.githubusercontent.com/u/63270399?s=20&u=4b0074adb449a50eed5387c47a003e8e7ea08328&v=4)[ Nelson Barrios](https://www.GitHub.com/nelsonbarrios)_** 
   
    **Estudiante, 23 años.**  
    **Especialidad:** *Programación.*  
    **Habilidad:** *Capacidad de adaptación a diferentes planes informáticos y de análisis de la información.*
   
--  **_![](https://avatars2.githubusercontent.com/u/67490231?s=20&u=ce97dd97766cea0165c2ecca474342a6fc844b07&v=4)[ Santiago Ojeda](https://www.GitHub.com/ssanti09)_**
+**_![](https://avatars2.githubusercontent.com/u/67490231?s=20&u=ce97dd97766cea0165c2ecca474342a6fc844b07&v=4)[ Santiago Ojeda](https://www.GitHub.com/ssanti09)_**
   
    **Estudiante, 18 años.**  
    **Especialidad:** _Programación._  
    **Habilidad:** _Aportación en aires frescos a ámbitos grupales._  
   
--  **_![](https://avatars1.githubusercontent.com/u/67671912?s=20&u=3747f8742ccf2dc8dd169e6eac13a1ea5cd38877&v=4)[ Junior Lizazu](https://www.GitHub.com/juniorlizazu)_**
+**_![](https://avatars1.githubusercontent.com/u/67671912?s=20&u=3747f8742ccf2dc8dd169e6eac13a1ea5cd38877&v=4)[ Junior Lizazu](https://www.GitHub.com/juniorlizazu)_**
   
    **Estudiante, 26 años.**  
    **Especialidad:** _Programación._  
@@ -77,7 +71,7 @@ Para el desarrollo de este proyecto hemos utilizado:
 
 - *Examinado, navegado y explorado por diversos sitios Webs resultamos en unanimidad en las siguientes Páginas Digitales*  
 
-_Como referencia apartamos éstos por su elegancia y simpleza en sus diseños característicos.
+- Como referencia apartamos éstos por su elegancia y simpleza en sus diseños característicos.
 Agregamos fuerza en el compromiso con los clientes...  
 Es por ellos que hemos apartado estás página para su investigación y emprendimiento en este nuevo trabajo._
 
@@ -92,5 +86,12 @@ Es por ellos que hemos apartado estás página para su investigación y emprendi
 Utilizamos la plataforma [Trello](https://trello.com/b/JRpKlpfZ/grupo16cell), cómo gestión online del equipo 
 
 ## Sprint 3
--  *Puede acceder a /products mediante el boton "ver más"*
+-  *Puede acceder a /products mediante el boton "ver más" de la parte Productos del home*
 - */delete se encuentra en el detalle del administrador*
+
+## Sprint 4
+
+- *Huespedes ven el home y su fomulario de registro e ingreso*
+- *Usuarios tienen la posibilidad de publicar productos, editarlos, eliminarlos y acceder al carrito*
+- *Deben crearse un usuario para poder navegar en la pagina con las ventajas antes mencionadas*
+- *Estaremos trabajando en la parte de categorias para tenerlas listas para tenerlos en el proximo sprint*
