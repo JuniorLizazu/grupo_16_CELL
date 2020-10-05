@@ -98,20 +98,6 @@
         "dualsim": "Si"
     },
     {
-        "id": 8,
-        "name": "Samnug J5 Pro",
-        "trademark": "Samsung",
-        "model": "J5 PRO",
-        "price": 50000,
-        "image": "default-image.png",
-        "colors": "Blanco - Negro - Azul",
-        "company": "Libre",
-        "discount": 12,
-        "capacidad": 124,
-        "dualsim": "Si",
-        "nombre": "Samnug J5 Pro"
-    },
-    {
         "id": 9,
         "name": "asd",
         "trademark": "asd",
