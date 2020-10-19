@@ -54,10 +54,7 @@
             <a href="/users/register">Creá tu Cuenta</a>
           </li> 
           <li>
-            <a href="/products/cart"><i class="fas fa-shopping-cart"></i></a>
-          </li>
-          <li>
-            <a href="/users/login"><img src="/images/users/default.png" alt="" width="40px"></a>
+            <a href="/users/login">Ingresá</a>
           </li>
           <% } else{ %>
             <li>
@@ -67,7 +64,7 @@
             <a href="/products/cart"><i class="fas fa-shopping-cart"></i></a>
           </li>
         <li>
-          <a href=""><img src="/images/users/<%= locals.user.avatar %> " alt="avatar" class="avatar"></a>
+          <a href="/users/profile"><img src="/images/users/<%= locals.user.avatar %> " alt="avatar" class="avatar"></a>
         </li>
         <li>
           <a href="/users/logout"><i class="fas fa-sign-in-alt "></i></a>
