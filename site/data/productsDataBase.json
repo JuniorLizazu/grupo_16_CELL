@@ -96,17 +96,5 @@
         "discount": "20",
         "capacidad": 124,
         "dualsim": "Si"
-    },
-    {
-        "id": 9,
-        "name": "asd",
-        "trademark": "asd",
-        "price": 123,
-        "image": "image-1601840109636.jfif",
-        "colors": "asd",
-        "company": "asd",
-        "discount": 123,
-        "capacidad": 123,
-        "dualsim": "si"
     }
 ]

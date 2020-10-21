@@ -33,7 +33,7 @@ module.exports={
                 email: req.body.email.trim(),
                 avatar: (req.files[0])?req.files[0].filename:"default.png",
                 password:bcrypt.hashSync(req.body.pass,10),
-                rol:"user"
+                rol: "user"
             }
             dbUsers.push(newUser);
             fs.writeFileSync(path.join(__dirname,'..','data','dbUsers.json'),JSON.stringify(dbUsers),'utf-8')

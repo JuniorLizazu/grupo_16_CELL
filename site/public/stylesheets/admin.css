@@ -1,0 +1,40 @@
+@import "style.css";
+
+main{
+    padding: 59px;
+}
+main h3{
+    padding: 20px 22px 25px;
+}
+
+p{
+    padding: 17px 18px;
+}
+
+main .enlace{
+    padding: 22px 18px 94px;
+    color: #00adb5;
+}
+main .enlace a{
+    color: #00adb5;
+}
+
+@media(min-width: 768px){
+    main .enlace{
+        padding: 3px 18px ;
+        position: relative;
+        right: 438px;
+        top: 61px;
+    }
+}
+@media(min-width: 1024px){
+    main{
+        padding: 150px;
+    }
+    main .enlace{
+        padding: 3px 18px ;
+        position: relative;
+        right: 375px;
+        top: 61px;
+    }
+}

@@ -16,12 +16,8 @@
 
 					<div class="form-group col-12 col-xl-6">
 					<label for="nombre"></label>
-					<input type="text" class="form-control <%= (typeof old != 'undefined' && old.name)?"is-valid":(typeof errors != 'undefined' && errors.name)?"is-invalid": ""  %>"
-												id="nombre" name="nombre"
-												value="<%= (typeof old != 'undefined' && old.name)?old.name:'' %>"
-												placeholder="Nombre" />
-											<small
-												class="text-danger"><%= (typeof errors != 'undefined' && errors.nombre)?errors.nombre.msg: "" %>
+					<input type="text" class="form-control <%= (typeof old != 'undefined' && old.name)?"is-valid":(typeof errors != 'undefined' && errors.name)?"is-invalid": ""  %>" id="nombre"value="<%= (typeof old != 'undefined' && old.name)?old.name:'' %>" placeholder="Nombre"  name="nombre" />
+											<small class="text-danger"><%= (typeof errors != 'undefined' && errors.nombre)?errors.nombre.msg: "" %>
 											</small>
 										</div>
 
