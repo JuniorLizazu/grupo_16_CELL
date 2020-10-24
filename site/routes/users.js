@@ -9,7 +9,7 @@ const loginValidator = require('../validations/loginValidator');
 
 const upImagesUsers = require('../middlewares/upImagesUsers');
 const huespedMiddleware = require('../middlewares/huespedMiddleware');
-const userMiddleware = require('..middlewares/userMiddleware');
+const userMiddleware = require('../middlewares/userMiddleware');
 
 /* GET users listing. */
 
