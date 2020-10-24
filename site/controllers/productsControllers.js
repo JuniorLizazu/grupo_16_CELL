@@ -86,7 +86,7 @@ module.exports = {
         res.render('vistaProducto',{
             title: 'Ver / Editar',
             css: 'vistaProducto.css',
-            total: dbProducts.lenght,
+            total: dbProducts.length,
             producto:resultado[0],
             activeDetail: activeDetail,
             activeEdit:activeEdit,
