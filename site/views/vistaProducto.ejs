@@ -38,7 +38,7 @@
                                         </h3>
                                     </div>
                                     <div class="col-1">
-                                        <% if (producto.id>0 || producto.id <= total) { %>
+                                        <% if (producto.id>0 && producto.id <= total-1) { %>
                                             <a href="/products/show/<%- producto.id+1 %>/show " class="text-warning"><i class="fas fa-chevron-circle-right"></i></a>
  
                                             <% } %>
