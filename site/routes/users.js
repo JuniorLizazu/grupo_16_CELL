@@ -21,7 +21,7 @@ router.post('/login', loginValidator,usersController.processLogin);
 
 router.get('/profile',huespedMiddleware, usersController.profile);
 
-router.get('/logout', usersController.logout);
+router.get('/logout',huespedMiddleware , usersController.logout);
 /*router.get('/', loginController.login);
 router.get('/enterpass', loginController.enterPass);
 router.get('/social', loginController.social)*/
