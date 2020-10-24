@@ -1,8 +1,8 @@
 module.exports = (req, res, next)=>{
     if(req.session.user != undefined){
-        res.render('profile.ejs', {
-            title: "Perfil",
-            css: 'profile.css'
+        res.render('index.ejs', {
+            title: "Bienvenidos a Cell",
+            css: 'home.css'
         })
     } else {
         next();
