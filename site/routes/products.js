@@ -21,7 +21,7 @@ router.post('/create', upImagesProducts.any(), productsController.agregar);
 
 /*Vista del edit y eliminar*/
 router.get('/show/:id/:flap?',adminMiddleware, productsController.showEdit);
-router.put('/edit/:id', productsController.editar)
+router.put('/edit/:id',upImagesProducts.any(), productsController.editar)
 /* Eliminar producto */
 router.delete('/delete/:id', productsController.eliminar);
 

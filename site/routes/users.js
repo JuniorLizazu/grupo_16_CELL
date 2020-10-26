@@ -9,15 +9,15 @@ const loginValidator = require('../validations/loginValidator');
 
 const upImagesUsers = require('../middlewares/upImagesUsers');
 const huespedMiddleware = require('../middlewares/huespedMiddleware');
-const userMiddleware = require('../middlewares/userMiddleware');
+
 
 /* GET users listing. */
 
 
-router.get('/register',userMiddleware, usersController.register);
+router.get('/register', usersController.register);
 router.post('/register',upImagesUsers.any(),registerValidator,usersController.processRegister);
 
-router.get('/login',userMiddleware, usersController.login);
+router.get('/login', usersController.login);
 router.post('/login', loginValidator,usersController.processLogin);
 
 router.get('/profile',huespedMiddleware, usersController.profile);

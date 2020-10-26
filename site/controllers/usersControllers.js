@@ -63,7 +63,8 @@ module.exports={
                         id: user.id,
                         nick: user.nombre + " " + user.apellido,
                         email: user.email,
-                        avatar:user.avatar
+                        avatar:user.avatar,
+                        rol: user.rol
                     }
                 }
             })

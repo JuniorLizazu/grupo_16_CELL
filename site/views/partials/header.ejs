@@ -45,31 +45,33 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         
         <ul class="menu navbar-nav ">
-          <% if (typeof user == "undefined") { %>
-          <li>
-            <a href="">Contacto</a>
-          </li>
-          
-          <li>
-            <a href="/users/register">Creá tu Cuenta</a>
-          </li> 
-          <li>
-            <a href="/users/login">Ingresá</a>
-          </li>
-          <% } else{ %>
+          <% if (typeof user != 'undefined') { %>
             <li>
-              <a href="/products/admin">Tus Productos</a>
+              <a href="/products/cart"><i class="fas fa-shopping-cart"></i></a>
             </li>
-          <li>
-            <a href="/products/cart"><i class="fas fa-shopping-cart"></i></a>
-          </li>
-        <li>
-          <a href="/users/profile"><img src="/images/users/<%= locals.user.avatar %> " alt="avatar" class="avatar"></a>
-        </li>
-        <li>
-          <a href="/users/logout"><i class="fas fa-sign-in-alt "></i></a>
-      </li>
-          <% } %>
+            <li>
+              <a href="/users/profile"><img src="/images/users/<%= locals.user.avatar %>" alt="avatar" class="avatar"></a>
+            </li>
+            <li>
+              <a href="/users/logout"><i class="fas fa-sign-in-alt "></i></a>
+            </li>
+                <% if (user.rol == 'admin') { %>
+                  <li>
+                    <a href="/products/admin">Administra</a>
+                  </li>
+                <% } %>
+            <% } else {%>
+              <li>
+                <a href="">Contacto</a>
+              </li>
+              
+              <li>
+                <a href="/users/register">Creá tu Cuenta</a>
+              </li> 
+              <li>
+                <a href="/users/login">Ingresá</a>
+              </li>
+            <% } %>
         </ul>
         
       </div>

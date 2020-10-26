@@ -36,7 +36,7 @@ module.exports = {
         })
     },
     crear: function(req, res){
-        res.render('cargaproducts',{
+        res.render('cargaProducts',{
             title:"Carga de Productos",
             css:"cargaproducto.css",
         })
@@ -120,6 +120,9 @@ module.exports = {
                 dbProducts.splice(aEliminar,1)
             }
         })
+        for(let i = 1; i < dbProducts.length; i++){
+            dbProducts[i].id = i - 1;
+        }
         fs.writeFileSync(path.join(__dirname,'../data/productsDataBase.json'),JSON.stringify(dbProducts))
         res.redirect('/products/admin')
     }
