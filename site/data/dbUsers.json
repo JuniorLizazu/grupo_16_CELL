@@ -1,1 +1,38 @@
-[{"id":1,"nombre":"Santiago","apellido":"Ojeda","email":"santiagoeojeda@gmail.com","avatar":"avatar-avatar-1601660125002.jpg","password":"$2b$10$Nl9wkjyUZEl6TGgY/Z9TXeHHDq9.HVduEnari31YPFnHNRnoPaCKi","rol":"admin"},{"id":2,"nombre":"Juan Junior","apellido":"Caceres Lizazu","email":"cacereslizazu2@hotmail.com","avatar":"avatar-avatar-1601840038330.jfif","password":"$2b$10$jEdQy.6Vry.fk/VWUawU4eVCrBkqdhwCKoyD3GI8RXEDqjixtsccW","rol":"admin"},{"id":3,"nombre":"Nelson","apellido":"Barrios","email":"nelson.barrios3@gmail.com","avatar":"avatar-avatar-1603512441962.jpeg","password":"$2b$10$X5wRXOETNSaEf6e8.JE3aOeqR8k.7rMFIKb0ECASeJW5/nAA/4E36","rol":"admin"},{"id":4,"nombre":"Roberto","apellido":"Ayala","email":"roberto@ayala.com","avatar":"default.png","password":"$2b$10$aLXjP1FkBguSIg.983q1heNkfgA3NHiqPK0MbBaNX6NwrZEhF.rgS","rol":"user"}]
+[
+    {
+        "id": 1,
+        "nombre": "Santiago",
+        "apellido": "Ojeda",
+        "email": "santiagoeojeda@gmail.com",
+        "avatar": "avatar-avatar-1601660125002.jpg",
+        "password": "$2b$10$Nl9wkjyUZEl6TGgY/Z9TXeHHDq9.HVduEnari31YPFnHNRnoPaCKi",
+        "rol": "admin"
+    },
+    {
+        "id": 2,
+        "nombre": "Juan Junior",
+        "apellido": "Caceres Lizazu",
+        "email": "cacereslizazu2@hotmail.com",
+        "avatar": "avatar-avatar-1601840038330.jfif",
+        "password": "$2b$10$jEdQy.6Vry.fk/VWUawU4eVCrBkqdhwCKoyD3GI8RXEDqjixtsccW",
+        "rol": "admin"
+    },
+    {
+        "id": 3,
+        "nombre": "Nelson",
+        "apellido": "Barrios",
+        "email": "nelson.barrios3@gmail.com",
+        "avatar": "avatar-avatar-1603512441962.jpeg",
+        "password": "$2b$10$X5wRXOETNSaEf6e8.JE3aOeqR8k.7rMFIKb0ECASeJW5/nAA/4E36",
+        "rol": "admin"
+    },
+    {
+        "id": 4,
+        "nombre": "Roberto",
+        "apellido": "Ayala",
+        "email": "roberto@ayala.com",
+        "avatar": "default.png",
+        "password": "$2b$10$aLXjP1FkBguSIg.983q1heNkfgA3NHiqPK0MbBaNX6NwrZEhF.rgS",
+        "rol": "user"
+    }
+]
