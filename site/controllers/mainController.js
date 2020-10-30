@@ -4,7 +4,7 @@ const dbProducts = require(path.join(__dirname,'..','data','dbProducts'))
 module.exports = {
     index: function(req, res){
         let menu = dbProducts.filter(producto=>{
-            return producto.category == "menu"
+            return producto.id < 5
         })
         res.render('index', { 
             title: 'Cell',
