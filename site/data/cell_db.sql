@@ -55,7 +55,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `cell_db`.`products` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(100) NOT NULL,
-  `model` VARCHAR(45) NOT NULL,
+  `model` VARCHAR(100) NOT NULL,
   `price` DECIMAL(6,2) NOT NULL,
   `colors` VARCHAR(45) NOT NULL,
   `company` VARCHAR(45) NOT NULL,

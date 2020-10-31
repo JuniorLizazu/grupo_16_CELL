@@ -25,7 +25,7 @@ DROP TABLE IF EXISTS `products`;
 CREATE TABLE `products` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) NOT NULL,
-  `model` varchar(45) NOT NULL,
+  `model` varchar(100) NOT NULL,
   `price` decimal(6,2) NOT NULL,
   `colors` varchar(45) NOT NULL,
   `company` varchar(45) NOT NULL,
