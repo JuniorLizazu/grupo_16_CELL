@@ -33,13 +33,6 @@ CREATE TABLE `trademark` (
 -- Dumping data for table `trademark`
 --
 
-LOCK TABLES `trademark` WRITE;
-/*!40000 ALTER TABLE `trademark` DISABLE KEYS */;
-INSERT INTO `trademark` VALUES (1,'Apple'),(2,'Samsung'),(3,'Xiomi'),(4,'LG'),(5,'Huawei'),(6,'Nokia'),(7,'TCL'),(8,'Motorola');
-/*!40000 ALTER TABLE `trademark` ENABLE KEYS */;
-UNLOCK TABLES;
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
-
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
 /*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
