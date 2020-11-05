@@ -10,10 +10,20 @@
                 <input type="text" class="form-control" id="exampleFormControlInput1"
                     placeholder="" name="name">
             </div>
-             <div class="col">
-                    <label for="">Marca</label>
-                    <input type="text" class="form-control" name="trademark">
-                </div>
+            <div class="col">
+                <label for="trademark">Marca</label>
+                <br>
+                <select name="trademark" class="form-control" >
+                  <option value="">Elige una opción</option>
+                  <% trademark.forEach(trademark => { %>
+                      <option value="<%= trademark.id %>"><%= trademark.name %></option>
+                  <%});%>
+                </select>                        
+            </div>
+            <div class="col">
+                <label for="">Modelo</label>
+                <input type="text" class="form-control" name="model" >
+            </div>
                 <div class="col">
                     <label for="">Precio</label>
                     <input type="number" class="form-control" name="price">
@@ -28,15 +38,16 @@
                 </div>
                 <div class="col">
                     <label for="">Dual-Sim</label>
-                    <input type="text" class="form-control" name="dualsim">
+                    <input type="text" class="form-control" name="dualsim" placeholder="SI o NO">
                 </div>
+                
                 <div class="col">
                     <label for="">Colores</label>
                     <input type="text" class="form-control" name="colors">
                 </div>
                 <div class="col">
                     <label for="">Company</label>
-                    <input type="text" class="form-control" name="company">
+                    <input type="text" class="form-control" name="company" placeholder="Libre o Empresa">
                 </div>
           
             <div class="col">

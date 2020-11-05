@@ -18,7 +18,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull : false
         },
         price : {
-            type : dataTypes.DECIMAL(6,2).UNSIGNED,
+            type : dataTypes.INTEGER(11),
             allowNull : false
         },
         colors : {
@@ -38,7 +38,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull : false
         },
         capacidad : {
-            type : dataTypes.INTEGER,
+            type : dataTypes.INTEGER(11),
             allowNull : false
         },
         image : {
@@ -46,7 +46,8 @@ module.exports = (sequelize, dataTypes) => {
             allowNull : false
         },
         id_trademark : {
-            type : dataTypes.INTEGER(11)
+            type : dataTypes.INTEGER(11),
+            allowNull : false
         }
     }
 

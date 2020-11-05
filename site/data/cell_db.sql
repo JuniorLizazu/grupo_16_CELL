@@ -56,7 +56,7 @@ CREATE TABLE IF NOT EXISTS `cell_db`.`products` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(100) NOT NULL,
   `model` VARCHAR(100) NOT NULL,
-  `price` DECIMAL(6,2) NOT NULL,
+  `price` INT NOT NULL,
   `colors` VARCHAR(45) NOT NULL,
   `company` VARCHAR(45) NOT NULL,
   `discount` INT NOT NULL,
