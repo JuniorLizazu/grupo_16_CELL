@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `cell_db`.`users` (
   `provincia` VARCHAR(45) NULL,
   `fecha` DATE NULL,
   `created_at` TIMESTAMP NULL,
-  `update_at` TIMESTAMP NULL,
+  `updated_at` TIMESTAMP NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `email_UNIQUE` (`email` ASC))
 ENGINE = InnoDB;
@@ -64,7 +64,7 @@ CREATE TABLE IF NOT EXISTS `cell_db`.`products` (
   `capacidad` INT NOT NULL,
   `image` VARCHAR(100) NOT NULL,
   `created_at` TIMESTAMP NULL,
-  `update_at` TIMESTAMP NULL,
+  `updated_at` TIMESTAMP NULL,
   `id_trademark` INT NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `idTrademark_idx` (`id_trademark` ASC),
@@ -87,7 +87,7 @@ CREATE TABLE IF NOT EXISTS `cell_db`.`carts` (
   `remito` INT NOT NULL,
   `date` DATE NULL,
   `created_at` TIMESTAMP NULL,
-  `update_at` TIMESTAMP NULL,
+  `updated_at` TIMESTAMP NULL,
   INDEX `id_usuario_idx` (`id_usuario` ASC),
   INDEX `id_producto_idx` (`id_productos` ASC),
   PRIMARY KEY (`id`),

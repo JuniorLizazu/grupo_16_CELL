@@ -43,7 +43,7 @@ module.exports = (sequelize,dataTypes) => {
             type : dataTypes.STRING(45),
         },
         fecha : {
-            type : dataTypes.DATEONLY,
+            type : dataTypes.DATE,
         }
     }
 

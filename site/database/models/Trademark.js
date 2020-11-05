@@ -1,4 +1,4 @@
-module.exports = (sequelize, datatypes) => {
+module.exports = (sequelize, dataTypes) => {
 
     let alias = "Trademark";
 
@@ -10,7 +10,7 @@ module.exports = (sequelize, datatypes) => {
             primaryKey: true
         },
         name: {
-            type : datatypes.STRING(45),
+            type : dataTypes.STRING(45),
             allowNull : false
         }
     }
@@ -24,15 +24,12 @@ module.exports = (sequelize, datatypes) => {
 
     const Trademark = sequelize.define(alias,cols,config);
 
-    Trademark.associate = function(models) {
-
         Trademark.associate = function(models){
             Trademark.hasMany(models.Products,{
                 as : 'productos',
                 foreignKey : 'id_trademark'
             })
         }
-    }
 
 
     return Trademark

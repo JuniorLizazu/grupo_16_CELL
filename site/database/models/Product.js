@@ -1,4 +1,4 @@
-module.exports = (sequelize, datatypes) => {
+module.exports = (sequelize, dataTypes) => {
 
     let alias = "Products";
 
@@ -10,43 +10,43 @@ module.exports = (sequelize, datatypes) => {
             primaryKey : true
         },
         name : {
-            type : datatypes.STRING(100),
+            type : dataTypes.STRING(100),
             allowNull : false
         },
         model : {
-            type : datatypes.STRING(100),
+            type : dataTypes.STRING(100),
             allowNull : false
         },
         price : {
-            type : datatypes.DECIMAL(6,2).UNSIGNED,
+            type : dataTypes.DECIMAL(6,2).UNSIGNED,
             allowNull : false
         },
         colors : {
-            type : datatypes.STRING(45),
+            type : dataTypes.STRING(45),
             allowNull : false
         },
         company : {
-            type : datatypes.STRING(45),
+            type : dataTypes.STRING(45),
             allowNull : false
         },
         discount : {
-            type : datatypes.INTEGER(11),
+            type : dataTypes.INTEGER(11),
             allowNull: false
         },
         dualsim : {
-            type : datatypes.STRING(45),
+            type : dataTypes.STRING(45),
             allowNull : false
         },
         capacidad : {
-            type : datatypes.INTEGER,
+            type : dataTypes.INTEGER,
             allowNull : false
         },
         image : {
-            type : datatypes.STRING(100),
+            type : dataTypes.STRING(100),
             allowNull : false
         },
         id_trademark : {
-            type : datatypes.INTEGER(11)
+            type : dataTypes.INTEGER(11)
         }
     }
 
@@ -69,7 +69,7 @@ module.exports = (sequelize, datatypes) => {
         Product.belongsToMany(models.Users,{ //un producto tiene muchos usuarios (N:M)
             as : 'usuarios',
             through : 'carts',
-            foreignKey : 'id_producto',
+            foreignKey : 'id_productos',
             otherKey : 'id_usuario',
             timestamps : false
         })
