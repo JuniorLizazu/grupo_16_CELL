@@ -4,12 +4,7 @@
     <section class="perfilUsuario">
         <div class="row perfil principal">
 
-            <div class="container">
-                <section class="row"></section>
-                <ul class="barra">
-                <li class="opciones"><a href="/products/create">Agregar Producto</a></li>
-                <li class="opciones"><a href="/products/show/1/show">Editar / Eliminar</a></li>
-                </ul>
+            
 
             <div class="contenido text-left">
 
@@ -54,7 +49,7 @@
                             </div>
                             <div class="col-12 col-md-8 mt-3">
                                 <p>
-                                   Marca: <%= producto.trademark %>
+                                   Marca: <%= trademark.name %>
                                 </p>
                                 <p>
                                     Modelo: <%= producto.model%>
@@ -110,7 +105,12 @@
                                     <input type="file" class="form-control" name="image">
                                 </div>
                                 <div class="form-group col-12 col-md-8 col-xl-8 mt-3">
-                                    <p>Marca:</p><input class="form-control" type="text" value="<%= producto.trademark%>" name="marca">
+                                    <p>Marca:</p><select name="trademark" class="form-control" >
+                                        <option value="">Elige una opción</option>
+                                        <% trademark.forEach(trademark => { %>
+                                            <option value="<%= trademark.id %>"><%= trademark.name %></option>
+                                        <%});%>
+                                      </select>   
                                 </div>
                                 <div class="form-group col-12 col-md-8 col-xl-8 mt-3">
                                     <p>Modelo</p><input class="form-control" type="text" value="<%= producto.model%>" name="modelo">

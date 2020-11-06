@@ -75,6 +75,9 @@ module.exports = {
                 trademark: trademark
             })
         })
+        .catch(error =>{
+            res.send(error)
+        })
     },
     agregar: function(req,res){
         //si no hay errores, entra y crea el nuevo producto
@@ -94,7 +97,9 @@ module.exports = {
             .then(()=>{
                 return res.redirect('/products')
             })
-        
+            .catch(error =>{
+                res.send(error)
+            })
     },
     showEdit:function(req,res){
         let idProducto = req.params.id;
@@ -111,50 +116,83 @@ module.exports = {
             activeEdit = 'active';
             showEdit = 'show';
         }
-        let resultado = dbProducts.filter(producto =>{
-            return producto.id == idProducto
+        
+        let producto = db.Products.findOne({
+            where: {
+                id: idProducto
+            },
+            include: [
+                {
+                    association: 'trademark'
+                }
+            ]
         })
-        res.render('vistaProducto',{
-            title: 'Ver / Editar',
-            css: 'vistaProducto.css',
-            total: dbProducts.length,
-            producto:resultado[0],
-            activeDetail: activeDetail,
-            activeEdit:activeEdit,
-            showDetail: showDetail,
-            showEdit:showEdit,
-        })
+        //GUARDO LA CANTIDAD DE PRODUCTOS PARA PODES RECORRERLOS EN LA PESTAÑA "detalle del producto"
+        let total = db.Products.count();
+        //GUARDO TODO LOS DATOS DE LA TABLA EN trademark
+        let trademark = db.Trademark.findAll()
+
+       //LO PASO COMO PROMESA EN UNA LLAVE A LAS VARIABLES QUE VOY A USAR
+       Promise.all([producto, trademark, total])
+        
+       .then(([producto, trademark, total]) => {
+           //MUESTRO productShow Y LE PASO CADA VALOR PARA PODER MANIPULARLO EN DICHO ARCHIVO
+           res.render('vistaProducto', {
+               title: "Ver / Editar Producto",
+               css: 'vistaProducto.css',
+               total: total,
+               trademark: trademark,
+               producto: producto,
+               activeDetail: activeDetail,
+               activeEdit: activeEdit,
+               showEdit: showEdit,
+               showDetail: showDetail
+           })
+       })
+
     },
     editar: function(req,res){
-        let idProducto = req.params.id;
-        dbProducts.forEach(producto => {
-            if(producto.id == idProducto){
-                producto.id = Number(req.body.id),
-                producto.nombre = req.body.name,
-                producto.trademark = req.body.marca,
-                producto.model = req.body.modelo,
-                producto.price = Number(req.body.price),
-                producto.discount = Number(req.body.discount),
-                producto.colors = req.body.colors,
-                producto.company = req.body.company,
-                producto.image = producto.image
+        //USO LA FUNCION PARA ACTUALIZAR DATOS.
+        db.Products.update({
+            //GUARDO LOS DATOS NUEVOS EN CADA VARIBLE ASIGNADA.
+            name : req.body.name,
+            model : req.body.modelo,
+            price : Number(req.body.price),
+            colors : req.body.colors,
+            company : req.body.company,
+            discount : Number(req.body.discount),
+            id_trademark : req.body.trademark,
+        },
+        {
+            //DEPENDE DE LA ID SELECCIONADA, SE EDITAR CADA PRODUCTO.
+            where: {
+                id: req.params.id
             }
         })
-        fs.writeFileSync(path.join(__dirname,'../data/productsDataBase.json'),JSON.stringify(dbProducts),'utf-8');
-        res.redirect('/products/show/'+ idProducto +'/show')
+            .then(() => {
+                //REDIRECCIONO A LA LISTA DE PRODUCTOS.
+                res.redirect('/products/detail/'+req.params.id)
+            })
     },
     eliminar:function(req,res){
-        let idProducto = req.params.id;
-        dbProducts.forEach(producto =>{
-            if(producto.id == idProducto){
-                var aEliminar = dbProducts.indexOf(producto)
-                dbProducts.splice(aEliminar,1)
-            }
-        })
-        for(let i = 1; i < dbProducts.length; i++){
-            dbProducts[i].id = i - 1;
-        }
-        fs.writeFileSync(path.join(__dirname,'../data/productsDataBase.json'),JSON.stringify(dbProducts))
-        res.redirect('/products/admin')
-    }
+        /* LOGICA CON JSON
+         let idProducto = req.params.id;
+         dbProducts.forEach(producto =>{
+             if(producto.id == idProducto){
+                 let aEliminar = dbProducts.indexOf(producto)
+                 dbProducts.splice(aEliminar,1)
+             }
+         })
+         fs.writeFileSync(path.join(__dirname,'../data/products.json'),JSON.stringify(dbProducts))
+         res.redirect('/products')*/
+         db.Products.destroy({
+             where:{
+               id: req.params.id
+             }
+           })
+           .then(() =>{
+             res.redirect('/products')
+           
+         })
+     }
 }

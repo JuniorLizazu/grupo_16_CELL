@@ -45,6 +45,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `cell_db`.`trademark` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
+  `image` VARCHAR(100) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 

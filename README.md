@@ -92,15 +92,15 @@ Utilizamos la plataforma [Trello](https://trello.com/b/JRpKlpfZ/grupo16cell), c�
 ## Sprint 4
 
 - *Huespedes ven el home y su fomulario de registro e ingreso*
-- *Usuarios tienen la posibilidad de publicar productos, editarlos, eliminarlos y acceder al carrito*
+- *Usuarios tienen la posibilidad de acceder al carrito*
 - *Deben crearse un usuario para poder navegar en la pagina con las ventajas antes mencionadas*
-- *Estaremos trabajando en la parte de categorias para tenerlas listas para tenerlos en el proximo sprint*
+- *Usuario admin para tener acceso a las funciones de crude tanto de usuarios como productos: -Emani: santiagoeojeda@gmail.com -Password: walking dead (incluye el espacio)*
 
 ## Sprint 5
 
-- *Se cre처 un diagrama diagrama y Script de base de datos*
+- *En la carpeta data se encuentra diagrama y Script de base de datos, dentro de la carpeta poblacion se encuentran los scripts de poblaci처n de las respectivas tablas*
 - *Creaci처n de carpeta Sequelize e Instalacion y configuracion de las dependencias*
-- *Script de poblaci처n de base de datos*
-- *Se cre처 un modelo de base de datos*
-- *Creaci처n de CRUD de usuarios y productos*
-
+- *Se crearon los modelos de la base de datos*
+- *Adaptamos el CRUD de usuarios y productos a la nueva base de datos*
+- *Usuario admin para tener acceso a las funciones de crude tanto de usuarios como productos: -Emani: santiagoeojeda@gmail.com -Password: walking dead (incluye el espacio) REPETIMOS EL USUARIO*
+- *Quedan pendientes las categorias por cuestiones de tiempo y el perfil de usuario*
