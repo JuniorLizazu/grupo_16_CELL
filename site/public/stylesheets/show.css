@@ -25,9 +25,6 @@
     padding: 5px;
     text-align: center;
     margin-bottom: 20px;
-} 
-.contenido img{
-    width: 80%;
 }
 
 p{
@@ -37,10 +34,130 @@ p{
 h4, h3{
     color: black;
 }
+.row{
+    margin: 0;
+  }
+  .productos{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .productos .titulo h2{
+    text-align: left;
+    font-size: 24px;
+    color: #393e46;
+    padding: 30px;
+    font-family: sans-serif;
+  } 
+  .productos .titulo span a{
+    color: #00adb5;
+    display: flex;
+  }
+  .productos .seccion{
+    background-color: white;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    height: 281px;
+  }
+  .productos .seccion p{
+    font-size: 25px;
+    border-bottom: 1px solid #f6f5f5;
+  }
+  .productos .seccion .eco img{
+    height: 126px;
+      width: 94px;;
+      position: relative;
+      left: 17px;
+  }
+  .productos .seccion figure img{
+    width: 90%;
+    height: 127px;
+  }
+  
+  .productos .seccion article{
+    display: flex;
+    flex-wrap: wrap;
+    border-top: #393e46;
+    padding: 20px;
+    position: relative;
+    height: 150px;
+  }
+  .productos article a{
+    display: flex;
+    align-items: flex-end;
+    color: #00adb5;
+    top: 24px;
+  }
+  .productos .contenido{
+    background-color: white;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+  }
+  
+  .productos img{
+    height: 170px;
+    position: relative;
+    top: 50px;
+    border-bottom: 1px solid #f6f5f5;
+  }
+  .productos .contenido p{
+    font-size: 25px;
+    border-bottom: 1px solid #f6f5f5;
+  }
+  
+  .productos article{
+    display: flex;
+    flex-wrap: wrap;
+    border-top: #393e46;
+    padding: 20px;
+    position: relative;
+    height: 150px;
+  }
+  
+  .productos article h2{
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    top: 10px;
+  }
+  
+  .productos article span{
+    margin-left: 10px;
+    display: flex;
+    align-items: flex-end;
+  }
+  .productos article a{
+    display: flex;
+    align-items: flex-end;
+    color: #00adb5;
+  }
+  .productos .contenido2{
+    display: none;
+  }
+  .productos .oculto{
+    display: none;
+  }
+  .boton a{
+    position: relative;
+    bottom: 63px;
+    left: 148px;
+    width: 68px;
+  }
 @media(min-width:768px){
     .barra li{
         margin-left:30px;
     }
+    .productos .seccion{
+        height: 432px;
+        position: relative;
+      }
+      .barra li{
+        margin-left:30px;
+      }
     
 }
 @media(min-width:1024px){
@@ -51,4 +168,28 @@ h4, h3{
         border-right: none;
         margin-left: 20px;
     }
+    .productos .oculto{
+        display: block;
+      }
+      .productos .seccion span a{
+        position: relative;
+        top: 243px;
+      }
+        
+      .productos .seccion .eco span a{
+        position: relative;
+        top: 243px;
+      }
+        .productos .seccion .buscado span a{
+          position: relative;
+          top: 243px;
+        }
+        /*FOOTER ESCRITORIO*/
+      
+        footer .redes ul li{
+          margin-right: 60px;
+        }
+        footer .redes ul li:last-child{
+          margin-right: 20px;
+        }
 }

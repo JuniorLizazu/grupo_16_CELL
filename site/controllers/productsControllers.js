@@ -55,11 +55,17 @@ module.exports = {
         });
     },
     show: function(req, res){
-        res.render('show',{
-            title: "Productos",
-            css:"products.css",
-            productos: dbProducts
-        })
+        db.Products.findAll()
+            .then(producto =>{
+                res.render('show',{
+                 title: 'Admin',
+                 css: 'show.css',
+                 productos: producto
+                })
+            })
+            .catch(error =>{
+                res.send(error)
+            })
     },
     crear: function(req,res){
         //guardo los nombres en subCategorias para despues mostrarlos y ordenar el nombre alfabeticamente.
