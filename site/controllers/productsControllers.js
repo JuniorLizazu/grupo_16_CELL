@@ -1,6 +1,4 @@
 const path = require('path');
-const dbProducts = require(path.join(__dirname,'..','data','dbProducts'))
-const dbUsers = require(path.join(__dirname,'..','data','dbUsers'))
 const fs = require('fs');
 
 // Requiero la base de datos
@@ -108,61 +106,55 @@ module.exports = {
             })
     },
     showEdit:function(req,res){
-        let idProducto = req.params.id;
-        let flap = req.params.flap;
-        let activeDetail;
-        let activeEdit;
-        let showDetail;
-        let showEdit;
- 
-        if(flap=="show"){
-            activeDetail = 'active';
-            showDetail = 'show';
-        }else{
-            activeEdit = 'active';
-            showEdit = 'show';
-        }
-        
-        let producto = db.Products.findOne({
-            where: {
-                id: idProducto
-            },
+        db.Products.findAll({
             include: [
                 {
                     association: 'trademark'
                 }
             ]
         })
-        //GUARDO LA CANTIDAD DE PRODUCTOS PARA PODES RECORRERLOS EN LA PESTAÑA "detalle del producto"
-        let total = db.Products.count();
-        //GUARDO TODO LOS DATOS DE LA TABLA EN trademark
-        let trademark = db.Trademark.findAll()
-
-       //LO PASO COMO PROMESA EN UNA LLAVE A LAS VARIABLES QUE VOY A USAR
-       Promise.all([producto, trademark, total])
-        
-       .then(([producto, trademark, total]) => {
+       .then(producto => {
            //MUESTRO productShow Y LE PASO CADA VALOR PARA PODER MANIPULARLO EN DICHO ARCHIVO
            res.render('vistaProducto', {
                title: "Ver / Editar Producto",
                css: 'vistaProducto.css',
-               total: total,
-               trademark: trademark,
+               trademark: producto.trademark,
                producto: producto,
-               activeDetail: activeDetail,
-               activeEdit: activeEdit,
-               showEdit: showEdit,
-               showDetail: showDetail
            })
        })
+       .catch(error=>{
+           res.send(error)
+       })
+
+    },
+    formulario:function(req, res){
+        let producto = db.Products.findOne({
+            where : {
+                id: req.params.id
+            },
+            include : [
+                {
+                    association: 'trademark'
+                }
+            ]
+        })
+        let trademark = db.Trademark.findAll()
+        Promise.all([producto,trademark])
+        
+         .then(([producto,trademark]) =>{
+            res.render('productEdit',{
+            title:'Editar producto',
+            css:'editProduct.css',
+            producto: producto,
+            trademark: trademark
+        })
+    })
 
     },
     editar: function(req,res){
         //USO LA FUNCION PARA ACTUALIZAR DATOS.
         db.Products.update({
             //GUARDO LOS DATOS NUEVOS EN CADA VARIBLE ASIGNADA.
-            name : req.body.name,
-            model : req.body.modelo,
             price : Number(req.body.price),
             colors : req.body.colors,
             company : req.body.company,

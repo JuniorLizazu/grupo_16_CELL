@@ -6,163 +6,48 @@
 
             
 
-            <div class="contenido text-left">
+            <div class="container">
+                
+                  <section>
+                  <div class="row productos">
+                    <div class="col-12 titulo">
+                      <h2>Productos</h2>
+                    </div>
+                    
 
-                <ul class="nav nav-tabs" id="myTab" role="tablist">
-                    <li class="nav-item " role="presentation">
-                        <a class="nav-link <%= activeDetail %> " id="home-tab" data-toggle="tab" href="#detalle" role="tab" aria-controls="home" aria-selected="true">Detalle del Producto</a>
-                    </li>
-                    <li class="nav-item"  role="presentation">
-                        <a class="nav-link <%= activeEdit %>" id="profile-tab" data-toggle="tab" href="#editar" role="tab" aria-controls="detalle" aria-selected="false">Editar Producto</a>
-                    </li>
-                </ul>
-                <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade <%= showDetail %> <%= activeDetail %> " id="detalle" role="tabpanel" aria-labelledby="profile-tab">
+                        <% producto.forEach(productos => { %>
+     
 
-                        <div class="row p-3">
-                            <div class="col-12">
-                                <div class="row">
-                                    <div class="col-1">
-                                        <% if (producto.id>1) { %>
-                                            <a href="/products/show/<%- producto.id-1 %>/show " class="text-warning"><i class="fas fa-chevron-circle-left"></i></a>
-                                            <% } %>
-                                    </div>
-                                    <div class="col-10">
-                                        <h3 class="text-center">
-                                            Nombre: <%= producto.name %>
-                                        </h3>
-                                    </div>
-                                    <div class="col-1">
-                                        <% if (producto.id>0 && producto.id <= total-1) { %>
-                                            <a href="/products/show/<%- producto.id+1 %>/show " class="text-warning"><i class="fas fa-chevron-circle-right"></i></a>
- 
-                                            <% } %>
-                                    </div>
+
+                            <div class="col-12 col-md-6 col-lg-3"> 
+                                <div class="contenido">
+                                  <p><%= productos.name %></p>
+                                  <figure>
+            
+                                    <a href="/products/detail/<%= productos.id %>"><img src="/images/logos/<%= productos.image %>" alt=""/></a>
+        
+                                  </figure>
+        
+                                  <article>
+                                    
+                                    <form action="/products/delete/<%= productos.id%>?_method=DELETE" method="POST">
+            
+                                        <button type="submit" class="btn-sm btn-danger" id="darBaja"><i class="fas fa-trash"></i></button>
+                                      </form>
+
+                                      <a href="/products/edit/<%= productos.id %> "><i class="fas fa-edit"></i></a>
+            
+                                    
+                                  </article>
                                 </div>
-
-
-                            </div>
-                            <div class="col-12 col-md-4 mt-6">
-                                <figure class="text-center">
-                                    <img src="/images/logos/<%= producto.image %> " alt="" class="img-fluid">
-                                </figure>
-                            </div>
-                            <div class="col-12 col-md-8 mt-3">
-                                <p>
-                                   Marca: <%= trademark.name %>
-                                </p>
-                                <p>
-                                    Modelo: <%= producto.model%>
-                                </p>
-                                <p>
-                                    Colores: <%= producto.colors %>
-                                </p>
-                                <p>
-                                    Compania: <%= producto.company %>
-                                </p>
-                                <p>
-                                    Dual-Sim: <%= producto.dualsim %>
-                                </p>
-                                <div class="row">
-                                    <div class="col-12 col-lg-4">
-                                        <span><b>Capacidad:</b> 
-                                            <%= producto.capacidad %>
-                                        </span>
-                                    </div>
-                                    <div class="col-12 col-md-6 col-lg-4">
-                                        <span><b>Precio:</b>  $
-                                        <%=producto.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")%>
-                                    </span>
-                                    </div>
-                                    <div class="col-12 col-md-6 col-lg-4">
-                                        <span><b>Descuento:</b> 
-                                        <%=producto.discount%>%
-                                    </span>
-                                    </div>
-                                    <form action="/products/delete/<%= producto.id %>?_method=DELETE"
-                                        method="POST">
-                                        <button class="btn btn-outline-light" type="submit">
-                                            <h4 class="fas fa-trash-alt text-danger"></h4>
-                                        </button>
-                                    </form>
-
-                                </div>
-                            </div>
-
-
+                              </div>
+            
+                          
+                          <% }) %>
                         </div>
-                    </div>
-                    <div class="tab-pane fade <%= showEdit %> <%= activeEdit %>" id="editar" role="tabpanel" aria-labelledby="home-tab">
-                        <form action="/products/edit/<%= producto.id %>?_method=PUT" method="POST" >
-                            <div class="row p-3">
-                                <div class="form-group col-12">
-                                    <p>Nombre:</p><input class="form-control" type="text" value="<%= producto.name%>" name="name">
-                                </div>
-                                <div >
-                                    <figure class="text-center">
-                                        <img src="/images/logos/<%= producto.image %> " alt="" class="img-fluid">
-                                    </figure>
-                                </div>
-                                <div class="form-group col-12 col-md-8 col-xl-8 mt-3">
-                                    <p>Marca:</p><select name="trademark" class="form-control" >
-                                        <option value="">Elige una opción</option>
-                                        <% trademark.forEach(trademark => { %>
-                                            <option value="<%= trademark.id %>"><%= trademark.name %></option>
-                                        <%});%>
-                                      </select>   
-                                </div>
-                                <div class="form-group col-12 col-md-8 col-xl-8 mt-3">
-                                    <p>Modelo</p><input class="form-control" type="text" value="<%= producto.model%>" name="modelo">
-                                </div>
-                                <div class="form-group col-12 col-md-8 col-xl-8 mt-3">
-                                    <p>Colores</p><input class="form-control" type="text" value="<%= producto.colors%>" name="colors">
-                                </div>
-                                <div class="form-group col-12 col-md-8 col-xl-8 mt-3">
-                                    <p>Company</p><input class="form-control" type="text" value="<%= producto.company%>" name="company">
-                                </div>
-                                <div class="form-group col-12 col-md-8 col-xl-8 mt-3">
-                                    <p>
-                                    </p>
-                                    <div class="row">
-                                        <div class="form-group col-12 col-lg-4">
 
-                                        </div>
-                                        <div class="form-group col-6 col-lg-4">
-
-                                            <div class="input-group mb-2 mr-sm-2">
-                                                <div class="input-group-prepend">
-                                                    <div class="input-group-text">$</div>
-                                                </div>
-                                                <input type="text" class="form-control" value="<%=producto.price%>" name="price">
-                                            </div>
-                                        </div>
-                                        <div class="col-6 col-lg-4">
-                                            <div class="input-group mb-2 mr-sm-2">
-
-                                                <input type="text" class="form-control" value="<%=producto.discount%>" name="discount">
-                                                <div class="input-group-prepend">
-                                                    <div class="input-group-text">%</div>
-                                                </div>
-                                            </div>
-                                            </span>
-                                        </div>
-                                        <div class="col-12 d-flex justify-content-end">
-                                            <a href="/products/show/<%= producto.id %>/show"><button class="btn btn-danger mr-2" type="button">Cancelar</button></a>
-                                            <button class="btn btn-info" type="submit" name="id" value="<%= producto.id %> ">Guardar</button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </form>
-                    </div>
+                    </section>
                 </div>
-            </div>
-        </div>
-</div>
-</section>
-</div>
-
 
 
 

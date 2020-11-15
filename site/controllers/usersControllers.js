@@ -2,8 +2,6 @@ const path = require('path');
 const fs = require('fs');
 const bcrypt = require('bcrypt');
 const {validationResult} = require('express-validator');
-const dbProducts = require(path.join(__dirname,'..','data','dbProducts'))
-const dbUsers = require(path.join(__dirname,'..','data','dbUsers'))
 
 
 // Requiero la base de datos
@@ -89,14 +87,72 @@ module.exports={
             });
         }
     },
-    profile:function(req,res){
-        res.render('userProfile',{
-            title:"Perfil de usuario",
-            css: "profile.css",
-            productos: dbProducts.filter(producto =>{
-                return producto.category != "menu" && producto.category != "nomenu"
+    listar: function(req, res){
+        db.Users.findAll()
+        .then(usuario=>{
+            res.render('usersLista',{
+                title: 'Admin. Usuarios',
+                css: 'usersLista',
+                usuario: usuario
             })
+        })
+    },
+    profile:function(req,res){
+        db.Users.findByPk(req.session.user.id)
+            .then(usuario =>{
+                res.render("userProfile",{
+                    title: "Perfil de Usuario",
+                    css: "profile.css",
+                    usuario: usuario
+                })
+            })
+            .catch(error =>{
+                res.send(error)
+            })
+    },
+    editar: function(req, res){
+
+        db.Users.update({
+            avatar: (req.files[0])?req.files[0].filename:req.session.user.avatar,
+            direccion: req.body.direccion.trim(),
+            ciudad : req.body.ciudad.trim(),
+            provincia: req.body.provincia.trim(),
+            fecha: req.body.fecha
+        },
+        {
+            where:{
+                id: req.params.id
+            }
+        })
+        .then(()=>{
+            req.session.user.nombre = req.body.nombre
+            req.session.user.apellido = req.body.apellido
+            req.session.user.alias = req.body.nombre +' '+ req.body.apellido
+            res.redirect('/')
+        })
+        .catch(error=>{
+            res.send(error)
+        })
+
+    },
+    eliminar:function(req,res) {
+        db.Users.destroy({
+            where : {
+                id : req.params.id
+            }
+        })
+        .then( result => {
+            console.log(result)
             
+            req.session.destroy();
+            if(req.cookies.userRmr){
+                res.cookie('userCell','',{maxAge:-1});
+            }
+            return res.redirect('/')
+            
+        })
+        .catch( error => {
+            res.send(error)
         })
     },
     logout:function(req,res){

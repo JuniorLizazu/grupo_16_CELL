@@ -49,11 +49,14 @@
             <li>
               <a href="/products/cart"><i class="fas fa-shopping-cart"></i></a>
             </li>
-            <li>
-              <a href="/users/profile"><img src="/images/users/<%= locals.user.avatar %>" alt="avatar" class="avatar"></a>
-            </li>
-            <li>
-              <a href="/users/logout"><i class="fas fa-sign-in-alt "></i></a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle menu" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src="/images/users/<%= locals.user.avatar %>" alt="avatar" class="avatar">
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/users/profile/<%= user.id %> ">Mi cuenta</a>
+                <a class="dropdown-item" href="/users/logout" style="color: red;">Salir</a>
+              </div>
             </li>
                 <% if (user.rol == 'admin') { %>
                   <li>
@@ -80,3 +83,6 @@
   </div>
   <!--Fin del header-->
 </header>
+
+
+

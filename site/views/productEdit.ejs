@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('partials/head') %>
+
+<body>
+    <%- include('partials/header') %> 
+    
+    <div class="signup-form col-12">
+        
+
+      <div class="titulo col-12">
+        <h2>
+          <%= title %> 
+        </h2>
+      </div>
+
+      <form action="/products/edit/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="formulario">
+      
+        <div>
+          <div class="col-12 col-md-4 mt-3 d-flex flex-column align-items-center">
+              
+            <img src="/images/logos/<%= producto.image %>" class="avatarImg" alt="avatar" width="75%"
+              style="object-fit: cover; object-position: top;">
+
+            <div class="form-group w-75">
+              <input type="file" class="form-control" id="avatarImput" name="avatar" placeholder="Actualizar Nombre">
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <label for="">Nombre</label>
+          <input type="text" class="form-control" name="name" value="<%= producto.name %> " disabled>
+      </div>
+      <div class="col">
+        <p>Marca:</p><select name="trademark" class="form-control" >
+            <option value="">Elige una opción</option>
+            <% trademark.forEach(trademark => { %>
+                <option value="<%= trademark.id %>"><%= trademark.name %></option>
+            <%});%>
+          </select>   
+    </div>
+      <div class="col">
+        <label for="">Modelo</label>
+        <input type="text" class="form-control" name="model" value="<%= producto.model %> " disabled>
+    </div>
+    <div class="col">
+      <label for="">Precio</label>
+      <input type="number" class="form-control" name="price" value="<%= producto.price %>">
+    </div>
+    <div class="col">
+      <label for="">Colores</label>
+      <input type="text" class="form-control" name="colors" value="<%= producto.colors %>">
+    </div>
+    <div class="col">
+      <label for="">Company</label>
+      <input type="text" class="form-control" name="company" value="<%= producto.company %>">
+    </div>
+    <div class="col">
+      <label for="">Descuento</label>
+      <input type="text" class="form-control" name="discount" value="<%= producto.discount %>">
+    </div>
+    <div class="boton">
+      <button class="subir" type="submit" name="id" value="<%= producto.id %> ">Actualizar Perfil</button>
+    </div>
+
+    <div class="eliminar">
+      <form action="/products/delete/<%= producto.id%>?_method=DELETE" method="POST">
+        <button type="submit" class="btn-sm btn-danger" id="darBaja"><i class="fas fa-trash"></i></button>
+      </form>
+    </div>
+
+      </form>
+
+    </div>
+
+    <%- include('partials/footer') %> 
+</body>
+</html>

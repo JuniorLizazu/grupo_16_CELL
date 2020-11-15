@@ -59,12 +59,18 @@ header nav .menu{
   position: relative;
   bottom: 3px;
   right: 2px;
+  border-radius: 5px;
 }
 
 
 /*HEADER TABLET*/
 
 @media(min-width: 768px){
+  .navbar-expand-md .navbar-nav .nav-link{
+    position: relative;
+  bottom: 7px;
+  left: 7px;
+  }
   header .logo img{
       left: auto;
   }

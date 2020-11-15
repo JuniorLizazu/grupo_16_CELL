@@ -118,18 +118,18 @@
         <span class="boton"><a href="/products">Ver más</a></span>
       </div>
 
-      <% menu.forEach(producto => { %>
+      <% producto.forEach(products => { %>
         <div class="col-12 col-md-6 col-lg-3">
           <div class="contenido">
-            <p><%= producto.name %></p>
+            <p><%= products.name %></p>
             <figure>
-              <a href="/products/detail/<%= producto.id %>"><img src="/images/logos/<%= producto.image %>" alt=""/></a>
+              <a href="/products/detail/<%= products.id %>"><img src="/images/logos/<%= products.image %>" alt=""/></a>
             </figure>
             <article>
               <h2>
-                $<%- (producto.price - producto.price * producto.discount / 100).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") %>
+                $<%- (products.price - products.price * products.discount / 100).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") %>
               </h2>
-              <span><%= producto.discount %>% OFF</span>
+              <span><%= products.discount %>% OFF</span>
               
             </article>
           </div>
