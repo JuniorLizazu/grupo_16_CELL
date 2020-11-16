@@ -14,13 +14,13 @@ router.get('/detail/:id',productsController.detalle);
 /* GET home page. */
 router.get('/cart', huespedMiddleware, productsController.carrito);
 
-router.get('/admin', huespedMiddleware, productsController.show)
+
 /*Crear producto*/ 
 router.get('/create',adminMiddleware, productsController.crear);
 router.post('/create', upImagesProducts.any(), productsController.agregar);
 
 /*Vista del edit y eliminar*/
-router.get('/show',adminMiddleware, productsController.showEdit);
+router.get('/admin', huespedMiddleware, productsController.show)
 router.get('/edit/:id', adminMiddleware, productsController.formulario)
 router.put('/edit/:id',upImagesProducts.any(), productsController.editar)
 /* Eliminar producto */

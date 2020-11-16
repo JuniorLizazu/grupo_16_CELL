@@ -52,18 +52,27 @@ module.exports = {
             css: 'cart.css',
         });
     },
-    show: function(req, res){
-        db.Products.findAll()
-            .then(producto =>{
-                res.render('show',{
-                 title: 'Admin',
-                 css: 'show.css',
-                 productos: producto
-                })
-            })
-            .catch(error =>{
-                res.send(error)
-            })
+    show: function(req,res){
+        db.Products.findAll({
+            include: [
+                {
+                    association: 'trademark'
+                }
+            ]
+        })
+       .then(producto => {
+           //MUESTRO productShow Y LE PASO CADA VALOR PARA PODER MANIPULARLO EN DICHO ARCHIVO
+           res.render('vistaProducto', {
+               title: "Ver / Editar Producto",
+               css: 'vistaProducto.css',
+               trademark: producto.trademark,
+               producto: producto,
+           })
+       })
+       .catch(error=>{
+           res.send(error)
+       })
+
     },
     crear: function(req,res){
         //guardo los nombres en subCategorias para despues mostrarlos y ordenar el nombre alfabeticamente.
@@ -105,28 +114,6 @@ module.exports = {
                 res.send(error)
             })
     },
-    showEdit:function(req,res){
-        db.Products.findAll({
-            include: [
-                {
-                    association: 'trademark'
-                }
-            ]
-        })
-       .then(producto => {
-           //MUESTRO productShow Y LE PASO CADA VALOR PARA PODER MANIPULARLO EN DICHO ARCHIVO
-           res.render('vistaProducto', {
-               title: "Ver / Editar Producto",
-               css: 'vistaProducto.css',
-               trademark: producto.trademark,
-               producto: producto,
-           })
-       })
-       .catch(error=>{
-           res.send(error)
-       })
-
-    },
     formulario:function(req, res){
         let producto = db.Products.findOne({
             where : {
@@ -159,7 +146,7 @@ module.exports = {
             colors : req.body.colors,
             company : req.body.company,
             discount : Number(req.body.discount),
-            id_trademark : req.body.trademark,
+            capacidad: Number(req.body.capacidad)
         },
         {
             //DEPENDE DE LA ID SELECCIONADA, SE EDITAR CADA PRODUCTO.
@@ -189,7 +176,7 @@ module.exports = {
              }
            })
            .then(() =>{
-             res.redirect('/products')
+             res.redirect('/products/admin')
            
          })
      }

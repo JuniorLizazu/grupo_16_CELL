@@ -105,7 +105,7 @@ h4, h3{
     border-bottom: 1px solid #f6f5f5;
   }
   .productos .contenido p{
-    font-size: 25px;
+    font-size: 20px;
     border-bottom: 1px solid #f6f5f5;
   }
   
@@ -131,9 +131,17 @@ h4, h3{
     align-items: flex-end;
   }
   .productos article a{
-    display: flex;
-    align-items: flex-end;
-    color: #00adb5;
+    width: 19px;
+    height: 25px;
+    position: relative;
+    top: 78px;
+    left: 100px;
+  }
+  .productos form{
+    height: 27px;
+    position: relative;
+    top: 75px;
+    left: 24px;
   }
   .productos .contenido2{
     display: none;

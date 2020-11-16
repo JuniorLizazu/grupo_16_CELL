@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include('partials/head') %>
+<body>
+    <%- include('partials/header') %>
+
+
+    <div class="container">
+        <section class="perfilUsuario">
+            <div class="row perfil principal">
+    
+                
+    
+                <div class="container">
+                  <section class="row"></section>
+                  <section class="row"></section>
+                  <ul class="barra">
+                  <li class="opciones"><a href="/products/create">Agregar Producto</a></li>
+                  <li class="opciones"><a href="/users/lista">Usuarios</a></li>
+                  </ul>
+                      <section>
+                      <div class="row productos">
+                        <div class="col-12 titulo">
+                          <h2>Usuarios</h2>
+                        </div>
+                        
+    
+                            <% usuario.forEach(usuarios => { %>
+         
+    
+    
+                                <div class="col-12 col-md-6 col-lg-3"> 
+                                    <div class="contenido">
+                                      <p><%= usuarios.nombre %> <%= usuarios.apellido %> </p>
+                                      <figure>
+                
+                                        <img src="/images/users/<%= usuarios.avatar %>" alt=""/>
+            
+                                      </figure>
+            
+                                      <article>
+                                        <form action="/users/eliminar/<%= usuarios.id%>?_method=DELETE" method="POST">
+                
+                                            <button type="submit" class="btn-sm btn-danger eliminar" id="darBaja">Eliminar Usuario</button>
+                                          </form>
+    
+                                         
+                
+                                        
+                                      </article>
+                                    </div>
+                                  </div>
+                
+                              
+                              <% }) %>
+                            </div>
+    
+                        </section>
+                    </div>
+              </div>
+        </section>
+      </div>
+
+
+
+
+
+
+    <%- include('partials/footer') %>
+</body>
+</html>

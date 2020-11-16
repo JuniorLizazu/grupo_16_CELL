@@ -12,7 +12,6 @@ const huespedMiddleware = require('../middlewares/huespedMiddleware');
 const adminMiddleware = require('../middlewares/adminMiddleware');
 
 /* GET users listing. */
-
 /*RUTAS DE REGISTRO */
 router.get('/register', usersController.register);
 router.post('/register',upImagesUsers.any(),registerValidator,usersController.processRegister);

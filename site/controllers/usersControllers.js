@@ -92,7 +92,7 @@ module.exports={
         .then(usuario=>{
             res.render('usersLista',{
                 title: 'Admin. Usuarios',
-                css: 'usersLista',
+                css: 'usersLista.css',
                 usuario: usuario
             })
         })
@@ -145,7 +145,7 @@ module.exports={
             console.log(result)
             
             req.session.destroy();
-            if(req.cookies.userRmr){
+            if(req.cookies.userCell){
                 res.cookie('userCell','',{maxAge:-1});
             }
             return res.redirect('/')

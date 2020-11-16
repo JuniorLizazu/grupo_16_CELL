@@ -141,11 +141,12 @@ h4, h3{
 .productos .oculto{
   display: none;
 }
-.boton a{
-  position: relative;
-  bottom: 63px;
-  left: 148px;
-  width: 68px;
+.boton {
+  padding-bottom: 20px;
+}
+#agregar{
+ background-color: #00adb5;
+ color: white;
 }
 @media(min-width:768px){
   .barra li{
