@@ -4,20 +4,20 @@ const db = require('../database/models')
 
 module.exports = {
     index: function(req, res){
-        db.Products.findAll({
-            include : [
-                {
-                    association: 'trademark'
-                }
-            ]
-        })
+        let trademark = db.Trademark.findAll();
+        
+        let producto = db.Products.findAll();
+        
 
-        .then(producto=>{
+        Promise.all([producto, trademark])
+
+        .then(([trademark, producto])=>{
             res.render('index', { 
                 title: 'Cell',
                 css: 'home.css',
-                producto: producto,
-                trademark: producto.trademark
+                trademark: trademark,
+                producto: producto
+                
             })
         })
         .catch(error=>{

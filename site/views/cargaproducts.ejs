@@ -5,72 +5,101 @@
     <div class="col">
         <h4 class="heading"><strong>Formulario </strong> Carga <span></span></h4>
         <form action="" method="POST" enctype="multipart/form-data">
+           
             <div class="col">
                 <label for="exampleFormControlInput1">Titulo de la publicación</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1"
-                    placeholder="" name="name">
+                <input type="text" class="form-control <%= (typeof old != 'undefined' && old.name)?"is-valid":(typeof errors != 'undefined' && errors.name)?"is-invalid": ""  %>" id="exampleFormControlInput1" value="<%= (typeof old != 'undefined' && old.name)?old.name:'' %>" placeholder="" name="name">
+                <small id="errorNombre" class="text-danger"><%= (typeof errors != 'undefined' && errors.name)?errors.name.msg: "" %> </small>
             </div>
+
             <div class="col">
                 <label for="trademark">Marca</label>
                 <br>
-                <select name="trademark" class="form-control" >
+                <select name="trademark" class="form-control <%= (typeof old != 'undefined' && old.trademark)?"is-valid":(typeof errors != 'undefined' && errors.trademark)?"is-invalid": ""  %>" >
                   <option value="">Elige una opción</option>
                   <% trademark.forEach(trademark => { %>
                       <option value="<%= trademark.id %>"><%= trademark.name %></option>
                   <%});%>
-                </select>                        
+                </select>            
+                <small id="errortrademark" class="text-danger"><%= (typeof errors != 'undefined' && errors.trademark)?errors.trademark.msg: "" %> </small>            
             </div>
+
             <div class="col">
                 <label for="">Precio</label>
-                <input type="number" class="form-control" name="price">
+                <input type="number" class="form-control <%= (typeof old != 'undefined' && old.price && !errors.price)?"is-valid":(typeof errors != 'undefined' && errors.price)?"is-invalid": ""  %>" name="price" id="price" value="<%= (typeof old != 'undefined' && old.price)?old.price:'' %>" name="price" min=1>
+                <small id="errorprice" class="text-danger"><%= (typeof errors != 'undefined' && errors.price)?errors.price.msg: "" %> </small>
             </div>
+
             <div class="col">
                 <label for="">Modelo</label>
-                <input type="text" class="form-control" name="model" >
+                <input type="text" class="form-control <%= (typeof old != 'undefined' && old.model)?"is-valid":(typeof errors != 'undefined' && errors.model)?"is-invalid": ""  %>" value="<%= (typeof old != 'undefined' && old.model)?old.model:'' %>" model="model" >
+                <small id="errorNombre" class="text-danger"><%= (typeof errors != 'undefined' && errors.model)?errors.model.msg: "" %> </small>
             </div>
+
             <div class="col">
             <label for="">Comprania Telefonica</label>
-                <select name="company" id="" class="form-control">
+                <select name="company" id="" class="form-control <%= (typeof old != 'undefined' && old.company)?"is-valid":(typeof errors != 'undefined' && errors.company)?"is-invalid": ""  %>" value="<%= (typeof old != 'undefined' && old.company)?old.company:'' %>" >
                     <option value="Libre">Libre</option>
                     <option value="Empresa">Empresa</option>
                 </select>
+                <small id="errorNombre" class="text-danger"><%= (typeof errors != 'undefined' && errors.company)?errors.company.msg: "" %> </small>
             </div>
+
                 <div class="col">
                     <label for="">Descuento</label>
-                    <input type="number" class="form-control" name="discount">
+                    <input type="number" class="form-control <%= (typeof old != 'undefined' && old.discount && !errors.discount)?"is-valid":(typeof errors != 'undefined' && errors.discount)?"is-invalid": ""  %>" name="discount" value="<%= (typeof old != 'undefined' && old.discount)?old.discount:'' %>" min=1 >
+                    <small class="text-danger" id="errordiscount"><%= (typeof errors != 'undefined' && errors.discount)?errors.discount.msg: "" %> </small>
                 </div>
+
                 <div class="col">
                     <label for="">Capacidad</label>
-                        <select name="capacidad" id="" class="form-control">
+                        <select name="capacidad" id="" class="form-control <%= (typeof old != 'undefined' && old.capacidad && !errors.capacidad)?"is-valid":(typeof errors != 'undefined' && errors.capacidad)?"is-invalid": ""  %>" value="<%= (typeof old != 'undefined' && old.capacidad)?old.capacidad:'' %>" min=1 >
                             <option value="32">32 GB</option>
                             <option value="64">64 GB</option>
                             <option value="128">128 GB</option>
                         </select>
+
+                        <small class="text-danger" id="errorcapacidad"><%= (typeof errors != 'undefined' && errors.capacidad)?errors.capacidad.msg: "" %> </small>
                     </div>
+
                 <div class="col">
                     <label for="">Dual-Sim</label>
-                        <select name="dualsim" id="" class="form-control">
+                        <select name="dualsim" id="" class="form-control <%= (typeof old != 'undefined' && old.dualsim && !errors.dualsim)?"is-valid":(typeof errors != 'undefined' && errors.dualsim)?"is-invalid": ""  %>" value="<%= (typeof old != 'undefined' && old.dualsim)?old.dualsim:'' %>">
                             <option value="Si">Si</option>
                             <option value="No">No</option>
                         </select>
+
+                        <small class="text-danger" id="errordualsim"><%= (typeof errors != 'undefined' && errors.dualsim)?errors.dualsim.msg: "" %> </small>
                 </div>
                 
                 <div class="col">
                     <label for="">Colores</label>
-                    <input type="text" class="form-control" name="colors">
+                    <input type="text" class="form-control <%= (typeof old != 'undefined' && old.colors && !errors.colors)?"is-valid":(typeof errors != 'undefined' && errors.colors)?"is-invalid": ""  %>" value="<%= (typeof old != 'undefined' && old.colors)?old.colors:'' %>" name="colors">
+
+                    <small class="text-danger" id="errorcolors"><%= (typeof errors != 'undefined' && errors.colors)?errors.colors.msg: "" %> </small>
+
                 </div>
                 <!--<div class="col">
                     <label for="">Company</label>
                     <input type="text" class="form-control" name="company" placeholder="Libre o Empresa">
-                </div>-->
-          
+             </div>-->
+             <div class="col">
+                <label for="description">Agregar Descripcion:</label>
+      <br>
+      
+      <textarea placeholder="" name="description" cols="39" rows="5" class="form-control <%= (typeof old != 'undefined' && old.description && !errors.description)?"is-valid":(typeof errors != 'undefined' && errors.description)?"is-invalid": ""  %>"><%= (typeof old != 'undefined' && old.description)?old.description:'' %></textarea>
+      <small id="errorDescription" class="text-danger"><%= (typeof errors != 'undefined' && errors.description)?errors.description.msg: "" %> </small>
+    </div>
             <div class="col">
                 <label for="">Elija una imagen</label>
-                <input type="file" class="form-control" name='image'>
+                <input type="file" class="form-control <%= (typeof old != 'undefined' && old.image && !errors.image)?"is-valid":(typeof errors != 'undefined' && errors.image)?"is-invalid": ""  %>" value="<%= (typeof old != 'undefined' && old.image)?old.image:'' %>" name='image'>
+                <small id="errorImagen" class="text-danger"><%= (typeof errors != 'undefined' && errors.image)?errors.image.msg: "" %> </small>
             </div>
+
             <div class="mt-5 mr-5 d-flex justify-content-end boton">
                 <button type="submit" class="btn btn-outline-primary" id="agregar">Publicar</button>
             </div>
+
         </form>
     </div>
 

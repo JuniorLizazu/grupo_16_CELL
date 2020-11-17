@@ -45,6 +45,10 @@ module.exports = (sequelize, dataTypes) => {
             type : dataTypes.STRING(100),
             allowNull : false
         },
+        description : {
+            type : dataTypes.STRING(300),
+            allowNull : false
+        },
         id_trademark : {
             type : dataTypes.INTEGER(11),
             allowNull : false

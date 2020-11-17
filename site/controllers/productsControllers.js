@@ -5,6 +5,7 @@ const fs = require('fs');
 const db = require('../database/models');
 const sequelize = db.sequelize;
 const Op = sequelize.Op;
+const {validationResult} = require('express-validator');
 
 module.exports = {
     listar:function(req,res){
@@ -94,6 +95,10 @@ module.exports = {
     },
     agregar: function(req,res){
         //si no hay errores, entra y crea el nuevo producto
+        let errors = validationResult(req)
+
+
+        if(errors.isEmpty()){
             db.Products.create({
                 name: req.body.name,
                 model: req.body.model,
@@ -104,15 +109,38 @@ module.exports = {
                 dualsim:  req.body.dualsim,
                 capacidad:  Number(req.body.capacidad),
                 image: (req.files[0])?req.files[0].filename:"default.png",
+                description: req.body.description,
                 id_trademark: req.body.trademark
             })
             //redirecciono a productos para mostrar todos los productos, incluyendo el nuevo.
             .then(()=>{
                 return res.redirect('/products')
             })
-            .catch(error =>{
-                res.send(error)
+        }else{
+            db.Trademark.findAll({
+                order:[
+                    'name'
+                ]
             })
+            .then(trademark => {
+                let oldTrademark;
+                if(req.body.trademark){
+                    trademark.forEach(trademark => {
+                        if(trademark.id == req.body.trademark){
+                            oldTrademark = trademark.name
+                        }
+                    });
+                }
+            res.render('cargaproducts', {
+                title: "Agregar Producto",
+                css:'cargaproducto.css',
+                trademark: trademark,
+                errors: errors.mapped(),
+                old: req.body,
+                oldTrademark: oldTrademark
+            }) 
+        })
+        }
     },
     formulario:function(req, res){
         let producto = db.Products.findOne({
@@ -146,7 +174,8 @@ module.exports = {
             colors : req.body.colors,
             company : req.body.company,
             discount : Number(req.body.discount),
-            capacidad: Number(req.body.capacidad)
+            capacidad: Number(req.body.capacidad),
+            description: req.body.description,
         },
         {
             //DEPENDE DE LA ID SELECCIONADA, SE EDITAR CADA PRODUCTO.
