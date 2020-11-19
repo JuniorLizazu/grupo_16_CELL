@@ -86,6 +86,7 @@ module.exports = {
             res.render('cargaproducts',{
                 title:"Cargar producto",
                 css: "cargaproducto.css",
+                script: 'addProduct.js',
                 trademark: trademark
             })
         })
@@ -160,6 +161,7 @@ module.exports = {
             res.render('productEdit',{
             title:'Editar producto',
             css:'editProduct.css',
+            /*script:'addProduct.js',*/
             producto: producto,
             trademark: trademark
         })

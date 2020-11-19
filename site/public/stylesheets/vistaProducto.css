@@ -157,14 +157,11 @@ h4, h3{
   }
 @media(min-width:768px){
     .barra li{
-        margin-left:30px;
+        margin-left:155px;
     }
     .productos .seccion{
         height: 432px;
         position: relative;
-      }
-      .barra li{
-        margin-left:30px;
       }
     
 }
@@ -173,8 +170,8 @@ h4, h3{
         margin-left:150px;
     }
     .barra li:last-child{
-        border-right: none;
-        margin-left: 20px;
+      border-right: none;
+      margin-left: 294px;
     }
     .productos .oculto{
         display: block;

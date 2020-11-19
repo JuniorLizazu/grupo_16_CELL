@@ -68,8 +68,10 @@ header nav .menu{
 @media(min-width: 768px){
   .navbar-expand-md .navbar-nav .nav-link{
     position: relative;
-  bottom: 7px;
-  left: 7px;
+    bottom: 7px;
+    left: 7px;
+    padding-right: 0;
+    padding-left: 0; 
   }
   header .logo img{
       left: auto;

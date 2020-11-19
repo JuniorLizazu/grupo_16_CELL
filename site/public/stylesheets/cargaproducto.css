@@ -144,6 +144,16 @@ h4, h3{
 .boton {
   padding-bottom: 20px;
 }
+.justify-content-end {
+  justify-content: flex-start !important;
+  position: relative;
+  left: 18px;
+}
+#msgError{
+  position: relative;
+  left: 12px;
+  top: 9px;
+}
 #agregar{
  background-color: #00adb5;
  color: white;
