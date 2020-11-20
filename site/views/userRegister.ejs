@@ -6,7 +6,7 @@
 	<%- include('partials/header') %>
 
 	<div class="signup-form col-12">
-		<form action="" method="POST" enctype="multipart/form-data">
+		<form action="" method="POST" enctype="multipart/form-data" id="register">
 			<div class="signup-form col-12">
 
 			<h2><%= title %></h2>
@@ -16,8 +16,8 @@
 
 					<div class="form-group col-12 col-xl-6">
 					<label for="nombre"></label>
-					<input type="text" class="form-control <%= (typeof old != 'undefined' && old.name)?"is-valid":(typeof errors != 'undefined' && errors.name)?"is-invalid": ""  %>" id="nombre"value="<%= (typeof old != 'undefined' && old.name)?old.name:'' %>" placeholder="Nombre"  name="nombre" />
-											<small class="text-danger"><%= (typeof errors != 'undefined' && errors.nombre)?errors.nombre.msg: "" %>
+					<input type="text" class="form-control <%= (typeof old != 'undefined' && old.name)?"is-valid":(typeof errors != 'undefined' && errors.name)?"is-invalid": ""  %>" id="nombre" value="<%= (typeof old != 'undefined' && old.name)?old.name:'' %>" placeholder="Nombre"  name="nombre" />
+											<small class="text-danger" id="errorNombre"><%= (typeof errors != 'undefined' && errors.nombre)?errors.nombre.msg: "" %>
 											</small>
 										</div>
 
@@ -29,7 +29,7 @@
 												value="<%= (typeof old != 'undefined' && old.apellido)?old.apellido:'' %>"
 												placeholder="Apellido" name="apellido" />
 											<small
-												class="text-danger"><%= (typeof errors != 'undefined' && errors.apellido)?errors.apellido.msg: "" %>
+												class="text-danger" id="errorApellido"><%= (typeof errors != 'undefined' && errors.apellido)?errors.apellido.msg: "" %>
 											</small>
 										</div>
 
@@ -42,7 +42,7 @@
 												class="form-control <%= (typeof errors != 'undefined' && errors.pass)?"is-invalid": ""  %>"
 												id="pass" placeholder="Contraseña" name="pass" />
 											<small
-												class="text-danger"><%= (typeof errors != 'undefined' && errors.pass)?errors.pass.msg: "" %>
+												class="text-danger" id="errorPass"><%= (typeof errors != 'undefined' && errors.pass)?errors.pass.msg: "" %>
 											</small>
 										</div>
 
@@ -52,7 +52,7 @@
 												class="form-control <%= (typeof errors != 'undefined' && errors.pass2)?"is-invalid": ""  %>"
 												id="pass2" placeholder="Reingresar Contraseña" name="pass2" />
 											<small
-												class="text-danger"><%= (typeof errors != 'undefined' && errors.pass2)?errors.pass2.msg: "" %>
+												class="text-danger" id="errorPass2"><%= (typeof errors != 'undefined' && errors.pass2)?errors.pass2.msg: "" %>
 											</small>
 
 										</div>
@@ -67,7 +67,7 @@
 												value="<%= (typeof old != 'undefined' && old.email)?old.email:'' %>"
 												placeholder="Email" name="email" />
 											<small
-												class="text-danger"><%= (typeof errors != 'undefined' && errors.email)?errors.email.msg: "" %>
+												class="text-danger" id="errorEmail"><%= (typeof errors != 'undefined' && errors.email)?errors.email.msg: "" %>
 											</small>
 										</div>
 
@@ -78,7 +78,7 @@
 												<label class="custom-file-label" for="customFileLang">Seleccionar
 													Archivo</label>
 												<small
-													class="text-danger"><%= (typeof errorFormato != 'undefined')?errorFormato: "" %>
+													class="text-danger" id="errorImagen"><%= (typeof errorFormato != 'undefined')?errorFormato: "" %>
 												</small>
 											</div>
 										</div>
@@ -96,7 +96,7 @@
 												<a href="" class="text-info">ver bases y condiciones</a><br>
 
 												<small
-													class="text-danger"><%= (typeof errors != 'undefined' && errors.bases)?errors.bases.msg: "" %>
+													class="text-danger" id="errorBases"><%= (typeof errors != 'undefined' && errors.bases)?errors.bases.msg: "" %>
 												</small>
 											</div>
 										</div>
@@ -104,6 +104,7 @@
 											<button type="submit" class="btn btn-success btn-lg btn-block">
 												Registrarse
 											</button>
+											<small id="msgError" class="text-danger"></small>
 										</div>
 
 									</div>

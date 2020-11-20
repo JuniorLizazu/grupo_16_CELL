@@ -13,7 +13,8 @@ module.exports={
     register:function(req,res){
         res.render('userRegister',{
             title:"Registro de Usuario",
-            css:'register.css'
+            css:'register.css',
+            script:"registerUser.js",
         })
     },
     processRegister: function (req, res) {
