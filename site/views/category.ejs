@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include('./partials/head.ejs') %>
+<body>
+
+    <%- include('./partials/header.ejs') %>
+
+    <section class="principal">
+
+        <div class="container">
+            <div class="row">
+            
+            <!-- Filtro -->
+                <div class="col-12 col-md-4 col-lg-3">
+                    <div class="filtro">
+
+                        <a id="btn-filtro"><i class="fa fa-sliders-h"></i> FILTRAR</a>
+
+                        <div class="container">
+                            <section>
+                              <div class="row productos">
+                                <div class="col-12 titulo">
+                                  <h2>Marcas</h2>
+                                </div>
+                      
+                                <div class="container">
+                                  <div class="row">
+                                    <div class="MultiCarousel" data-items="1,3,5,6" data-slide="1" id="MultiCarousel"  data-interval="1000">
+                                            <div class="MultiCarousel-inner">
+                                              <% trademark.forEach(trademark => { %>
+                      
+                                               
+                                              <div class="item">
+                                                    <div class="pad15">
+                                                       <a href=""><img src="/images/logos/<%= trademark.image %> " alt=""></a>
+                                                    </div>
+                                                </div>
+                                                <% }) %>
+                                                
+                                            </div>
+                                            <button class="btn btn-primary leftLst"><</button>
+                                            <button class="btn btn-primary rightLst">></button>
+                                        </div>
+                                  </div>
+                                </div>
+                      
+                            </section>
+                            
+                          </div>
+                      
+                            
+                            <!-- <div class="cabecera">MARCAS</div> -->
+                        </div>
+                        
+                    </div>
+                </div>
+
+            <!-- Productos -->
+                <div class="col-12 col-md-8">
+                    <div class="row">
+                    
+                    <% if (productos.length == 0) { %>
+                        <div >No tenemos productos de esta categoria</div>
+                    <% } %>
+                    <% productos.forEach(producto => { %>
+                     
+                        <div class="contenedor-productos">
+
+                            <div class=" producto">
+                                <a href="/products/detail/<%= producto.id %>">
+                                    <figure>
+                                    <img src="/images/logos/<%= producto.image %> " alt="">
+                                    </figure>
+                                    <article>
+                                    <span><%= producto.name %> </span>
+                                    <h2>$<%= producto.price %> </h2>
+                                    </article>
+                                </a>
+                            </div>
+
+                        </div>
+
+                    <% }) %>
+
+                    </div>
+                 </div>
+                    
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="javascript/carousel.js"></script>
+    <%- include('./partials/footer.ejs') %>
+    
+</body>
+</html>
+

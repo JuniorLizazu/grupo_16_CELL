@@ -111,7 +111,7 @@ window.addEventListener('load', function(){
             break;
             
         }
-    })
+    }),
 
     inputDiscount.addEventListener('blur', function(){
 

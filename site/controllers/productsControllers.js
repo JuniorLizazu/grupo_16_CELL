@@ -53,6 +53,31 @@ module.exports = {
             css: 'cart.css',
         });
     },
+    category: function(req, res){
+        let trademark = db.Trademark.findAll();
+
+        let productsFilters = db.Products.findAll({
+            include: [
+                {
+                    model: db.Trademark,
+                    as: 'trademark',
+                    where: {
+                        name: { [Op.eq]: req.params.id.toLowerCase() }
+                    }
+                }
+            ],
+        })
+
+        Promise.all([productsFilters, trademark])
+            .then(([productsFilters, trademark]) => {
+                res.render('listado', {
+                    title: "Blastech",
+                    css: "listado.css",
+                    productos: productsFilters,
+                    trademark,
+                })
+            })
+    },
     show: function(req,res){
         db.Products.findAll({
             include: [
@@ -161,7 +186,7 @@ module.exports = {
             res.render('productEdit',{
             title:'Editar producto',
             css:'editProduct.css',
-            /*script:'addProduct.js',*/
+            script:'editProduct.js',
             producto: producto,
             trademark: trademark
         })
@@ -169,7 +194,11 @@ module.exports = {
 
     },
     editar: function(req,res){
+
+        let errors = validationResult(req)
+
         //USO LA FUNCION PARA ACTUALIZAR DATOS.
+        if (errors.isEmpty()) {
         db.Products.update({
             //GUARDO LOS DATOS NUEVOS EN CADA VARIBLE ASIGNADA.
             price : Number(req.body.price),
@@ -189,6 +218,33 @@ module.exports = {
                 //REDIRECCIONO A LA LISTA DE PRODUCTOS.
                 res.redirect('/products/detail/'+req.params.id)
             })
+        } else {
+            let product = db.Products.findOne({
+                where: {
+                    id: req.params.id
+                },
+                include: [
+                    {
+                        association: 'trademark'
+                    }
+                ]
+            })
+            let trademark = db.Trademark.findAll()
+            
+            Promise.all([trademark, product])
+                .then(([trademark, product]) => {
+                    res.render('productEdit', {
+                        title: "Editar Producto",
+                        css: 'editProduct.css',
+                        producto: product,
+                        errors: errors.mapped(),
+                        old: req.body,
+                        trademark: trademark,
+
+                    })
+
+                })
+            }
     },
     eliminar:function(req,res){
         /* LOGICA CON JSON

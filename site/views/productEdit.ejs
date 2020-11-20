@@ -14,7 +14,7 @@
         </h2>
       </div>
 
-      <form action="/products/edit/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="formulario">
+      <form action="/products/edit/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="formulario" id="edit">
       
         <div>
           <div class="col-12 col-md-4 mt-3 d-flex flex-column align-items-center">
@@ -37,32 +37,39 @@
         <label for="">Modelo</label>
         <input type="text" class="form-control" name="model" value="<%= producto.model %> " disabled>
     </div>
+
     <div class="col">
       <label for="">Precio</label>
-      <input type="number" class="form-control <%= (typeof old != 'undefined' && old.price && !errors.price)?"is-valid":(typeof errors != 'undefined' && errors.price)?"is-invalid": ""  %>" name="price" value="<%= producto.price %>">
-      <small id="errorprice" class="text-danger"><%= (typeof errors != 'undefined' && errors.price)?errors.price.msg: "" %> </small>
+      <input type="number" class="form-control" name="price" value="<%= producto.price %>">
+      <span id="errorPrice" class="text-danger"><%= (typeof errors != 'undefined' && errors.price)?errors.price.msg: "" %> </span>
     </div>
+
     <div class="col">
       <label for="">Colores</label>
       <input type="text" class="form-control" name="colors" value="<%= producto.colors %>">
+      <span id="errorColors" class="text-danger"><%= (typeof errors != 'undefined' && errors.colors)?errors.colors.msg: "" %> </span>
     </div>
-   <!-- <div class="col">
-      <label for="">Company</label>
-      <input type="text" class="form-control" name="company" value="">
-    </div>-->
+    
     <div class="col">
       <p>Compania</p>
-      <select name="company" class="form-control <%= (typeof old != 'undefined' && old.company && !errors.company)?"is-valid":(typeof errors != 'undefined' && errors.company)?"is-invalid": ""  %>"  value="<%= (typeof old != 'undefined' && old.company)?old.company:'' %>" >
+      <select name="company" class="form-control" value="<%= producto.company%>" >
+        <% if(producto.company == 'Empresa') { %> 
           <option value="Empresa">Empresa</option>
           <option value="Libre">Libre</option>
+        <% } else {%> 
+          <option value="Empresa">Libre</option>
+          <option value="Libre">Empresa</option>
+          <% } %>
         </select>   
-        <small id="errorNombre" class="text-danger"><%= (typeof errors != 'undefined' && errors.company)?errors.company.msg: "" %> </small>
+        <span id="errorCompany" class="text-danger"><%= (typeof errors != 'undefined' && errors.company)?errors.company.msg: "" %> </span>
   </div>
+
     <div class="col">
       <label for="">Descuento</label>
-      <input type="text" class="form-control <%= (typeof old != 'undefined' && old.discount && !errors.discount)?"is-valid":(typeof errors != 'undefined' && errors.discount)?"is-invalid": ""  %>" name="discount" value="<%= producto.discount %>">
-      <small class="text-danger" id="errordiscount"><%= (typeof errors != 'undefined' && errors.discount)?errors.discount.msg: "" %> </small>
+      <input type="text" class="form-control" name="discount" value="<%= producto.discount %>">
+      <span class="text-danger" id="errorDiscount"><%= (typeof errors != 'undefined' && errors.discount)?errors.discount.msg: "" %> </span>
     </div>
+
     <div class="col">
       <label for="">Capacidad</label>
           <select name="capacidad" id="" class="form-control">
@@ -70,14 +77,16 @@
               <option value="64">64 GB</option>
               <option value="128">128 GB</option>
           </select>
+          <span class="text-danger" id="errorCapacidad"><%= (typeof errors != 'undefined' && errors.capacidad)?errors.capacidad.msg: "" %> </span>
       </div>
+
       <div class="col">
-        <label for="description">Agregar Descripcion:</label>
-<br>
-<small id="errorDescription" class="text-danger"><%= (typeof errors != 'undefined' && errors.description)?errors.description.msg: "" %> </small>
-<textarea placeholder="" name="description" cols="39" rows="5" class="form-control <%= (typeof old != 'undefined' && old.description && !errors.description)?"is-valid":(typeof errors != 'undefined' && errors.description)?"is-invalid": "" %>" ><%= (typeof old != 'undefined' && old.description)?old.description:'' %></textarea>
-<small id="errorDescription" class="text-danger"><%= (typeof errors != 'undefined' && errors.description)?errors.description.msg: "" %> </small>
-</div>
+        <label for="tipo"> Descripcion </label>
+        <textarea name="description" class="form-control"><%= producto.description%>"</textarea>
+        <span class="text-danger" id="errorDescription"><%= (typeof errors != 'undefined' && errors.description)?errors.description.msg:"" %>
+      </div>
+
+
     <div class="boton">
       <button class="subir" type="submit" name="id" value="<%= producto.id %> ">Guardar</button>
     </div>
@@ -85,6 +94,7 @@
     <div class="eliminar">
       <form action="/products/delete/<%= producto.id%>?_method=DELETE" method="POST">
         <button type="submit" class="btn-sm btn-danger" id="darBaja"><i class="fas fa-trash"></i></button>
+        <span id="msgError" class="text-danger"></span>
       </form>
     </div>
 
