@@ -9,7 +9,7 @@ module.exports = {
         let producto = db.Products.findAll();
         
 
-        Promise.all([producto, trademark])
+        Promise.all([trademark, producto])
 
         .then(([trademark, producto])=>{
             res.render('index', { 
