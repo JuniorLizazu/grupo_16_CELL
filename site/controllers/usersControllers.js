@@ -48,7 +48,8 @@ module.exports={
     login:function(req,res){
         res.render('userLogin',{
             title:"Ingresá a tu cuenta",
-            css: 'login.css'
+            css: 'login.css',
+            script: 'userLogin.js'
         })
     },
     processLogin: function (req, res) {
@@ -136,23 +137,22 @@ module.exports={
         })
 
     },
-    eliminar:function(req,res) {
+    eliminar:function(req,res){
         db.Users.destroy({
-            where : {
-                id : req.params.id
+            where: {
+                id:req.params.id
             }
         })
-        .then( result => {
-            console.log(result)
+        .then(result=>{
             
-            req.session.destroy();
+            fs.unlinkSync('./public/images/users/'+ req.session.user.image); 
+            req.session.destroy()
             if(req.cookies.userCell){
-                res.cookie('userCell','',{maxAge:-1});
-            }
+                res.cookie('userCell', '', {maxAge:-1})
+            } 
             return res.redirect('/')
-            
         })
-        .catch( error => {
+        .catch(error=>{
             res.send(error)
         })
     },

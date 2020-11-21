@@ -22,68 +22,62 @@ window.addEventListener('load', function(){
     let checkBases = formulario.elements[6];
 
     let errores = {};
-    let regExPass = /^(?=.\d)(?=.[a-z])(?=.*[A-Z]).{8,16}$/;
+    let regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/;
     let regExEmail =  /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]:+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/;
     let regExExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
 
-    inputNombre.addEventListener('blur',function(){
-
-        switch (true) {
-            case this.value.length === 0:
-                errorNombre.innerHTML = "El nombre es obligatorio";
-                this.classList.add('is-invalid')
-                break;
-            case this.value.trim().length <=3:
-                errorNombre.innerHTML = "Tenés que poner al menos tres letras"
-                this.classList.add('is-invalid')
-                break
+    inputNombre.addEventListener('keyup',function(){
+        switch(true){
+            case this.value.length == 0:
+            errorNombre.innerHTML = 'El nombre es obligatorio'
+            addIsInvalid(inputNombre)
+            break
+            case this.value.trim().length <3:
+            errorNombre.innerHTML = 'El nombre debe ser mayor a 3 letras'
+            addIsInvalid(inputNombre)
+            break
             default:
-                this.classList.remove('is-invalid')
-                this.classList.add('is-valid')
+                inputNombre.classList.remove('is-invalid')
+                addIsValid(inputNombre)
                 errorNombre.innerHTML = ""
                 break;
         }
-
     })
     
-    inputApellido.addEventListener('blur',function(){
-
-        switch (true) {
-            case this.value.length === 0:
-                errorApellido.innerHTML = "El apellido es obligatorio";
-                this.classList.add('is-invalid')
-                break;
-            case this.value.trim().length <=3:
-                errorApellido.innerHTML = "Tenés que poner al menos tres letras"
-                this.classList.add('is-invalid')
-                break
+    inputApellido.addEventListener('keyup',function(){
+        switch(true){
+            case this.value.length == 0:
+                errorApellido.innerHTML = 'Debe ingresar su apellido'
+                addIsInvalid(inputApellido)
+            break
+            case this.value.length < 2:
+                errorApellido.innerHTML = 'El apellido debe tener al menos 2 carácteres'
+                addIsInvalid(inputApellido)
+            break
             default:
-                this.classList.remove('is-invalid')
-                this.classList.add('is-valid')
-                errorApellido.innerHTML = ""
-                break;
+            this.classList.remove('is-invalid')
+            addIsValid(inputApellido)
+            errorApellido.innerHTML = ''
+            break
         }
-
     })
 
-    inputPass.addEventListener('blur',function(){
-
-        switch (true) {
-            case this.value.length === 0:
-                errorPass.innerHTML = "La contraseña es obligatorio";
-                this.classList.add('is-invalid')
-                break;
-            case !regExPass.test(this.value) :
-                errorPass.innerHTML = "La contraseña debe tener entre 8 y 16 caracteres, una mayúscula una minúscula y un número"
-                this.classList.add('is-invalid')
-                break
+    inputPass.addEventListener('keyup',function(){
+        switch(true){
+            case this.value.length == 0:
+                errorPass.innerHTML = 'La contraseña es obligatoria'
+                addIsInvalid(inputPass)
+            break
+            case !regExPass.test(this.value):
+                errorPass.innerHTML = 'La contraseña debe tener entre 6 y 12 carácteres, una mayúscula, una minúscula y un número'
+                addIsInvalid(inputPass)
+            break
             default:
                 this.classList.remove('is-invalid')
-                this.classList.add('is-valid')
+                addIsValid(inputPass)
                 errorPass.innerHTML = ""
-                break;
+            break
         }
-
     })
 
     inputPass2.addEventListener('blur',function(){
@@ -106,73 +100,71 @@ window.addEventListener('load', function(){
 
     })
 
-    inputEmail.addEventListener('blur',function(){
-
-        switch (true) {
-            case this.value.length === 0:
-                errorEmail.innerHTML = "El campo email es obligatorio";
-                this.classList.add('is-invalid')
-                break;
-            case !regExEmail.test(this.value) :
-                errorEmail.innerHTML = "Debes escribir un email válido"
-                this.classList.add('is-invalid')
+    inputEmail.addEventListener('keyup',function(){
+        switch(true){
+            case this.value.length == 0:
+                errorEmail.innerHTML = 'Este campo es obligatorio'
+                addIsInvalid(inputEmail)
+                break
+            case !regExEmail.test(this.value):
+                this.innerHTML = 'Debes ingresar un Email válido'
+                addIsInvalid(inputEmail)
                 break
             default:
                 this.classList.remove('is-invalid')
-                this.classList.add('is-valid')
-                errorEmail.innerHTML = ""
-                break;
+                addIsValid(inputEmail)
+                errorEmail.innerHTML = ''
+                break
         }
-
     })
+    inputImagen.addEventListener('change', function(e){
+        switch(true){
+        case !regExExtensions.exec(this.value):
+            errorImagen.innerHTML = 'La extensión de la imagen sólo puedo ser jpg/jpeg/png/gif'
+            addIsInvalid(inputImagen)
+            this.value = ''
+            preview.src=''
+        break
 
-    inputImagen.addEventListener('change',function(e){
-
-        switch (true) {
-            case !regExExtensions.exec(this.value) :
-                errorFoto.innerHTML = "Solo imagenes con extension jpg, jpeg, png, o gif";
-                addIsInvalid(inputImagen)
-                this.value = '';
-                preview.src = '';
-            break
-        
-            default:
-                this.classList.remove('is-invalid');
-                addIsValid(inputImagen)
-                errorImagen.innerHTML = "";
-                
-                let reader = new FileReader();
-               
-                reader.readAsDataURL(e.target.files[0]);
-                
-                reader.onload = function(){
-                preview.src = reader.result;
-                }
+        default:
+            this.classList.remove('is-invalid')
+            addIsValid(inputImagen)
+            errorImagen.innerHTML=''
+            let reader = new FileReader()
+            reader.readAsDataURL(e.target.files[0])
+            reader.onload = function(){
+                preview.src = reader.result
+            }
         }
     })
 
 
     formulario.addEventListener('submit',function(e){
-        e.preventDefault();
-        let elementos = formulario.elements
+        e.preventDefault()
+        let elements = formulario.elements
+
         if(checkBases.checked == false){
-            checkBases.classList.add('is-invalid');
-            errorBases.innerHTML = "Debes aceptar las bases y condiciones"
+            addIsInvalid(checkBases)
+            errorBases.innerHTML = 'Debes aceptar nuestras bases y condiciones'
+        }else if(checkBases.checked == true){
+            this.classList.remove('is-invalid')
+            addIsValid(checkBases)
+            errorBases.innerHTML = ''
         }
+        
         let error = false
-        for (let index = 0; index < elementos.length-1; index++) {
-            if(elementos[index].value == 0){
-                elementos[index].classList.add('is-invalid');
-               error = true;
+        for (let i = 0; i<elements.length-1; i++){
+            if(elements[i].value == 0){
+                addIsInvalid(elements[i])
+                error = true
             }
         }
         if(!error){
             formulario.submit()
         }else{
-            msgError.innerHTML = "Los campos señadados son obligatorios"
+            msgError.innerHTML = 'Los campos señalados son obligatorios'
         }
     })
 
-
-
 })
+

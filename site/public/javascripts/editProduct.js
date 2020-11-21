@@ -1,3 +1,13 @@
+function addIsInvalid(element){
+    element.classList.add('is-invalid')
+}
+
+function addIsValid(element){
+    element.classList.add('is-valid')
+}
+
+
+
 window.addEventListener('load', function(){
     console.log('esta conectado')
 
@@ -14,55 +24,55 @@ window.addEventListener('load', function(){
 
     let errors = {};
 
-    inputPrice.addEventListener('blur', function(){
+    inputPrice.addEventListener('keyup', function(){
 
         switch(true) {
             case this.value.length === 0:
                 errorPrice.innerHTML = "Debe ingresar el valor.";
-                this.classList.add('is-invalid');
+                addIsInvalid(inputPrice)
                 break;
             case this.value <=0:
                 errorPrice.innerHTML = "Debe ingresar un numero positivo.";
-                this.classList.add('is-invalid');
+                addIsInvalid(inputPrice)
                 break;
             default:
                 this.classList.remove('is-invalid');
-                this.classList.add('is-valid');
                 errorPrice.innerHTML ="";
+                addIsValid(inputPrice)
                 break;
         }
     }),
 
-    inputColors.addEventListener('blur', function(){
+    inputColors.addEventListener('keyup', function(){
 
         switch (true) {
             case this.value.length === 0:
                 errorColors.innerHTML = "Debe indicar el/los colores del dispositivo";
-                this.classList.add('is-invalid')
+                addIsInvalid(inputColors)
                 break;
             case this.value.trim().length < 4:
                 errorColors.innerHTML = "Debe indicar al menos un color";
-                this.classList.add('is-invalid')
+                addIsInvalid(inputColors)
                 break;
             default:
                 this.classList.remove('is-invalid')
-                this.classList.add('is-valid')
                 errorColors.innerHTML = ""
+                addIsValid(inputColors)
                 break;
         }
     }),
 
-    inputCompany.addEventListener('blur', function(){
+    inputCompany.addEventListener('keyup', function(){
         
         switch(true) {
             case this.value.length === 0:
                 errorCompany.innerHTML = "Debe elegir una de las dos opciones";
-                this.classList.add('is-invalid');
+                addIsInvalid(inputCompany)
                 break;
             default:
                 this.classList.remove('is-invalid');
-                this.classList.add('is-valid');
                 errorCompany.innerHTML = "";
+                addIsValid(inputCompany)
             break;
             
         }
@@ -70,52 +80,52 @@ window.addEventListener('load', function(){
 
 
 
-    inputDiscount.addEventListener('blur', function(){
+    inputDiscount.addEventListener('keyup', function(){
 
         switch(true){
             case this.value.length === 0:
                 errorDiscount.innerHTML = "Debe rellentar este campo o ingrese 0.";
-                this.classList.add('is-invalid');
+                addIsInvalid(inputDiscount)
                 break;
             case this.value <0:
                 errorDiscount.innerHTML = "Debe ingresar un numero positivo.";
-                this.classList.add('is-invalid');
+                addIsInvalid(inputDiscount)
                 break;
             default:
                 this.classList.remove('is-invalid');
-                this.classList.add('is-valid');
                 errorDiscount.innerHTML ="";
+                addIsValid(inputDiscount)
                 break;
         }
     }),
 
-    inputCapacidad.addEventListener('blur', function(){
+    inputCapacidad.addEventListener('keyup', function(){
 
         switch(true) {
             case this.value.length === 0:
                 errorCapacidad.innerHTML = "Debe indicar la capacidad del dispositivo";
-                this.classList.add('is-invalid');
+                addIsInvalid(inputCapacidad)
                 break;
             default:
                 this.classList.remove('is-invalid');
-                this.classList.add('is-valid');
                 errorCapacidad.innerHTML = "";
+                addIsValid(inputCapacidad)
             break;
             
         }
     }),
 
-    inputDescription.addEventListener('blur', function(){
+    inputDescription.addEventListener('keyup', function(){
 
         switch(true){                
             case this.value.length >= 0 && this.value.length <= 20:
                 errorDescription.innerHTML = "La descripcion debe tener al menos 20 caracteres";
-                this.classList.add('is-invalid');
+                addIsInvalid(inputDescription)
                 break;
             default:
                 this.classList.remove('is-invalid');
-                this.classList.add('is-valid');
                 errorDescription.innerHTML ="";
+                addIsValid(inputDescription)
                 break;
         }
     }),
