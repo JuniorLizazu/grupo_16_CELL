@@ -4,23 +4,22 @@
 
 **<span style="color:blue">Comienzo</span> 🏁**
 
-</h5>• Desde el 14/10 empezamos este sprint numero 5 y lo terminamos el 5/11 :  </h5>
+</h5>• Desde el 06/11 empezamos este sprint numero 6 y lo terminamos el 20/11 :  </h5>
 
 
 
 **<span style="color:blue">Tareas</span> 📚**
 
-• *-Junior se encargó de desarrollar el diagrama y Script de la base de datos.
-- Santiago se dedicó a la creación de la carpeta Sequelize e instalacioó y configuracion de las dependencias y el CRUDE de usuarios.
-- Nelson creó el Script de población de base de datos y tambien junto con Bryan la CRUDE de products.
-- Nos juntamos los 3 para desarrollar las vistas para logeados.*
+• *-Junior se encargó de las validaciones de registro de usuario (FRONTEND).
+- Santiago se dedicó a la validacion Login de usuarios(FRONTEND)
+- Nelson creó la Validación de Creación y Edicion de productos(FRONTEND).
 - Al Weekly Junior le estuvo haciendo el seguimiento.
-- Por Ultimo al Retro se lo armó entre todos.
+- Por Ultimo al Retro se lo armó entre todos.*
 
-**<span style="color:blue"> Los dias 27/10, 30/10 , 4/11 y 5/11 > 📆**  
+**<span style="color:blue"> Los dias 06/11 y el 19/11 > 📆**  
 
 *• Fueron las reuniones pertinentes en las cuales revisamos los avances, nos consultamos inconvenientes sobre el codeo y grupalmente se terminaron los objetivos de Trello*
-*Hubo mas reuniones que no se dejaron constancia, pero fueron pero entre maximo 2 integrantes del grupo*
+*En esta ocasión la mitad del sprint ya te teniamos echo, por eso no fue necesario tantas reuniones, exceptuando las de los viernes con Nelson*
 
  
 

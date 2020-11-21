@@ -1,6 +1,6 @@
 # Nuestra retrospectiva  :eyes:
 
-*Durante el proceso del Sprint 2, 3, 4 y 5 los miembros del grupo hicimos una puesta en comun en la cual pudimos generar una retrospectiva, para así conocer nuestros puntos fuertes y nuestras debilidades para así lograr dar lo mejor.*
+*Durante el proceso del Sprint 2, 3, 4, 5 y 6 los miembros del grupo hicimos una puesta en comun en la cual pudimos generar una retrospectiva, para así conocer nuestros puntos fuertes y nuestras debilidades para así lograr dar lo mejor.*
 *Los puntos principales que pudimos notar son:*
 
 
@@ -8,8 +8,8 @@
 ----------
 
 
-#### Seguir con las 2 reuniones semanales:
-*En esta ocasion hicimos mas de 2 reuniones ya que tuvimos nuevo integrante en el proyecto.Hubo tantas reuniones que se decidio dejar en constancia solo las mas importantes*
+#### Reunion semanal:
+*En esta ocasion hicimos solo una reunion y con eso fue mas que suficiente.*
 
 
 #### La distribucion de tareas balanceada:
@@ -18,10 +18,6 @@
 
 ## Empezar a hacer. :grin:
 ----------
-
-
-#### Agregar una reunion semanal mas:
-*Se hicieron muchas mas como fue mencionado* 
 
 
 ## Dejar de hacer. :hushed:
