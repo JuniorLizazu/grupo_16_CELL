@@ -54,29 +54,27 @@ module.exports = {
         });
     },
     category: function(req, res){
-        let trademark = db.Trademark.findAll();
+        let trademark = db.Trademark.findAll()
 
-        let productsFilters = db.Products.findAll({
-            include: [
-                {
-                    model: db.Trademark,
-                    as: 'trademark',
-                    where: {
-                        name: { [Op.eq]: req.params.id.toLowerCase() }
-                    }
-                }
-            ],
+        let productos = db.Products.findAll({
+            where: {
+                id_trademark : req.params.id
+            }
         })
 
-        Promise.all([productsFilters, trademark])
-            .then(([productsFilters, trademark]) => {
-                res.render('listado', {
-                    title: "Blastech",
-                    css: "listado.css",
-                    productos: productsFilters,
-                    trademark,
-                })
+
+        Promise.all([trademark, productos])
+        .then(([trademark, productos]) => {
+            res.render('category', {
+                title: 'Categorias',
+                css: 'home.css',
+                productos: productos,
+                trademark : trademark
             })
+        })
+        .catch(error => {
+            res.send(error)
+        })
     },
     show: function(req,res){
         db.Products.findAll({

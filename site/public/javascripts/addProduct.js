@@ -33,11 +33,11 @@ window.addEventListener('load', function(){
         switch (true) {
             case this.value.length === 0:
                 errorNombre.innerHTML = "El nombre del producto es obligatorio";
-                addIsInvalid('is-invalid')
+                addIsInvalid(inputName)
                 break;
             case this.value.trim().length < 4:
                 errorNombre.innerHTML = "El nombre debe tener al menos 4 letras";
-                addIsInvalid('is-invalid')
+                addIsInvalid(inputName)
                 break;
             default:
                 inputName.classList.remove('is-invalid')

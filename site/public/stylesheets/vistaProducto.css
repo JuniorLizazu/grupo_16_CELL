@@ -189,5 +189,9 @@ h4, h3{
           position: relative;
           top: 243px;
         }
+        .edicion i{
+          position: relative;
+    bottom: 7px;
+        }
         
 }

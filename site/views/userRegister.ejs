@@ -73,9 +73,9 @@
 
 										<div class="form-group col-12 col-xl-6">
 											<div>
+												<label for="imagen"></label>
 												<input type="file" accept="image/png, .jpeg, .jpg, image/gif" class="form-control"   <%= (typeof old != 'undefined' && old.imagen)?"is-valid":(typeof errores != 'undefined' && errores.imagen)?"is-invalid": ""  %>"
 												 id="imagen" name = "imagen">
-												<label for="imagen">Seleccionar imagen</label>
 												<img id="preview" src= "" alt="" class="w-75"/>
 												<small class="text-danger" id="errorImagen">
 												<%= (typeof errores != 'undefined' && errores.imagen)?errores.imagen.msg: "" %> 

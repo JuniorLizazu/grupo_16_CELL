@@ -1,3 +1,5 @@
+
+
 function addIsInvalid(element){
     element.classList.add('is-invalid')
 }
@@ -116,7 +118,22 @@ window.addEventListener('load', function(){
                 errorEmail.innerHTML = ''
                 break
         }
+    }),
+
+    inputEmail.addEventListener('blur', function(){
+        fetch(`${window.location.origin}/api/email`,{method: 'POST'})
+        .then(response => response.json())
+        .then(users => {
+            users.forEach(user => {
+                if(user.email == inputEmail.value){
+                    errorEmail.innerHTML = 'Este email ya se encuentra registrado'
+                    inputEmail.classList.toggle('is-invalid')
+                }
+            })
+        })
     })
+
+
     inputImagen.addEventListener('change', function(e){
         switch(true){
         case !regExExtensions.exec(this.value):

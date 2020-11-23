@@ -11,10 +11,8 @@
             <div class="row">
             
             <!-- Filtro -->
-                <div class="col-12 col-md-4 col-lg-3">
-                    <div class="filtro">
+                
 
-                        <a id="btn-filtro"><i class="fa fa-sliders-h"></i> FILTRAR</a>
 
                         <div class="container">
                             <section>
@@ -27,12 +25,12 @@
                                   <div class="row">
                                     <div class="MultiCarousel" data-items="1,3,5,6" data-slide="1" id="MultiCarousel"  data-interval="1000">
                                             <div class="MultiCarousel-inner">
-                                              <% trademark.forEach(trademark => { %>
+                                              <% trademark.forEach(marcas => { %>
                       
                                                
                                               <div class="item">
                                                     <div class="pad15">
-                                                       <a href=""><img src="/images/logos/<%= trademark.image %> " alt=""></a>
+                                                       <a href="/products/category/<%= marcas.id %> "><img src="/images/logos/<%= marcas.image %> " alt=""></a>
                                                     </div>
                                                 </div>
                                                 <% }) %>
@@ -56,34 +54,36 @@
                 </div>
 
             <!-- Productos -->
-                <div class="col-12 col-md-8">
-                    <div class="row">
-                    
-                    <% if (productos.length == 0) { %>
-                        <div >No tenemos productos de esta categoria</div>
-                    <% } %>
-                    <% productos.forEach(producto => { %>
-                     
-                        <div class="contenedor-productos">
+            <div class="container">
 
-                            <div class=" producto">
-                                <a href="/products/detail/<%= producto.id %>">
-                                    <figure>
-                                    <img src="/images/logos/<%= producto.image %> " alt="">
-                                    </figure>
-                                    <article>
-                                    <span><%= producto.name %> </span>
-                                    <h2>$<%= producto.price %> </h2>
-                                    </article>
-                                </a>
-                            </div>
-
-                        </div>
-
-                    <% }) %>
-
+                <section>
+                <div class="row productos">
+                  
+            
+                  <% productos.forEach(producto => { %>
+                    <div class="col-12 col-md-6 col-lg-3">
+                      <div class="contenido">
+                        <p><%= producto.name %></p>
+                        <figure>
+                          <a href="/products/detail/<%= producto.id %>"><img src="/images/logos/<%= producto.image %>" alt=""/></a>
+                        </figure>
+                        <article>
+                          <h2>
+                            $<%- (producto.price - producto.price * producto.discount / 100).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") %>
+                          </h2>
+                          <span><%= producto.discount %>% OFF</span>
+                          
+                        </article>
+                      </div>
                     </div>
-                 </div>
+            
+                    <% }) %>
+            
+                </div>
+              
+                </section>
+                
+              </div>
                     
             </div>
 
@@ -91,7 +91,7 @@
 
     </section>
 
-    <script src="javascript/carousel.js"></script>
+    <script src="/javascripts/carousel.js"></script>
     <%- include('./partials/footer.ejs') %>
     
 </body>
