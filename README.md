@@ -104,3 +104,9 @@ Utilizamos la plataforma [Trello](https://trello.com/b/JRpKlpfZ/grupo16cell), c√
 - *Adaptamos el CRUD de usuarios y productos a la nueva base de datos*
 - *Usuario admin para tener acceso a las funciones de crude tanto de usuarios como productos: -Emani: santiagoeojeda@gmail.com -Password: walking dead (incluye el espacio) REPETIMOS EL USUARIO*
 - *Quedan pendientes las categorias por cuestiones de tiempo y el perfil de usuario*
+
+## Sprint 6
+
+- *Implementamos validaciones, tanto por back-end como por front-end, en los formularios de registro y logeo de usuarios, en cuanto a productos pudimos aplicarlo en la carga de productos y la edicion del mismo.*
+- *USUARIO ADMIN: santiagoeojeda@gmail.com PASSWORD: walking dead* 
+
