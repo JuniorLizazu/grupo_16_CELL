@@ -29,5 +29,11 @@ module.exports = {
                 title: 'Contáctanos',
                 css: 'contacto.css'
             })
+        },
+    empresa: function (req,res){
+            res.render('empresa',{
+                title:'Empresa',
+                css: 'empresa.css'
+            })
         }
 }
