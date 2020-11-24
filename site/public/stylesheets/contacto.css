@@ -1,0 +1,77 @@
+@import "style.css";
+@import url(http://fonts.googleapis.com/css?family=Calibri:400,300,700);
+
+body {
+    background-color: #cacaca;
+    font-family: 'Calibri', sans-serif !important
+}
+.icon {
+    width: 28px;
+    margin-right: 0.7rem
+}
+.social-icons {
+    display: flex;
+    margin-top: 0.5rem
+}
+.social-information i {
+    font-size: 22px;
+    margin-bottom: 23px;
+    margin-right: 8px;
+    color: #cf0606
+}
+
+.mt-100 {
+    margin-top: 100px;
+    margin-bottom: 70px
+}
+
+.card {
+    position: relative;
+    display: flex;
+    width: 350px;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid #d2d2dc;
+    border-radius: 11px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgb(249, 249, 250);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(212, 182, 212, 1);
+    box-shadow: 0px 0px 5px 0px rgb(161, 163, 164)
+}
+
+.card .card-body {
+    padding: 1rem 1rem
+}
+
+.card-body {
+    flex: 1 1 auto;
+    padding: 1.25rem
+}
+
+p {
+    font-size: 14px
+}
+
+h4 {
+    margin-top: 18px
+}
+
+.btn:focus {
+    outline: none
+}
+
+.btn {
+    border-radius: 22px;
+    text-transform: capitalize;
+    font-size: 13px;
+    padding: 8px 19px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #1c1d4e
+}
+
+.btn:hover {
+    background-color: #26294d !important
+}

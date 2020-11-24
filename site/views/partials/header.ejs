@@ -6,7 +6,7 @@
       <!--Logotipo-->
       <div class="col-5 col-md-2 col-lg-2 logo">
         <a href="/"
-          ><img src="/images/logo.png" alt=" "
+          ><img src="/images/logo.png" alt="logo"
         /></a>
       </div>
 
@@ -47,7 +47,7 @@
         <ul class="menu navbar-nav ">
           <% if (typeof user != 'undefined') { %>
             <li>
-              <a href="">Contacto</a>
+              <a href="/contacto">Contacto</a>
             </li>
             <li>
               <a href="/products/cart"><i class="fas fa-shopping-cart"></i></a>
@@ -74,9 +74,8 @@
                 <% } %>
             <% } else {%>
               <li>
-                <a href="">Contacto</a>
+                <a href="contacto">Contacto</a>
               </li>
-              
               <li>
                 <a href="/users/register">Creá tu Cuenta</a>
               </li> 

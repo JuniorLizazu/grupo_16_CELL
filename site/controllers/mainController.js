@@ -23,6 +23,11 @@ module.exports = {
         .catch(error=>{
             res.send(error)
         })
-        
-    }
+    },
+    contacto: function(req, res){
+            res.render('contacto', { 
+                title: 'Contáctanos',
+                css: 'contacto.css'
+            })
+        }
 }

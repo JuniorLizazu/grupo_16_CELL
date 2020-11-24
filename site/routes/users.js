@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 
-
 const usersController = require('../controllers/usersControllers')
 
 const registerValidator = require('../validations/registerValidator')
@@ -16,7 +15,7 @@ const adminMiddleware = require('../middlewares/adminMiddleware');
 router.get('/register', usersController.register);
 router.post('/register',upImagesUsers.any(),registerValidator,usersController.processRegister);
 
-/* RUTAS DE LOGEO */
+/* RUTAS DE LOGUEO */
 router.get('/login', usersController.login);
 router.post('/login', loginValidator,usersController.processLogin);
 
@@ -26,10 +25,6 @@ router.put('/profile/:id',upImagesUsers.any(), usersController.editar);
 router.delete('/eliminar/:id',usersController.eliminar)
 /* LOGOUT Y LISTAD0 */
 router.get('/logout',huespedMiddleware, usersController.logout);
-router.get('/lista', adminMiddleware, usersController.listar)
-/*router.get('/', loginController.login);
-router.get('/enterpass', loginController.enterPass);
-router.get('/social', loginController.social)*/
-
+router.get('/lista', adminMiddleware, usersController.listar);
 
 module.exports = router;
