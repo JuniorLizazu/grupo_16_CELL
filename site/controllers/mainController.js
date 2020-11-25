@@ -57,4 +57,10 @@ module.exports = {
          res.send(e)
      })
  },
+ locales: function (req,res){
+            res.render('locales',{
+                title:'Locales',
+                css: 'style.css'
+            })
+        },
 }

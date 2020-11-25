@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('partials/head') %> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js">
+</head>
+<body>
+    <!--ACA HEAD-->
+   <%- include('partials/header') %>
+   <!--Columnas-->
+<div class="h-screen bg-gray-200">
+    <div class="container mx-auto py-20 lg:px-12 sm:px-5">
+        <div class="grid lg:grid-cols-3 gap-6">
+            <div class="p-3 bg-white shadow rounded-lg px-5 py-6"> <img src="https://i.imgur.com/gvNYKAh.png" width="50" class="mb-3"> <span class="font-bold text-xl">Cell Store</span>
+                <p class="mt-2 text-justify">>Av. Boedo 401, C1218 CABA, Argentina.<br>
+                    >+54 11 4931-4993.<br>
+                    >Lun - Vie, 8:00-22:00.<br>
+                    >cellstore1@gmail.com</p> <a href="#" class="flex flex-row items-center mt-3 text-blue-600 hover:text-blue-800"></a>
+            </div>
+            <div class="p-3 bg-white shadow rounded-lg px-5 py-6"> <img src="https://i.imgur.com/qtIK04u.png" width="50" class="mb-3"> <span class="font-bold text-xl">Cell Store II</span>
+                <p class="mt-2 text-justify">>Dr. Nicolás Boccuzzi, B1888 Florencio Varela, Provincia de Buenos Aires, Argentina.<br>
+                    >+54 11 4600-4688.<br>
+                    >Lun - Sab, 8:00-22:00.<br>
+                    >cellstore2@gmail.com</p> <a href="#" class="flex flex-row items-center mt-3 text-blue-600 hover:text-blue-800"></a>
+            </div>
+            <div class="p-3 bg-white shadow rounded-lg px-5 py-6"> <img src="https://i.imgur.com/7IPu6pH.png" width="50" class="mb-3"> <span class="font-bold text-xl">Cell Store III</span>
+                <p class="mt-2 text-justify">>Alem Y Av 25 De Mayo Loc Nro° 1, G4300 La Banda, Santiago del Estero, Argentina.<br>
+                    >+54 385 600-5802.<br>
+                    >Lun - Vie, 8:00-22:00.<br>
+                    >cellstore3@gmail.com</p> <a href="#" class="flex flex-row items-center mt-3 text-blue-600 hover:text-blue-800"></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Google Maps-->
+<div style="text-align: center;"><iframe src="https://www.google.com/maps/d/u/0/embed?mid=19SpaSEyCoZTKCGUu3KPzx6Z3eA1n1qCf" width="540" height="380" style="display: inline;"></iframe></div>
+<!--FOOTER-->
+<%- include('partials/footer') %>
+</body>
+</html>
