@@ -22,7 +22,7 @@ router.post('/login', loginValidator,usersController.processLogin);
 /* RUTAS DE EDICION DE PERFIL */
 router.get('/profile/:id',huespedMiddleware, usersController.profile);
 router.put('/profile/:id',upImagesUsers.any(), usersController.editar);
-router.delete('/eliminar/:id',usersController.eliminar)
+router.delete('/profile/delete/:id',usersController.eliminar)
 /* LOGOUT Y LISTAD0 */
 router.get('/logout',huespedMiddleware, usersController.logout);
 router.get('/lista', adminMiddleware, usersController.listar);

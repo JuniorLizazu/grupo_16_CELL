@@ -12,7 +12,7 @@
 
       <!--Buscador-->
       <div class="col-7 col-md-6 col-lg-6">
-        <form action="">
+        <form action="/search" method="GET">
           <input
             type="text"
             name="search"
@@ -67,8 +67,8 @@
                       Administra
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" href="/products/admin ">Productos</a>
-                      <a class="dropdown-item" href="/users/lista">Usuarios</a>
+                      <a class="dropdown-item" href="/products/admin ">Editar Productos</a>
+                      <a class="dropdown-item" href="/products/create">Subir Productos</a>
                     </div>
                   </li>
                 <% } %>

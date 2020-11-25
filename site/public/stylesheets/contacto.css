@@ -1,10 +1,6 @@
 @import "style.css";
 @import url(http://fonts.googleapis.com/css?family=Calibri:400,300,700);
 
-body {
-    background-color: #cacaca;
-    font-family: 'Calibri', sans-serif !important
-}
 .icon {
     width: 28px;
     margin-right: 0.7rem
@@ -14,7 +10,6 @@ body {
     margin-top: 0.5rem
 }
 .social-information i {
-    font-size: 22px;
     margin-bottom: 23px;
     margin-right: 8px;
     color: #cf0606
@@ -50,9 +45,7 @@ body {
     padding: 1.25rem
 }
 
-p {
-    font-size: 14px
-}
+
 
 h4 {
     margin-top: 18px

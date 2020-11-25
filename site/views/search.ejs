@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('partials/head'); %>
+
+<body>
+  <!-- importa header -->
+  <%- include('partials/header'); %>
+
+  
+  
+  <div class="container">
+    <section>
+
+      <!--caja contenedora de productos-->
+    <div class="container">
+      <section>
+        <div class="row productos">
+
+            <div class="col-12 titulo">
+                <h2></h2>
+              </div>
+         
+          <% products.forEach(producto => { %>
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="contenido">
+                <p><%= producto.name %> </p>
+                <figure>
+                  <a href="/products/detail/<%= producto.id %>"><img src="/images/logos/<%= producto.image %>" alt=""></a>
+                </figure>
+                <article>
+                  <h2>
+                    $ <%- (producto.price - producto.price * producto.discount / 100).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") %>
+                  </h2>
+                  <span><%= producto.discount %> %OFF </span>
+                </article>
+              </div>
+            </div>
+  
+            <% }) %>
+
+            <% if (products.length == '') { %>
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="resultado" style="padding: 50px 0px 100px 0px;">
+                 <a href="/"><img src="/images/logo.png" alt=" " width="50"></a>
+                  <h2>No hay resultados</h2>
+                  <p>Lo sentimos, no encontramos el producto solicitado</p>
+                </div>
+              </div>             
+            <% } %>
+ 
+        </div>
+      </section>
+    </div>
+    </section>
+  </div>
+  <!-- importa footer -->
+  <%- include('partials/footer') %>
+
+</body>
+
+</html>

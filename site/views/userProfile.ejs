@@ -61,8 +61,8 @@
     </div>
 
     <div class="eliminar">
-      <form action="/users/eliminar/<%= usuario.id%>?_method=DELETE" method="POST">
-        <button type="submit" class="btn-sm btn-danger" id="darBaja">Dar de baja mi cuenta</button>
+      <form action="/user/profile/delete/<%= usuario.id %>?_method=DELETE" method="POST" id="profileDelete-form">
+        <button class="btn btn-danger btn-lg btn-block " type="submit" name="id" id="profile-delete" value="<%= usuario.id %> ">Eliminar Perfil</button>
       </form>
     </div>
 

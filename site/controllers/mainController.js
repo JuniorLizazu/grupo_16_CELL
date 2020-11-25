@@ -1,6 +1,7 @@
 const path = require('path');
-const dbProducts = require(path.join(__dirname,'..','data','dbProducts'))
-const db = require('../database/models')
+const Sequelize = require('sequelize');
+const db = require('../database/models');
+let Op = Sequelize.Op;
 
 module.exports = {
     index: function(req, res){
@@ -35,5 +36,25 @@ module.exports = {
                 title:'Empresa',
                 css: 'empresa.css'
             })
-        }
+        },
+    search: function(req, res, next){
+        db.Products.findAll({
+            where:{
+                [Op.or]: [
+                    { name :{[Op.like] : `%${req.query.search}%` }},
+                    { model :{[Op.like] : `%${req.query.search}%` }}
+                 ]
+             }
+         })
+     .then(resultado => {
+         res.render('search',{
+             title: 'Cell',
+             css: 'home.css',
+             products: resultado
+         })
+     })
+     .catch(e => {
+         res.send(e)
+     })
+ },
 }

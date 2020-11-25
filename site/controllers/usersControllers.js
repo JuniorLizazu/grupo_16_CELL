@@ -74,7 +74,6 @@ module.exports={
                             maxAge: 1000 * 60 * 60,
                         });
                     }
-                    res.locals.user = req.session.user;
                     return res.redirect("/");
                 })
                 .catch((error) => {
@@ -137,23 +136,18 @@ module.exports={
         })
 
     },
-    eliminar:function(req,res){
+    eliminar:(req, res) => {
         db.Users.destroy({
             where: {
-                id:req.params.id
+                id: req.params.id
             }
         })
         .then(result=>{
-            
-            fs.unlinkSync('./public/images/users/'+ req.session.user.image); 
-            req.session.destroy()
+            req.session.destroy();
             if(req.cookies.userCell){
-                res.cookie('userCell', '', {maxAge:-1})
-            } 
-            return res.redirect('/')
-        })
-        .catch(error=>{
-            res.send(error)
+                res.cookie('userCell','',{ maxAge: -1})
+            }            
+            res.redirect('/')
         })
     },
     logout:function(req,res){
