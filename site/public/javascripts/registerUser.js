@@ -120,7 +120,7 @@ window.addEventListener('load', function(){
         }
     }),
 
-    inputEmail.addEventListener('blur', function(){
+    inputEmail.addEventListener('keyup', function(){
         fetch(`${window.location.origin}/api/email`,{method: 'POST'})
         .then(response => response.json())
         .then(users => {

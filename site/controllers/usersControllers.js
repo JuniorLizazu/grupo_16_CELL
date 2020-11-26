@@ -104,6 +104,7 @@ module.exports={
                 res.render("userProfile",{
                     title: "Perfil de Usuario",
                     css: "profile.css",
+                    script: 'userProfile.js',
                     usuario: usuario
                 })
             })
@@ -136,6 +137,13 @@ module.exports={
         })
 
     },
+    logout:function(req,res){
+        req.session.destroy()
+        if(req.cookies.userCell){
+            res.cookie('userCell',' ',{maxAge:-1});
+        } 
+        return res.redirect('/')
+    },
     eliminar:(req, res) => {
         db.Users.destroy({
             where: {
@@ -145,16 +153,9 @@ module.exports={
         .then(result=>{
             req.session.destroy();
             if(req.cookies.userCell){
-                res.cookie('userCell','',{ maxAge: -1})
+                res.cookie('userCell',' ',{ maxAge: -1})
             }            
             res.redirect('/')
         })
-    },
-    logout:function(req,res){
-        req.session.destroy()
-        if(req.cookies.userCell){
-            res.cookie('userCell',' ',{maxAge:-1});
-        } 
-        return res.redirect('/')
     }
 }

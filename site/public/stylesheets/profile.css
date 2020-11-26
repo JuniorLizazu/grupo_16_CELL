@@ -22,8 +22,11 @@ form .boton .subir{
     border-radius: 5px;
     color: white;
 }
-form .eliminar{
+#eliminar{
     border-radius: 5px;
     color: white;
     padding-left: 15px;
+    position: relative;
+    left: 17px;
+    height: 35px;
 }

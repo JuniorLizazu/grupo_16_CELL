@@ -10,6 +10,14 @@ module.exports = {
         })
         .then(emails => res.json(emails))
         .catch(error => res.send(error))
+    },
+    producto: function(req, res) {
+        db.Products.findAll({
+            attributes : [
+                "name"
+            ]
+        })
+        .then(names => res.json(names))
+        .catch(error => res.json(error))
     }
-
 }

@@ -14,7 +14,8 @@
         </h2>
       </div>
 
-      <form action="/users/profile/<%= usuario.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="formulario">
+      <div class="formulario">
+      <form action="/users/profile/<%= usuario.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
       
         <div>
           <div class="col-12 col-md-4 mt-3 d-flex flex-column align-items-center">
@@ -60,14 +61,14 @@
       <button class="subir" type="submit" name="id" value="<%= usuario.id %> ">Actualizar Perfil</button>
     </div>
 
-    <div class="eliminar">
-      <form action="/user/profile/delete/<%= usuario.id %>?_method=DELETE" method="POST" id="profileDelete-form">
-        <button class="btn btn-danger btn-lg btn-block " type="submit" name="id" id="profile-delete" value="<%= usuario.id %> ">Eliminar Perfil</button>
+  </form>
+    <div>
+      <form action="/users/delete/<%= usuario.id %>?_method=DELETE" method="POST" enctype="multipart/form-data" id="profileDelete-form">
+        <button class="btn btn-danger" type="submit" name="id" id="eliminar" value="<%= usuario.id %> ">Eliminar Perfil</button>
       </form>
     </div>
-
-      </form>
-
+     
+  </div>
     </div>
 
     <%- include('partials/footer') %> 

@@ -46,21 +46,21 @@ module.exports = {
                  ]
              }
          })
-     .then(resultado => {
-         res.render('search',{
-             title: 'Cell',
-             css: 'home.css',
-             products: resultado
-         })
-     })
-     .catch(e => {
-         res.send(e)
-     })
- },
- locales: function (req,res){
-            res.render('locales',{
-                title:'Locales',
-                css: 'style.css'
-            })
-        },
+        .then(resultado => {
+            res.render('search',{
+            title: 'Cell',
+            css: 'home.css',
+            products: resultado
+        })
+        })
+        .catch(e => {
+            res.send(e)
+        })
+    },
+    locales: function (req,res){
+        res.render('locales',{
+            title:'Locales',
+            css: 'style.css'
+        })
+    },
 }

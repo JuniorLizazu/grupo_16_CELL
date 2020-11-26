@@ -16,7 +16,7 @@ router.get('/detail/:id',productsController.detalle);
 
 /* GET home page. */
 router.get('/cart', huespedMiddleware, productsController.carrito);
-router.get('/category/:id', huespedMiddleware,productsController.category);
+router.get('/category/:id', productsController.category);
 
 /*Crear producto*/ 
 router.get('/create',adminMiddleware, productsController.crear);
