@@ -12,6 +12,12 @@ window.addEventListener('load',()=>{
               text: 'Sigue navegando para encontrar tu celular indicado',
               timer:2000
           })
+      } else{
+        Swal.fire({
+            icon : "success",
+            title : 'Se ha eliminado su cuenta correctamente',
+            timer : 3000
+        })
       }
     })
 

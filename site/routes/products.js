@@ -10,13 +10,13 @@ const productEditValidator = require('../validations/productEditValidator');
 
 
 /*Lista de productos y detalle*/
-router.get('/',productsController.listar);
+router.get('/',huespedMiddleware,productsController.listar);
 router.get('/detail/:id',productsController.detalle);
 
 
 /* GET home page. */
 router.get('/cart', huespedMiddleware, productsController.carrito);
-router.get('/category/:id', productsController.category);
+router.get('/category/:id', huespedMiddleware,productsController.category);
 
 /*Crear producto*/ 
 router.get('/create',adminMiddleware, productsController.crear);

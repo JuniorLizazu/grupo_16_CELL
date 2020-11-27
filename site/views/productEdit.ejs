@@ -21,7 +21,7 @@
               
             <img src="/images/logos/<%= producto.image %>" class="avatarImg" alt="avatar" width="75%"
               style="object-fit: cover; object-position: top;">
-
+            <input class="form-control" type="file" accept="image/png, .jpeg, .jpg, image/gif" name="imagen" id="imagenProducto">
           </div>
         </div>
 
@@ -53,13 +53,8 @@
     <div class="col">
       <p>Compania</p>
       <select name="company" class="form-control" value="<%= producto.company%>" >
-        <% if(producto.company == 'Empresa') { %> 
           <option value="Empresa">Empresa</option>
           <option value="Libre">Libre</option>
-        <% } else {%> 
-          <option value="Empresa">Libre</option>
-          <option value="Libre">Empresa</option>
-          <% } %>
         </select>   
         <span id="errorCompany" class="text-danger"><%= (typeof errors != 'undefined' && errors.company)?errors.company.msg: "" %> </span>
   </div>
@@ -72,20 +67,11 @@
 
     <div class="col">
       <label for="">Capacidad</label>
-          <select name="capacidad" id="" class="form-control">
-            <% if(producto.capacidad == '32') { %> 
+          <select name="capacidad" id="" class="form-control" value="<%= producto.capacidad %> ">
               <option value="32">32 GB</option>
               <option value="64">64 GB</option>
               <option value="128">128 GB</option>
-            <% } else if(producto.capacidad == '64') {%> 
-              <option value="64">64 GB</option>
-              <option value="32">32 GB</option>
-              <option value="128">128 GB</option>
-            <% } else { %>
-              <option value="128">128 GB</option>
-              <option value="32">32 GB</option>
-              <option value="128">64 GB</option>
-              <% } %> 
+            
           </select>
           <span class="text-danger" id="errorCapacidad"><%= (typeof errors != 'undefined' && errors.capacidad)?errors.capacidad.msg: "" %> </span>
       </div>
