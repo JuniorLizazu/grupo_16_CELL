@@ -27,3 +27,6 @@ form .eliminar{
     color: white;
     padding-left: 15px;
 }
+#imagenProducto{
+    overflow: hidden;
+}

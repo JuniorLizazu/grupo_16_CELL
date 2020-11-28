@@ -28,6 +28,21 @@ div.section > div > input {margin:0;padding-left:5px;font-size:10px;padding-righ
 .menu-items li ul{
     font-size: 29px;
 }
+.item-col{
+    margin-top: 50px;
+}
+.detail{
+    margin: 20px 0px;
+    padding-bottom: 20px;
+    border-bottom: 0.9px solid rgb(0, 0, 0, 0.3);
+}
+.description{
+    margin: 10px auto 30px auto;
+}
+.divClass{
+    margin-bottom: 30px;
+    border-bottom: 1.3px solid rgb(0, 0, 0, 0.3);
+}
 @media (max-width: 426px) {
     .container {margin-top:0px !important;}
     .container > .row{padding:15px;}

@@ -15,7 +15,7 @@
                <div class="col-12 col-md-6 item-photo">
                     <img style="max-width:80%;" src="/images/logos/<%= producto.image %>" />
                 </div>
-                <div class="col-12 col-md-4" style="border:0px solid gray">
+                <div class="col-12 col-md-4 item-col" style="border:0px solid gray">
                     <!-- Datos del vendedor y titulo del producto -->
                     <h3><%= producto.name %></h3>    
                     
@@ -62,23 +62,21 @@
                     <ul class="menu-items">
                         <li class="active">Detalle del producto</li>
                     </ul>
-                    <div >
-                        <p style="padding-top:15px;">
+                    <div class="divClass">
+                        <ul class="detail">
+                            <li>Marca: <%= trademark.name %></li>
+                            <li>¿Dual Sim?: <%= producto.dualsim %></li>
+                            <li>Modelo: <%= producto.model %></li>
+                            <li>Ram: <%= producto.capacidad %></li>
+                            <li>Color:<%= producto.colors %></li>
+                            <li>Compañia: <%= producto.company %></li>
+                                
+                        </ul>  
+                        <p class="description">
                             <small>
-                            <%= producto.description %> 
+                                <%= producto.description %> 
                             </small>
                         </p>
-                        
-                            <ul style="padding:0">
-                                <li>Marca: <%= trademark.name %></li>
-                                <li>¿Es Dual Sim?: <%= producto.dualsim %></li>
-                                <li>Modelo: <%= producto.model %></li>
-                                <li>Memoria Ram: <%= producto.capacidad %></li>
-                                <li>Colores:<%= producto.colors %></li>
-                                <li>Compaia telefonica: <%= producto.company %></li>
-                                
-                            </ul>  
-                       
                     </div>
 
                 </div>		
