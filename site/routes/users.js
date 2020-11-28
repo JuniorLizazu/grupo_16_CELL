@@ -1,11 +1,14 @@
 var express = require('express');
 var router = express.Router();
 
+/*REQUERIDO CONTROLADOR*/
 const usersController = require('../controllers/usersControllers')
 
+/*VALIDADORES */
 const registerValidator = require('../validations/registerValidator')
 const loginValidator = require('../validations/loginValidator');
 
+/*MIDDLEWARES*/
 const upImagesUsers = require('../middlewares/upImagesUsers');
 const huespedMiddleware = require('../middlewares/huespedMiddleware');
 const adminMiddleware = require('../middlewares/adminMiddleware');
