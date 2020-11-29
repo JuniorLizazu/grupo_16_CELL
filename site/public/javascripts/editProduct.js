@@ -21,8 +21,10 @@ window.addEventListener('load', function(){
     let inputDiscount = formulario.elements[6];
     let inputCapacidad = formulario.elements[7];
     let inputDescription = formulario.elements[8];
+    
 
     let errors = {};
+
 
     inputPrice.addEventListener('keyup', function(){
 

@@ -89,6 +89,7 @@ module.exports = {
            res.render('vistaProducto', {
                title: "Ver / Editar Producto",
                css: 'vistaProducto.css',
+               script:'productDelete.js',
                trademark: producto.trademark,
                producto: producto,
            })

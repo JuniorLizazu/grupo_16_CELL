@@ -33,10 +33,10 @@
                                     
                                     <form action="/products/delete/<%= productos.id%>?_method=DELETE" method="POST">
             
-                                        <button type="submit" class="btn-sm btn-danger" id="darBaja"><i class="fas fa-trash"></i></button>
+                                        <button type="submit" class="btn-sm btn-danger" name="id" id="eliminar"><i class="fas fa-trash"></i></button>
                                       </form>
 
-                                      <a href="/products/edit/<%= productos.id %> " class="edicion"><i class="fas fa-edit"></i></a>
+                                      <a href="/products/edit/<%= productos.id %> " class="edicion" id="edicion"><i class="fas fa-edit"></i></a>
             
                                     
                                   </article>

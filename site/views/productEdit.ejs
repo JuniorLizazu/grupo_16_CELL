@@ -21,7 +21,7 @@
               
             <img src="/images/logos/<%= producto.image %>" class="avatarImg" alt="avatar" width="75%"
               style="object-fit: cover; object-position: top;">
-            <input class="form-control" type="file" accept="image/png, .jpeg, .jpg, image/gif" name="imagen" id="imagenProducto">
+            <!--<input class="form-control" type="file" accept="image/png, .jpeg, .jpg, image/gif" name="imagen" id="imagenProducto">-->
           </div>
         </div>
 
@@ -52,9 +52,13 @@
     
     <div class="col">
       <p>Compania</p>
-      <select name="company" class="form-control" value="<%= producto.company%>" >
+      <select name="company" class="form-control" >
+          <option value="<%= producto.company%>"><%= producto.company %> </option>
+          <% if(producto.company == 'Libre') { %> 
           <option value="Empresa">Empresa</option>
+          <% }else { %>
           <option value="Libre">Libre</option>
+            <% } %> 
         </select>   
         <span id="errorCompany" class="text-danger"><%= (typeof errors != 'undefined' && errors.company)?errors.company.msg: "" %> </span>
   </div>
@@ -68,10 +72,17 @@
     <div class="col">
       <label for="">Capacidad</label>
           <select name="capacidad" id="" class="form-control" value="<%= producto.capacidad %> ">
-              <option value="32">32 GB</option>
-              <option value="64">64 GB</option>
-              <option value="128">128 GB</option>
-            
+              <option value="<%= producto.capacidad %> "><%= producto.capacidad %> GB </option>
+              <% if(producto.capacidad == '32') { %> 
+                <option value="64">64 GB</option>
+                <option value="128">128 GB</option>
+                <% }else if(producto.capacidad == '64') { %>
+                <option value="32">32 GB</option>
+                <option value="128">128 GB</option>
+                  <% }else { %> 
+                    <option value="32">32 GB</option>
+                    <option value="64">64 GB</option>
+                    <% } %> 
           </select>
           <span class="text-danger" id="errorCapacidad"><%= (typeof errors != 'undefined' && errors.capacidad)?errors.capacidad.msg: "" %> </span>
       </div>
@@ -87,12 +98,6 @@
       <button class="subir" type="submit" name="id" value="<%= producto.id %> ">Guardar</button>
     </div>
 
-    <div class="eliminar">
-      <form action="/products/delete/<%= producto.id%>?_method=DELETE" method="POST">
-        <button type="submit" class="btn-sm btn-danger" id="darBaja"><i class="fas fa-trash"></i></button>
-        <span id="msgError" class="text-danger"></span>
-      </form>
-    </div>
 
       </form>
 

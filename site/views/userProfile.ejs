@@ -46,13 +46,26 @@
       <input type="date" class="form-control" name="fecha" value="<%= usuario.fecha %>">
     </div>
     <div class="col">
-      <label for="">Provincia</label>
-      <input type="text" class="form-control" name="provincia" value="<%= usuario.provincia %>">
-    </div>
-    <div class="col">
-      <label for="">Ciudad</label>
-      <input type="text" class="form-control" name="ciudad" value="<%= usuario.ciudad %>">
-    </div>
+      <label for="provincia">Provincia</label>
+      <select name="provincia" id="provincia" class="form-control">
+          <% if (usuario.provincia) { %>
+              <option value="<%- usuario.provincia %>" hidden selected ><%- usuario.provincia %></option>
+          <% } else { %>
+              <option value="0" hidden selected >Seleccione su Provincia</option>
+          <% } %>
+      </select>
+  </div>
+  <div class="col">
+    <label for="ciudad">Locaildad</label>
+    <select name="ciudad" id="ciudad" class="form-control">
+        <% if (usuario.ciudad) { %>
+            <option value="<%- usuario.ciudad %>" hidden selected ><%- usuario.ciudad %></option>
+        <% } else { %>
+            <option hidden selected value="0" >Seleccione su Localidad</option>
+            <option value="0" >seleccione primero su provincia</option>
+        <% } %>
+    </select>
+</div>
     <div class="col">
       <label for="">Dirección</label>
       <input type="text" class="form-control" name="direccion" value="<%= usuario.direccion %>">

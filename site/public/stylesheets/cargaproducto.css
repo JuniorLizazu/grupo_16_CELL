@@ -158,6 +158,12 @@ h4, h3{
  background-color: #00adb5;
  color: white;
 }
+.preview{
+  width: 35%;
+  padding: 28px;
+  position: relative;
+  left: 227px;
+}
 @media(min-width:768px){
   .barra li{
       margin-left:30px;

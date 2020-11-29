@@ -117,8 +117,8 @@ module.exports={
         db.Users.update({
             avatar: (req.files[0])?req.files[0].filename:req.session.user.avatar,
             direccion: req.body.direccion.trim(),
-            ciudad : req.body.ciudad.trim(),
-            provincia: req.body.provincia.trim(),
+            ciudad : req.body.ciudad != '' && req.body.ciudad != 0 ?req.body.ciudad.trim():null,
+            provincia: req.body.provincia != '' && req.body.provincia != 0 ?req.body.provincia.trim():null,
             fecha: req.body.fecha
         },
         {

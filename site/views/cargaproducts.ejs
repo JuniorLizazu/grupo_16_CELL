@@ -97,7 +97,7 @@
         <p>
             <label for="">Elija su imagen</label>
             <input class="form-control" type="file" accept="image/png, .jpeg, .jpg, image/gif" name="imagen" id="imagenProducto">
-            <img id = "preview" alt="" class="w-75">
+            <img id = "preview" alt="" class="preview">
         </p>
         <span class="text-danger" id ="errorImagen"> 
             <%= (typeof errors != 'undefined' && errors.imagen)?errors.imagen.msg: "" %> 

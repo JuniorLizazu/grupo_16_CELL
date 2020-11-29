@@ -60,7 +60,7 @@ module.exports = {
     locales: function (req,res){
         res.render('locales',{
             title:'Locales',
-            css: 'style.css'
+            css: 'locales.css'
         })
     },
 }
