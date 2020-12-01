@@ -50,9 +50,9 @@ window.addEventListener('load', function(){
     inputName.addEventListener('keyup', function(){
         fetch(`${window.location.origin}/api/products`,{method: 'POST'})
         .then(response => response.json())
-        .then(users => {
-            users.forEach(user => {
-                if(user.name == inputName.value){
+        .then(products => {
+            products.forEach(product => {
+                if(product.name == inputName.value){
                     errorNombre.innerHTML = 'Este producto ya se encuentra registrado'
                     inputName.classList.toggle('is-invalid')
                 }

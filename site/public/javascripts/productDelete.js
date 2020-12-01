@@ -1,12 +1,11 @@
 window.addEventListener('load', function(){
     console.log('esta conectado')
 
+    let deleteProduct = document.querySelectorAll('#eliminar');
+    
 
-
-    let deleteProduct = document.getElementById('eliminar');
-
-
-    deleteProduct.addEventListener('click',function(e){
+    for(let i = 0; i < deleteProduct.length; i++) {
+    deleteProduct[i].addEventListener('click',function(e){
         let conf = confirm('¿Estás seguro que deseas eliminar este producto?')
         if(!conf){
             e.preventDefault()
@@ -24,5 +23,6 @@ window.addEventListener('load', function(){
               timer : 3000
           })
         }
-      })
+    })
+}
 })

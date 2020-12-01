@@ -134,14 +134,14 @@ h4, h3{
     width: 19px;
     height: 25px;
     position: relative;
-    top: 78px;
-    left: 100px;
+    top: 72px;
+    left: 147px;
   }
   .productos form{
     height: 27px;
     position: relative;
     top: 75px;
-    left: 24px;
+    left: 80px;
   }
   .productos .contenido2{
     display: none;
@@ -160,9 +160,16 @@ h4, h3{
         margin-left:155px;
     }
     .productos .seccion{
-        height: 432px;
-        position: relative;
-      }
+      height: 432px;
+      position: relative;
+    }
+    .productos article a {
+      width: 19px;
+      height: 25px;
+      position: relative;
+      top: 72px;
+      left: 124px;
+    }
     
 }
 @media(min-width:1024px){
@@ -176,22 +183,29 @@ h4, h3{
     .productos .oculto{
         display: block;
       }
-      .productos .seccion span a{
-        position: relative;
-        top: 243px;
-      }
-        
-      .productos .seccion .eco span a{
-        position: relative;
-        top: 243px;
-      }
-        .productos .seccion .buscado span a{
-          position: relative;
-          top: 243px;
-        }
-        .edicion i{
-          position: relative;
-    bottom: 7px;
-        }
-        
+    .productos .seccion span a{
+      position: relative;
+      top: 243px;
+    }
+    .productos .seccion .eco span a{
+      position: relative;
+      top: 243px;
+    }
+    .productos .seccion .buscado span a{
+      position: relative;
+      top: 243px;
+    }
+    .productos article a {
+      width: 19px;
+      height: 25px;
+      position: relative;
+      top: 72px;
+      left: 73px;
+    }
+    .productos form {
+      height: 27px;
+      position: relative;
+      top: 75px;
+      left: 50px;
+  }
 }

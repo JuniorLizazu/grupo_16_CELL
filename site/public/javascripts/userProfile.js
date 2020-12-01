@@ -22,7 +22,7 @@ window.addEventListener('load',()=>{
       }
     })
 
-
+    
     let provinciaSelect = document.getElementById('provincia');
     let localidadSelect = document.getElementById('ciudad');
 
@@ -76,7 +76,7 @@ window.addEventListener('load',()=>{
 
                 localidadSelect.innerHTML += options;
                 
-                loadingBackground.classList.add('none');
+               
             })
             .catch(err => {
                 console.log(err)

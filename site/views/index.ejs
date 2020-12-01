@@ -74,8 +74,9 @@
         <h2>Productos</h2>
         <span class="boton"><a href="/products">Ver más</a></span>
       </div>
-
+    
       <% producto.forEach(producto => { %>
+        <% if(producto.id < 9) {%> 
         <div class="col-12 col-md-6 col-lg-3">
           <div class="contenido">
             <p><%= producto.name %></p>
@@ -91,9 +92,9 @@
             </article>
           </div>
         </div>
-
+        <% } %> 
         <% }) %>
-
+        
     </div>
   
     </section>

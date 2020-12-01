@@ -12,14 +12,15 @@ const loginValidator = require('../validations/loginValidator');
 const upImagesUsers = require('../middlewares/upImagesUsers');
 const huespedMiddleware = require('../middlewares/huespedMiddleware');
 const adminMiddleware = require('../middlewares/adminMiddleware');
+const visitaMiddleware = require('../middlewares/visitaMiddleware')
 
 /* GET users listing. */
 /*RUTAS DE REGISTRO */
-router.get('/register', usersController.register);
+router.get('/register',visitaMiddleware, usersController.register);
 router.post('/register',upImagesUsers.any(),registerValidator,usersController.processRegister);
 
 /* RUTAS DE LOGUEO */
-router.get('/login', usersController.login);
+router.get('/login',visitaMiddleware, usersController.login);
 router.post('/login', loginValidator,usersController.processLogin);
 
 /* RUTAS DE EDICION DE PERFIL */
