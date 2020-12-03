@@ -23,8 +23,7 @@
                     <!-- Precios -->
                     <h6 class="title-price"><small>PRECIO FINAL</small></h6>
                     <h3 style="margin-top:0px;">
-                        <span>$<%= producto.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") %> <strong>
-                            <%= producto.discount %> % OFF</strong></span>
+                        <span>$<%= producto.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") %><strong> <%= producto.discount %> % OFF</strong></span>
                     </h3>
         
                     <!-- Detalles especificos del producto -->
@@ -54,7 +53,7 @@
                     <!-- Botones de compra -->
                     <div class="section" style="padding-bottom:20px;">
                         <a href="/products/cart"><button class="btn btn-success"><span style="margin-right:20px" class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Agregar al carro</button></a>
-                        <h6><a href="#"><span class="glyphicon glyphicon-heart-empty" style="cursor:pointer;"></span> Agregar a lista de deseos</a></h6>
+                        <h6><a href="#"><span class="glyphicon glyphicon-heart-empty" style="cursor:pointer;"></span>       Agregar a lista de deseos</a></h6>
                     </div>                                        
                 </div>                              
         
@@ -68,7 +67,7 @@
                             <li>¿Dual Sim?: <%= producto.dualsim %></li>
                             <li>Modelo: <%= producto.model %></li>
                             <li>Ram: <%= producto.capacidad %></li>
-                            <li>Color:<%= producto.colors %></li>
+                            <li>Color: <%= producto.colors %></li>
                             <li>Compañia: <%= producto.company %></li>
                                 
                         </ul>  

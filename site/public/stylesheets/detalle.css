@@ -10,7 +10,7 @@ li.active{border-bottom:3px solid silver;}
     object-fit: scale-down;
 }
 .menu-items{list-style-type:none;display:inline-flex;margin-bottom:0;margin-top:20px;padding: 0;}
-.btn-success{width:100%;border-radius:0;}
+.btn-success{width:100%;border-radius:0;background-color: #393e46!important;border-color:#393e46!important;color:white;}
 .section{width:100%;margin-left:3px;padding:2px;padding-left:15px;padding-right:15px;background:#f8f9f9}
 .section a{color: black;position: relative;}
 .title-price{margin-top:30px;margin-bottom:0;color:black}
