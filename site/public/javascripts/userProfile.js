@@ -1,6 +1,7 @@
 window.addEventListener('load',()=>{
     console.log('conectadisimoo')
     let deleteUser = document.getElementById('eliminar')
+    let updateUser = document.getElementById('actualizar')
 
     deleteUser.addEventListener('click',function(e){
       let conf = confirm('¿Estás seguro que deseas dar de baja la cuenta?')
@@ -21,6 +22,26 @@ window.addEventListener('load',()=>{
         })
       }
     })
+
+    updateUser.addEventListener('click',function(e){
+        let conf = confirm('¿Estás seguro que deseas aplicar los cambios?')
+        if(!conf){
+            e.preventDefault()
+            Swal.fire({
+                icon:'info',
+                title: 'Los cambios no fueron aplicados',
+                timer:2000
+            })
+        } else{
+          Swal.fire({
+              icon : "success",
+              title : 'Excelente!',
+              text: 'Su cuenta ha sido actualizada',
+              timer : 3000
+          })
+        }
+      })
+
 
     
     let provinciaSelect = document.getElementById('provincia');

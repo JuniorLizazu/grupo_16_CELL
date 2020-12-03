@@ -21,6 +21,30 @@ window.addEventListener('load', function(){
     let inputDiscount = formulario.elements[6];
     let inputCapacidad = formulario.elements[7];
     let inputDescription = formulario.elements[8];
+
+    let editProduct = document.querySelectorAll('#guardar')
+
+    for(let i = 0; i < editProduct.length; i++) {
+        editProduct[i].addEventListener('click',function(e){
+            let conf = confirm('¿Estás seguro que quiere aplicar los cambios?')
+            if(!conf){
+                e.preventDefault()
+                Swal.fire({
+                    icon:'info',
+                    title: '',
+                    text: 'Su producto no ha sido modificado',
+                    timer:2000
+                })
+            } else{
+              Swal.fire({
+                  icon : "success",
+                  title : 'Bien!',
+                  text: 'Su producto ha sido actualizado',
+                  timer : 3000
+              })
+            }
+        })
+    }
     
 
     let errors = {};

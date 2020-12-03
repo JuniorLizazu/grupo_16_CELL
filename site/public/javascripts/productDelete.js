@@ -10,14 +10,14 @@ window.addEventListener('load', function(){
         if(!conf){
             e.preventDefault()
             Swal.fire({
-                icon:'success',
-                title: 'Excelente',
+                icon:'info',
+                title: 'Producto no eliminado',
                 text: 'Su producto no ha sido eliminado',
                 timer:2000
             })
         } else{
           Swal.fire({
-              icon : "info",
+              icon : "succes",
               title : 'Bien!',
               text: 'Su producto ha sido eliminado correctamente',
               timer : 3000
