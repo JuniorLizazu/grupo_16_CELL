@@ -25,6 +25,20 @@ window.addEventListener('load', function(){
     let inputDescription = formulario.elements[9];
     let inputImage = formulario.elements[10];
 
+    let cargProduct = document.querySelector('#agregar')
+
+    cargProduct.addEventListener('click',function(e){
+        let conf = confirm('¿Estás seguro que deseas dar de baja la cuenta?')
+        if(!conf){
+            e.preventDefault()
+            Swal.fire({
+                icon:'info',
+                title: 'No ha agregado ningun producto',
+                timer:2000
+            })
+        }
+      })
+
     let errors = {};
     let regExExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
 

@@ -160,9 +160,9 @@ h4, h3{
 }
 .preview{
   width: 35%;
-  padding: 28px;
-  position: relative;
-  left: 227px;
+    padding: 13px;
+    position: relative;
+    left: 96px;
 }
 @media(min-width:768px){
   .barra li{
@@ -175,7 +175,12 @@ h4, h3{
     .barra li{
       margin-left:30px;
     }
-  
+    .preview {
+      width: 35%;
+      padding: 13px;
+      position: relative;
+      left: 205px;
+  }
 }
 @media(min-width:1024px){
   .barra li{
@@ -208,5 +213,11 @@ h4, h3{
       }
       footer .redes ul li:last-child{
         margin-right: 20px;
+      }
+      .preview{
+        width: 35%;
+        padding: 28px;
+        position: relative;
+        left: 227px;
       }
 }
